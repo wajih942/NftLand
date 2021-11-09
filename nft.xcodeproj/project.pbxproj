@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4698AB2A273A820600E177F8 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4698AB29273A820600E177F8 /* ReadMe.txt */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
 		4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D392731393C005F0177 /* SceneDelegate.swift */; };
 		4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D3B2731393C005F0177 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4698AB29273A820600E177F8 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F1F5D392731393C005F0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,9 +80,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4698AB2B273A85B700E177F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F1F5D452731393D005F0177 /* LaunchScreen.storyboard */,
+				4F1F5D3D2731393C005F0177 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4698AB2C273A860B00E177F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F1F5D3B2731393C005F0177 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4698AB2E273A867100E177F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4F1F5D2B2731393C005F0177 = {
 			isa = PBXGroup;
 			children = (
+				4698AB29273A820600E177F8 /* ReadMe.txt */,
 				4F1F5D362731393C005F0177 /* nft */,
 				4F1F5D502731393D005F0177 /* nftTests */,
 				4F1F5D5A2731393D005F0177 /* nftUITests */,
@@ -103,10 +130,10 @@
 			children = (
 				4F1F5D372731393C005F0177 /* AppDelegate.swift */,
 				4F1F5D392731393C005F0177 /* SceneDelegate.swift */,
-				4F1F5D3B2731393C005F0177 /* ViewController.swift */,
-				4F1F5D3D2731393C005F0177 /* Main.storyboard */,
+				4698AB2E273A867100E177F8 /* Model */,
+				4698AB2B273A85B700E177F8 /* View */,
+				4698AB2C273A860B00E177F8 /* Controller */,
 				4F1F5D432731393D005F0177 /* Assets.xcassets */,
-				4F1F5D452731393D005F0177 /* LaunchScreen.storyboard */,
 				4F1F5D482731393D005F0177 /* Info.plist */,
 				4F1F5D402731393C005F0177 /* nft.xcdatamodeld */,
 			);
@@ -236,6 +263,7 @@
 			files = (
 				4F1F5D472731393D005F0177 /* LaunchScreen.storyboard in Resources */,
 				4F1F5D442731393D005F0177 /* Assets.xcassets in Resources */,
+				4698AB2A273A820600E177F8 /* ReadMe.txt in Resources */,
 				4F1F5D3F2731393C005F0177 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
