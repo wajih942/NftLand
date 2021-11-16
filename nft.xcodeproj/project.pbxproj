@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708A2743939200054E16 /* stepsToUploadViewController.swift */; };
+		466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708C274397BC00054E16 /* connectWalletViewController.swift */; };
+		466C708F2743997300054E16 /* scanQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708E2743997300054E16 /* scanQrViewController.swift */; };
+		466C709127439B0500054E16 /* termsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C709027439B0500054E16 /* termsViewController.swift */; };
+		466C709327439CC200054E16 /* faqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C709227439CC200054E16 /* faqViewController.swift */; };
+		466C709627439F4200054E16 /* visitProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C709527439F4200054E16 /* visitProfileViewController.swift */; };
+		466C70982743A23500054E16 /* activityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70972743A23500054E16 /* activityViewController.swift */; };
+		466C709A2743A4D700054E16 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70992743A4D700054E16 /* searchViewController.swift */; };
+		466C709C2743A72100054E16 /* noResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C709B2743A72100054E16 /* noResultsViewController.swift */; };
+		466C709E2743A9B300054E16 /* notificationClickedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C709D2743A9B300054E16 /* notificationClickedViewController.swift */; };
+		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
+		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
+		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
 		4698AB2A273A820600E177F8 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4698AB29273A820600E177F8 /* ReadMe.txt */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
 		4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D392731393C005F0177 /* SceneDelegate.swift */; };
@@ -38,6 +51,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		466C708A2743939200054E16 /* stepsToUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsToUploadViewController.swift; sourceTree = "<group>"; };
+		466C708C274397BC00054E16 /* connectWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectWalletViewController.swift; sourceTree = "<group>"; };
+		466C708E2743997300054E16 /* scanQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scanQrViewController.swift; sourceTree = "<group>"; };
+		466C709027439B0500054E16 /* termsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = termsViewController.swift; sourceTree = "<group>"; };
+		466C709227439CC200054E16 /* faqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faqViewController.swift; sourceTree = "<group>"; };
+		466C709527439F4200054E16 /* visitProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visitProfileViewController.swift; sourceTree = "<group>"; };
+		466C70972743A23500054E16 /* activityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityViewController.swift; sourceTree = "<group>"; };
+		466C70992743A4D700054E16 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		466C709B2743A72100054E16 /* noResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noResultsViewController.swift; sourceTree = "<group>"; };
+		466C709D2743A9B300054E16 /* notificationClickedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationClickedViewController.swift; sourceTree = "<group>"; };
+		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
+		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
+		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
 		4698AB29273A820600E177F8 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,21 +106,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4671BA262743888C00604D1D /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		4698AB2B273A85B700E177F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4F1F5D452731393D005F0177 /* LaunchScreen.storyboard */,
 				4F1F5D3D2731393C005F0177 /* Main.storyboard */,
+				4671BA2427437D2000604D1D /* uploadItemViewController.swift */,
+				4F1F5D3B2731393C005F0177 /* ViewController.swift */,
+				4671BA272743896800604D1D /* addItemViewController.swift */,
+				4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */,
+				466C708A2743939200054E16 /* stepsToUploadViewController.swift */,
+				466C708C274397BC00054E16 /* connectWalletViewController.swift */,
+				466C708E2743997300054E16 /* scanQrViewController.swift */,
+				466C709027439B0500054E16 /* termsViewController.swift */,
+				466C709227439CC200054E16 /* faqViewController.swift */,
+				466C709527439F4200054E16 /* visitProfileViewController.swift */,
+				466C70972743A23500054E16 /* activityViewController.swift */,
+				466C70992743A4D700054E16 /* searchViewController.swift */,
+				466C709B2743A72100054E16 /* noResultsViewController.swift */,
+				466C709D2743A9B300054E16 /* notificationClickedViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4698AB2C273A860B00E177F8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4F1F5D3B2731393C005F0177 /* ViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		4698AB2E273A867100E177F8 /* Model */ = {
@@ -130,9 +168,10 @@
 			children = (
 				4F1F5D372731393C005F0177 /* AppDelegate.swift */,
 				4F1F5D392731393C005F0177 /* SceneDelegate.swift */,
-				4698AB2E273A867100E177F8 /* Model */,
 				4698AB2B273A85B700E177F8 /* View */,
-				4698AB2C273A860B00E177F8 /* Controller */,
+				4698AB2E273A867100E177F8 /* Model */,
+				4671BA262743888C00604D1D /* viewModel */,
+				4F1F5D452731393D005F0177 /* LaunchScreen.storyboard */,
 				4F1F5D432731393D005F0177 /* Assets.xcassets */,
 				4F1F5D482731393D005F0177 /* Info.plist */,
 				4F1F5D402731393C005F0177 /* nft.xcdatamodeld */,
@@ -290,8 +329,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1F5D422731393C005F0177 /* nft.xcdatamodeld in Sources */,
+				466C70982743A23500054E16 /* activityViewController.swift in Sources */,
+				466C709327439CC200054E16 /* faqViewController.swift in Sources */,
+				4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */,
+				466C709127439B0500054E16 /* termsViewController.swift in Sources */,
+				4671BA282743896800604D1D /* addItemViewController.swift in Sources */,
+				466C709C2743A72100054E16 /* noResultsViewController.swift in Sources */,
 				4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */,
+				466C709627439F4200054E16 /* visitProfileViewController.swift in Sources */,
+				4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */,
+				466C709E2743A9B300054E16 /* notificationClickedViewController.swift in Sources */,
 				4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */,
+				466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */,
+				466C709A2743A4D700054E16 /* searchViewController.swift in Sources */,
+				466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */,
+				466C708F2743997300054E16 /* scanQrViewController.swift in Sources */,
 				4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
