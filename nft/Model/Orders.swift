@@ -4,7 +4,7 @@
 //
 //  Created by wajih on 11/16/21.
 //
-
+/*
 import Foundation
 class orders: payment {
     var seller_wallet_address : String?
@@ -13,3 +13,4 @@ class orders: payment {
     var asset_name: String?
     
 }
+*/

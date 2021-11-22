@@ -12,12 +12,18 @@ class visitProfileViewController: UIViewController {
     
     //var
     
+    var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
     
     
     //iboutlet
     
+    @IBOutlet weak var LabelName: UILabel!
     
+    @IBOutlet weak var AddressLabel: UILabel!
     
+    @IBOutlet weak var BioLabel: UILabel!
+    
+    @IBOutlet weak var UrlLabel: UILabel!
     //ibaction
     
     @IBAction func notificationButton(_ sender: Any) {
@@ -55,7 +61,11 @@ class visitProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        LabelName.text = profile.DisplayName
+        AddressLabel.text = profile.WalletAddress
+        BioLabel.text = profile.Bio
+        UrlLabel.text = profile.CustomUrl
+        print(profile.DisplayName)
         // Do any additional setup after loading the view.
     }
     

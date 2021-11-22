@@ -5,7 +5,7 @@
 //  Created by wajih on 11/16/21.
 //
 
-import Foundation
+/*import Foundation
 class bids: Assets {
     var asset_id: Int?
     var entrance_date: Date?
@@ -13,4 +13,4 @@ class bids: Assets {
     var entrance_price : Float?
     var  last_price :Float?
 
-}
+}*/

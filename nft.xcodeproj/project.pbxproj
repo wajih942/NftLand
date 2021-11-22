@@ -38,6 +38,7 @@
 		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
 		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
 		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
+		46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC966A274B14BD00ECB59C /* SignUpViewController.swift */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
 		4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D392731393C005F0177 /* SceneDelegate.swift */; };
 		4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D3B2731393C005F0177 /* ViewController.swift */; };
@@ -99,6 +100,7 @@
 		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
 		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
+		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F1F5D392731393C005F0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				466C70992743A4D700054E16 /* searchViewController.swift */,
 				466C709B2743A72100054E16 /* noResultsViewController.swift */,
 				466C709D2743A9B300054E16 /* notificationClickedViewController.swift */,
+				46DC966A274B14BD00ECB59C /* SignUpViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				466C70B02743C21400054E16 /* Bids.swift in Sources */,
 				466C709327439CC200054E16 /* faqViewController.swift in Sources */,
 				466C70BE2743CCE100054E16 /* FollowerBrain.swift in Sources */,
+				46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */,
 				4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */,
 				466C709127439B0500054E16 /* termsViewController.swift in Sources */,
 				4671BA282743896800604D1D /* addItemViewController.swift in Sources */,

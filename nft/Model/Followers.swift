@@ -5,8 +5,8 @@
 //  Created by wajih on 11/16/21.
 //
 
-import Foundation
+/*import Foundation
 class followers: Account {
     var followed = [String]()
     var followers = [String]()
-}
+}*/

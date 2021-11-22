@@ -5,8 +5,8 @@
 //  Created by wajih on 11/16/21.
 //
 
-import Foundation
+/*import Foundation
 class favorites: Account {
     var assets_id = [Int]()
     var assets_name = [String]()
-}
+}*/
