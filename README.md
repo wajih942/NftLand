@@ -1,6 +1,10 @@
-NFT Land 
+# NFT Land 
 
-the best ecommerce app for digital items
+## Ecommerce app for digital items
+
+![This is an image](https://github.com/wajih942/ios-app/blob/main/Thumbnail.jpg)
+
+
 
 There are definitely some unprecedented opportunities for creators and vendors in this new realm. At its most basic level, 
 there is the opportunity to present your creation to an audience, whether through a specific topic-specific channel like 
@@ -10,7 +14,7 @@ Artists can control the quantity and visibility of their pieces and can gain in 
 Artists in the past had no way of knowing after the original sale where their piece would end up, but with a digital trail, an artist can make sure that 
 when their work makes money for an investor, it makes money for them too.
 
-WHAT IS NFT (NON-FUNGIBLE TOKEN)?
+## WHAT IS NFT (NON-FUNGIBLE TOKEN)?
 
 NFT is an abbreviation of Non-Fungible Token. But the meaning of that is not exactly intuitive either,
 so let’s explore what it means.The best way to understand this new phenomenon is to consider a monetary asset.
@@ -23,7 +27,7 @@ NFTs can’t be exchanged for an equivalent value, and like any investment, thei
 or decreasing demand. However, unlike your $10 bill, NFTs are not physical items; they’re entirely digital.
 
 
-NFT ART AND CRYPTO ART EXPLAINED
+## NFT ART AND CRYPTO ART EXPLAINED
 
 
 The first examples of digital Non-Fungible Tokens were created through a project called CRYPTOPUNKS. Here, users can sell, 
@@ -34,32 +38,23 @@ often struggle with proving the authenticity of their work, and the use of Block
 artists can upload their art to special websites that add proof of these details to the Blockchain.
 
 
-programming language:
+## programming language:
 
-swift :
+## swift :
 
 Swift is a robust and intuitive programming language created by Apple to create apps for iOS, Mac, Apple TV, and Apple Watch
 
-node js :
-
-Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of back-end projects
-
-solidity :
-
-Solidity is an object-oriented, high-level language for implementing smart contracts. Solidity is a curly-bracket language. It is influenced
-by C++, Python and JavaScript, and is designed to target the Ethereum Virtual Machine (EVM).
 
 
-Libraries and frameworks:
 
-RealityKit :
+## Libraries and frameworks:
+
+## RealityKit :
 
 RealityKit is a new framework that's baked into Xcode 11 and iOS 13 to allow developers to get photo-realistic rendering in their augmented reality scenes
 
-xcode :
+## xcode :
 
 Xcode is an application that developers use to build apps for Apple's various platforms such as iPhone, iPad, Macs, AppleTV and Apple Watch
 
-truffle :
 
-Truffle is a world-class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier. Truffle is widely considered the most popular tool for blockchain application development with over 1.5 million lifetime downloads.
