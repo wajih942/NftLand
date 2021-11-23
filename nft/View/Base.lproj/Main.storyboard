@@ -3768,6 +3768,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="edit"/>
                                                         <connections>
                                                             <action selector="editProfileButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="lJ4-Qu-RfX"/>
+                                                            <segue destination="E0k-qD-eYE" kind="show" identifier="ProfileToEditSegue" id="hMr-mE-L9j"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijs-FP-cpJ">
@@ -3945,10 +3946,10 @@
             </objects>
             <point key="canvasLocation" x="12518.840579710146" y="-832.36607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Profile View Controller-->
         <scene sceneID="NbU-Ec-q3m">
             <objects>
-                <viewController id="E0k-qD-eYE" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="E0k-qD-eYE" customClass="EditProfileViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2BX-jd-bSa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4040,6 +4041,9 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="BackToProfileButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="khA-pM-6Zj"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRl-1d-7Ei">
                                                         <rect key="frame" x="28" y="97" width="285" height="87"/>
@@ -4062,7 +4066,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAO-Ca-4A0">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="YAO-Ca-4A0">
                                                         <rect key="frame" x="28" y="290" width="75" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -4081,6 +4085,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Upload">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="UploadButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="Ont-PL-F1a"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nS-Qc-gR3">
                                                         <rect key="frame" x="28" y="488" width="144" height="26"/>
@@ -4179,6 +4186,9 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="AddSocialButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="19t-hG-CRf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtH-QH-204">
                                                         <rect key="frame" x="87" y="1454" width="240" height="37"/>
@@ -4187,6 +4197,10 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Update Profile">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="UpdateButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="RUg-II-me6"/>
+                                                            <segue destination="doZ-bs-fAa" kind="show" identifier="EditToProfileSegue" id="5fh-RX-nbn"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reset" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-pH-9U8">
                                                         <rect key="frame" x="151" y="1515" width="21" height="23"/>
@@ -4205,6 +4219,9 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="ClearAllButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="VMc-ur-BLQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4338,6 +4355,14 @@
                         <viewLayoutGuide key="safeArea" id="kcU-Gu-hYi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="D93-LP-gYe"/>
+                    <connections>
+                        <outlet property="BioTextView" destination="7ao-Re-RV4" id="laR-VO-nVk"/>
+                        <outlet property="CustomUrlSessionTextField" destination="CWF-P7-nlk" id="J1U-Qb-Tcn"/>
+                        <outlet property="DisplayNameTextField" destination="dQt-Mn-gY5" id="YWq-54-zIX"/>
+                        <outlet property="PasswordTextField" destination="5LQ-YS-Pki" id="bof-3T-pFC"/>
+                        <outlet property="PortfolioTextField" destination="RPf-EC-SrG" id="FFa-YM-69S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXF-KM-OuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -6237,7 +6262,85 @@
             </objects>
             <point key="canvasLocation" x="11443" y="-832"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="OTq-cV-cVw">
+            <objects>
+                <viewController id="8yE-rZ-vVT" customClass="APILoginViewController" customModule="nft" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ndV-3y-USv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BD2-0c-hWa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JD9-yO-Mg1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="894"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-kN-DAb">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="symbol 2" translatesAutoresizingMaskIntoConstraints="NO" id="NSD-g4-w3Z">
+                                                        <rect key="frame" x="-24" y="6" width="189" height="107"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NFT Land" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwJ-Gl-UHY">
+                                                        <rect key="frame" x="78" y="35" width="105" height="57"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-vR-cRQ">
+                                                        <rect key="frame" x="358" y="39" width="35" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Line">
+                                                            <backgroundConfiguration key="background"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="burgerButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="TuE-kL-4eN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="112" id="uwc-1G-S1R"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igT-rd-sDI">
+                                                <rect key="frame" x="0.0" y="112" width="414" height="782"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="782" id="ClZ-sx-wL3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JD9-yO-Mg1" firstAttribute="width" secondItem="ExW-Hw-EHR" secondAttribute="width" id="8MA-jc-MHd"/>
+                                    <constraint firstItem="JD9-yO-Mg1" firstAttribute="top" secondItem="0QB-ed-Dgc" secondAttribute="top" id="BDj-DD-LON"/>
+                                    <constraint firstItem="JD9-yO-Mg1" firstAttribute="leading" secondItem="0QB-ed-Dgc" secondAttribute="leading" id="V1h-CQ-1wn"/>
+                                    <constraint firstItem="JD9-yO-Mg1" firstAttribute="bottom" secondItem="0QB-ed-Dgc" secondAttribute="bottom" id="twl-fO-68O"/>
+                                    <constraint firstItem="JD9-yO-Mg1" firstAttribute="trailing" secondItem="0QB-ed-Dgc" secondAttribute="trailing" id="x2G-De-8Nj"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="0QB-ed-Dgc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ExW-Hw-EHR"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M0L-i3-GA8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTn-xk-Mea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12070" y="-28"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GgA-Mg-cD9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="01" width="26" height="28"/>
         <image name="01-1" width="161" height="160"/>

@@ -58,6 +58,13 @@ class visitProfileViewController: UIViewController {
     
     @IBAction func infoButton(_ sender: Any) {
     }
+    //functions
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ProfileToEditSegue" {
+            let destination = segue.destination as! EditProfileViewController
+            AccountBrain.copyAccount(account1: destination.edit , account2: profile)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

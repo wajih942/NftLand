@@ -1,0 +1,6 @@
+framework module Pods_nft {
+  umbrella header "Pods-nft-umbrella.h"
+
+  export *
+  module * { export * }
+}
