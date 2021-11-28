@@ -6,133 +6,29 @@
 	objectVersion = 55;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = FC1AD91374501137631602F12A7C7028 /* Build configuration list for PBXAggregateTarget "FBSDKLoginKit" */;
-			buildPhases = (
-			);
-			dependencies = (
-				56CFA22F9CE61860676397811D16896C /* PBXTargetDependency */,
-			);
-			name = FBSDKLoginKit;
-			productName = FBSDKLoginKit;
-		};
-		28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = F3B6463DD035C03CBF877F5608B01243 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit" */;
-			buildPhases = (
-			);
-			dependencies = (
-				3BB67BC79405A77F217F26A2EAEB9E60 /* PBXTargetDependency */,
-				4B078B01FC47A85EDF29B0433E81C15B /* PBXTargetDependency */,
-			);
-			name = FBSDKCoreKit;
-			productName = FBSDKCoreKit;
-		};
-		479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = AD8030EA16B045813DE76BCC6DA51EC4 /* Build configuration list for PBXAggregateTarget "FBAEMKit" */;
-			buildPhases = (
-			);
-			dependencies = (
-				9E7C7925741D36456CDB9294E5424B51 /* PBXTargetDependency */,
-			);
-			name = FBAEMKit;
-			productName = FBAEMKit;
-		};
-		8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 4303895DE6E6EA217C0B61DB74305354 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = FBSDKCoreKit_Basics;
-			productName = FBSDKCoreKit_Basics;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		03513108CAE879EA6F29144D77E2A0BD /* Pods-nftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1058A83D1AE0B65A2B6445B8B25231 /* Pods-nftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E98A2B9742396067511EDEFEBACBBF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2A22370F6BC7290A7705806FF959C13C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		43ACC94E1B9AE3EAF3712D896AD64E06 /* Pods-nft-nftUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7343F08007896446E42C2C908727063 /* Pods-nft-nftUITests-dummy.m */; };
-		A0AA05196CF67169E813C9F4A38ED348 /* Pods-nftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F7915454D0E3E63C6638056B2EB39 /* Pods-nftTests-dummy.m */; };
-		A3AB9F0C6355FDC23C4D16409D006A2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D338BA64654F259A834B7C57159794FC /* Pods-nft-nftUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF86F21AFA73DE0ACF1BDEC12C414324 /* Pods-nft-nftUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE9958E673DD5712ECC8B4E2E039074D /* Pods-nft-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 762FFFEC887C5286480BD7C21C7FA14F /* Pods-nft-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9895F59ACF5C41F5A37EF2FEAD9A5F5 /* Pods-nft-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7A5EFADEBEBDD3577DCEDFCA8C75A /* Pods-nft-dummy.m */; };
+		0FFF8DEAA43E3C9FC30E57193BD2C9F6 /* Pods-nftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F7915454D0E3E63C6638056B2EB39 /* Pods-nftTests-dummy.m */; };
+		3EF01B61407195C3A16CA1F08E9A6C43 /* Pods-nft-nftUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF86F21AFA73DE0ACF1BDEC12C414324 /* Pods-nft-nftUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E71614E1B958B39BE911D7E47C80F10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		63623CDC02AD22E5319CDA65B35AE3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6EEE107816177CC339648E21E9BEFFF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7284FA2CF7D29D21308E6A7ED89D5379 /* Pods-nft-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 762FFFEC887C5286480BD7C21C7FA14F /* Pods-nft-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97A653770F19B1D5F140D64D94835A78 /* Pods-nftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1058A83D1AE0B65A2B6445B8B25231 /* Pods-nftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0ED9E49B74BC16F65BDFA329C4892B2 /* Pods-nft-nftUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7343F08007896446E42C2C908727063 /* Pods-nft-nftUITests-dummy.m */; };
+		C30BE3C0FCEA1B530180B65B2AD930A1 /* Pods-nft-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7A5EFADEBEBDD3577DCEDFCA8C75A /* Pods-nft-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A5B6E037E90A0390F5EB4D205ED6406 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
-			remoteInfo = FBSDKCoreKit;
-		};
-		3B2F1268F8062471BCB2AB53B24CF913 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
-			remoteInfo = FBAEMKit;
-		};
-		4D113CE8AF3E48BD091D1FCCC2F68DDA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
-		51669BDFDA9EDA39686CFA3889E7CC05 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
-			remoteInfo = FBSDKCoreKit;
-		};
-		687E0EE5B2B32B6E0424D5371BB6CE32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
-			remoteInfo = FBAEMKit;
-		};
-		8199042B5E40BA1CDFF21A7FF7D1832C /* PBXContainerItemProxy */ = {
+		00F4D35159CF683B5932047F83CA8653 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 24A4D7C6B0CE21EDDAD3E93F4E93D9EC;
 			remoteInfo = "Pods-nft";
 		};
-		A24452605018F8B78EFE0DA1C9E09782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
-			remoteInfo = FBSDKLoginKit;
-		};
-		A7CA70394E2F204C4B963147C53F63F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
-		DFFF1D29871E5EEE75ECD1D916783C14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		122A38246F31E72A14B998A798959D32 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		1357190E987534CA2A95D2FD335702C1 /* Pods-nft-nftUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nft-nftUITests-Info.plist"; sourceTree = "<group>"; };
 		1D5F7915454D0E3E63C6638056B2EB39 /* Pods-nftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nftTests-dummy.m"; sourceTree = "<group>"; };
 		1FE2648C2CF67B17DE38DA7D2D4ABE62 /* Pods-nft.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nft.modulemap"; sourceTree = "<group>"; };
@@ -141,58 +37,51 @@
 		3A1058A83D1AE0B65A2B6445B8B25231 /* Pods-nftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nftTests-umbrella.h"; sourceTree = "<group>"; };
 		3ABBDBEA2BF0348484C97B8CA30A884F /* Pods-nftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nftTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3CC42709BC995FCF87C5E2AD1B810179 /* Pods-nft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nft.release.xcconfig"; sourceTree = "<group>"; };
-		3FD5410E811B2A4BA546F0C1911EB882 /* FBSDKCoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.xcconfig; sourceTree = "<group>"; };
 		44E009BB7345303A0BA58BDE49F6CFC9 /* Pods-nftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nftTests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		762FFFEC887C5286480BD7C21C7FA14F /* Pods-nft-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nft-umbrella.h"; sourceTree = "<group>"; };
-		79E2BEA46E075F30F258CFDCB48A33C2 /* Pods_nft_nftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nft_nftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C7C56822A759752A308B2D582F61595 /* FBSDKLoginKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.xcconfig; sourceTree = "<group>"; };
-		8110132DC70BB9625F50F72488E39BBE /* FBAEMKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.xcconfig; sourceTree = "<group>"; };
+		79E2BEA46E075F30F258CFDCB48A33C2 /* Pods-nft-nftUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nft-nftUITests"; path = Pods_nft_nftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		818FC6A2F7E4D6CE7CA17BAD393BED0D /* Pods-nft-nftUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nft-nftUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		82D4E2A8E60E5680196866623063E11D /* Pods-nft-nftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nft-nftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		86B69946CA779BF171438B81A207BF06 /* Pods-nft-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nft-acknowledgements.markdown"; sourceTree = "<group>"; };
 		878F233079DE75CCDC8FCC472DDED0DF /* Pods-nft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nft.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5DD1A26242A51D9493611EC80915061 /* Pods-nft-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nft-acknowledgements.plist"; sourceTree = "<group>"; };
-		A6D2F673B9C6AD5C0D480243D2748F09 /* FBSDKCoreKit_Basics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.xcconfig; sourceTree = "<group>"; };
 		ABCD11AC39725B77096DF6818BFC7521 /* Pods-nft-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nft-Info.plist"; sourceTree = "<group>"; };
 		AE1A1C7B46D7215434CE7E7DAA44676B /* Pods-nftTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nftTests-Info.plist"; sourceTree = "<group>"; };
 		B7343F08007896446E42C2C908727063 /* Pods-nft-nftUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nft-nftUITests-dummy.m"; sourceTree = "<group>"; };
-		C8D804EEAF4525C8F5B8C36B4DE59E93 /* Pods_nftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D804EEAF4525C8F5B8C36B4DE59E93 /* Pods-nftTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nftTests"; path = Pods_nftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7A5EFADEBEBDD3577DCEDFCA8C75A /* Pods-nft-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nft-dummy.m"; sourceTree = "<group>"; };
-		D1DCCB93011C0628281681A8E3FEF0F9 /* FBAEMKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = FBAEMKit.xcframework; path = XCFrameworks/FBAEMKit.xcframework; sourceTree = "<group>"; };
 		D9AD1A8D0B42A70F4C6E6F61CDDC2375 /* Pods-nftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DEDD2DF824B6D08DF9E28927656EBA4D /* Pods-nft-nftUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nft-nftUITests.modulemap"; sourceTree = "<group>"; };
 		E04F76F6A81C830B74530213E20A2FBB /* Pods-nftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nftTests.release.xcconfig"; sourceTree = "<group>"; };
-		EF7F959A5080785BADACB6DFC2D0725E /* FBSDKLoginKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = FBSDKLoginKit.xcframework; path = XCFrameworks/FBSDKLoginKit.xcframework; sourceTree = "<group>"; };
 		EF86F21AFA73DE0ACF1BDEC12C414324 /* Pods-nft-nftUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nft-nftUITests-umbrella.h"; sourceTree = "<group>"; };
 		F8B58CB2FC3ECC1F96BBCA17D8517809 /* Pods-nft-nftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nft-nftUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FD61E15AB1B08A6718D5997F2615B637 /* Pods_nft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEB588836A9ECC358557B33F908DCA77 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit_Basics.xcframework; path = XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		FD61E15AB1B08A6718D5997F2615B637 /* Pods-nft */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nft"; path = Pods_nft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		505AA10285E0C43248672DC468F38CE0 /* Frameworks */ = {
+		14B38182FA42D0FA5E09E85DF9A0506A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3AB9F0C6355FDC23C4D16409D006A2E /* Foundation.framework in Frameworks */,
+				4E71614E1B958B39BE911D7E47C80F10 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE071C5F14341A5CA1F759583379C300 /* Frameworks */ = {
+		82EB866FB3EB8C5B39D2719BDC5D7424 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A22370F6BC7290A7705806FF959C13C /* Foundation.framework in Frameworks */,
+				6EEE107816177CC339648E21E9BEFFF0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C55D73543BF224D1E443A34D829307FA /* Frameworks */ = {
+		E885035E91BFF0459A8F973524D84CB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E98A2B9742396067511EDEFEBACBBF2 /* Foundation.framework in Frameworks */,
+				63623CDC02AD22E5319CDA65B35AE3D3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,15 +104,6 @@
 			path = "Target Support Files/Pods-nftTests";
 			sourceTree = "<group>";
 		};
-		2A2FF1185EB8761669D38A5765F6915F /* FBSDKCoreKit */ = {
-			isa = PBXGroup;
-			children = (
-				45AF78B61B0FB2360B8ED89E7C818CC2 /* Frameworks */,
-				78F064454F666447AFD07695ACA6246A /* Support Files */,
-			);
-			path = FBSDKCoreKit;
-			sourceTree = "<group>";
-		};
 		2D0941750B40E4438BB34D0E91D2DFBB /* Pods-nft-nftUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,21 +120,14 @@
 			path = "Target Support Files/Pods-nft-nftUITests";
 			sourceTree = "<group>";
 		};
-		4251066747A495EA72ED99CC008C5A4F /* FBSDKLoginKit */ = {
+		4BBC27280C6AB45D88D1CAB254F1C66B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB52E8BE81E1BEC62179F0087E037C74 /* Frameworks */,
-				794208F77EC64E89CAABE8B4922DC9C0 /* Support Files */,
+				FD61E15AB1B08A6718D5997F2615B637 /* Pods-nft */,
+				79E2BEA46E075F30F258CFDCB48A33C2 /* Pods-nft-nftUITests */,
+				C8D804EEAF4525C8F5B8C36B4DE59E93 /* Pods-nftTests */,
 			);
-			path = FBSDKLoginKit;
-			sourceTree = "<group>";
-		};
-		45AF78B61B0FB2360B8ED89E7C818CC2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				122A38246F31E72A14B998A798959D32 /* FBSDKCoreKit.xcframework */,
-			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -263,42 +136,6 @@
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		5B3E59847028102524ED2C10BA4CE8D4 /* FBSDKCoreKit_Basics */ = {
-			isa = PBXGroup;
-			children = (
-				C77987D55A9A932B26160FA49B82D2B7 /* Frameworks */,
-				F58F168DEFFCD4324DF23750D81B493E /* Support Files */,
-			);
-			path = FBSDKCoreKit_Basics;
-			sourceTree = "<group>";
-		};
-		78F064454F666447AFD07695ACA6246A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3FD5410E811B2A4BA546F0C1911EB882 /* FBSDKCoreKit.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSDKCoreKit";
-			sourceTree = "<group>";
-		};
-		794208F77EC64E89CAABE8B4922DC9C0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C7C56822A759752A308B2D582F61595 /* FBSDKLoginKit.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSDKLoginKit";
-			sourceTree = "<group>";
-		};
-		A80FBB42A0D342D9716AD174E47F5319 /* FBAEMKit */ = {
-			isa = PBXGroup;
-			children = (
-				FA49ABB0AFF4A961BDAE62B6F8A833B8 /* Frameworks */,
-				DB16F50C1903195749D6AD3C09ED69EE /* Support Files */,
-			);
-			path = FBAEMKit;
 			sourceTree = "<group>";
 		};
 		AF2DE254A191BC60E60CD69AB35D33BD /* Targets Support Files */ = {
@@ -311,29 +148,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BB52E8BE81E1BEC62179F0087E037C74 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EF7F959A5080785BADACB6DFC2D0725E /* FBSDKLoginKit.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C77987D55A9A932B26160FA49B82D2B7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FEB588836A9ECC358557B33F908DCA77 /* FBSDKCoreKit_Basics.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				FA9D709ADCFE9F2286C39E4049A18205 /* Pods */,
-				EA7B787053DD8EF16C3B933C3FE73C86 /* Products */,
+				4BBC27280C6AB45D88D1CAB254F1C66B /* Products */,
 				AF2DE254A191BC60E60CD69AB35D33BD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -344,15 +164,6 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DB16F50C1903195749D6AD3C09ED69EE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8110132DC70BB9625F50F72488E39BBE /* FBAEMKit.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBAEMKit";
 			sourceTree = "<group>";
 		};
 		E15D935310486E9923FF6728D573A3FF /* Pods-nft */ = {
@@ -371,68 +182,30 @@
 			path = "Target Support Files/Pods-nft";
 			sourceTree = "<group>";
 		};
-		EA7B787053DD8EF16C3B933C3FE73C86 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FD61E15AB1B08A6718D5997F2615B637 /* Pods_nft.framework */,
-				79E2BEA46E075F30F258CFDCB48A33C2 /* Pods_nft_nftUITests.framework */,
-				C8D804EEAF4525C8F5B8C36B4DE59E93 /* Pods_nftTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F58F168DEFFCD4324DF23750D81B493E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A6D2F673B9C6AD5C0D480243D2748F09 /* FBSDKCoreKit_Basics.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSDKCoreKit_Basics";
-			sourceTree = "<group>";
-		};
-		FA49ABB0AFF4A961BDAE62B6F8A833B8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D1DCCB93011C0628281681A8E3FEF0F9 /* FBAEMKit.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA9D709ADCFE9F2286C39E4049A18205 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A80FBB42A0D342D9716AD174E47F5319 /* FBAEMKit */,
-				2A2FF1185EB8761669D38A5765F6915F /* FBSDKCoreKit */,
-				5B3E59847028102524ED2C10BA4CE8D4 /* FBSDKCoreKit_Basics */,
-				4251066747A495EA72ED99CC008C5A4F /* FBSDKLoginKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BAA4860368FC8606A3FDD80A06F4D3F6 /* Headers */ = {
+		39859246479F01124CE8A4000F0ECB25 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03513108CAE879EA6F29144D77E2A0BD /* Pods-nftTests-umbrella.h in Headers */,
+				7284FA2CF7D29D21308E6A7ED89D5379 /* Pods-nft-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB5F030D7DF71376EF22541385E4C466 /* Headers */ = {
+		CFEF60DD2AF8EFF9CFE8B728675D2E38 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE9958E673DD5712ECC8B4E2E039074D /* Pods-nft-umbrella.h in Headers */,
+				3EF01B61407195C3A16CA1F08E9A6C43 /* Pods-nft-nftUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D497E33D011AD40A3196352ECF47E509 /* Headers */ = {
+		D4EB74B11B890E96E635019E31AC4964 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D338BA64654F259A834B7C57159794FC /* Pods-nft-nftUITests-umbrella.h in Headers */,
+				97A653770F19B1D5F140D64D94835A78 /* Pods-nftTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,61 +214,57 @@
 /* Begin PBXNativeTarget section */
 		24A4D7C6B0CE21EDDAD3E93F4E93D9EC /* Pods-nft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3124A5526114F6598C44A1750479E52F /* Build configuration list for PBXNativeTarget "Pods-nft" */;
+			buildConfigurationList = 5AA443AEF57232B2F80F859CBEF26C85 /* Build configuration list for PBXNativeTarget "Pods-nft" */;
 			buildPhases = (
-				BB5F030D7DF71376EF22541385E4C466 /* Headers */,
-				FC49F0060F623B153DC58B89DF3E53E3 /* Sources */,
-				505AA10285E0C43248672DC468F38CE0 /* Frameworks */,
-				8B574026D52E5B6CB0DE9102373BBA3B /* Resources */,
+				39859246479F01124CE8A4000F0ECB25 /* Headers */,
+				F4855F5AF81359BC9324EF75D9FFAB76 /* Sources */,
+				82EB866FB3EB8C5B39D2719BDC5D7424 /* Frameworks */,
+				134F9AE79DEF4280BB29D87D584440F3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Pods-nft";
-			productName = "Pods-nft";
-			productReference = FD61E15AB1B08A6718D5997F2615B637 /* Pods_nft.framework */;
+			productName = Pods_nft;
+			productReference = FD61E15AB1B08A6718D5997F2615B637 /* Pods-nft */;
 			productType = "com.apple.product-type.framework";
 		};
 		3A2F79E5D8636965302DC4F793E3BB46 /* Pods-nftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D950C0BDBD21C5370CF7EDB7B15DC74 /* Build configuration list for PBXNativeTarget "Pods-nftTests" */;
+			buildConfigurationList = F16DF2B48FBC977622EC045F83BC865C /* Build configuration list for PBXNativeTarget "Pods-nftTests" */;
 			buildPhases = (
-				BAA4860368FC8606A3FDD80A06F4D3F6 /* Headers */,
-				0F5F078AD3068BCD3A0A07A28DB00421 /* Sources */,
-				C55D73543BF224D1E443A34D829307FA /* Frameworks */,
-				B9A22D96D9BDD93C7D7201E8C42135DC /* Resources */,
+				D4EB74B11B890E96E635019E31AC4964 /* Headers */,
+				DE7C92184DBBFCDF34A8CC4542F25A60 /* Sources */,
+				E885035E91BFF0459A8F973524D84CB1 /* Frameworks */,
+				9D74E6EEBDA7BB97B6EBFDCBA5AAEFD1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C4DB67303FC8302271FEEC5B00A935C /* PBXTargetDependency */,
-				196B646B25CEBFA21C3414D668BC412A /* PBXTargetDependency */,
-				5CA8E52CA8106438901DC48DA981DFD0 /* PBXTargetDependency */,
-				2D0E88DE94AF60E0B6AC5989E318DCB2 /* PBXTargetDependency */,
-				EA77546FEC9F2E796F5B29928729CDA0 /* PBXTargetDependency */,
+				6DF4AF4A4114B11B37909460275AC372 /* PBXTargetDependency */,
 			);
 			name = "Pods-nftTests";
-			productName = "Pods-nftTests";
-			productReference = C8D804EEAF4525C8F5B8C36B4DE59E93 /* Pods_nftTests.framework */;
+			productName = Pods_nftTests;
+			productReference = C8D804EEAF4525C8F5B8C36B4DE59E93 /* Pods-nftTests */;
 			productType = "com.apple.product-type.framework";
 		};
 		7BD087A6ABFBE27EBEA14DAF99B74EA1 /* Pods-nft-nftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7517F2D30D284C521B661C95B2B4F9A /* Build configuration list for PBXNativeTarget "Pods-nft-nftUITests" */;
+			buildConfigurationList = 948E14142FB5D97A75566756059F0FDB /* Build configuration list for PBXNativeTarget "Pods-nft-nftUITests" */;
 			buildPhases = (
-				D497E33D011AD40A3196352ECF47E509 /* Headers */,
-				CEE8303079B818849FCB671025938BA2 /* Sources */,
-				BE071C5F14341A5CA1F759583379C300 /* Frameworks */,
-				52507F5A2406F36773A91EFDB7181728 /* Resources */,
+				CFEF60DD2AF8EFF9CFE8B728675D2E38 /* Headers */,
+				98800AB5370F8CC7098C7564019EEEFA /* Sources */,
+				14B38182FA42D0FA5E09E85DF9A0506A /* Frameworks */,
+				D06648D6F2E59EA02079A31C13714267 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Pods-nft-nftUITests";
-			productName = "Pods-nft-nftUITests";
-			productReference = 79E2BEA46E075F30F258CFDCB48A33C2 /* Pods_nft_nftUITests.framework */;
+			productName = Pods_nft_nftUITests;
+			productReference = 79E2BEA46E075F30F258CFDCB48A33C2 /* Pods-nft-nftUITests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -505,25 +274,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = EA7B787053DD8EF16C3B933C3FE73C86 /* Products */;
+			productRefGroup = 4BBC27280C6AB45D88D1CAB254F1C66B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */,
-				28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */,
-				8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */,
-				10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */,
 				24A4D7C6B0CE21EDDAD3E93F4E93D9EC /* Pods-nft */,
 				7BD087A6ABFBE27EBEA14DAF99B74EA1 /* Pods-nft-nftUITests */,
 				3A2F79E5D8636965302DC4F793E3BB46 /* Pods-nftTests */,
@@ -532,21 +297,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52507F5A2406F36773A91EFDB7181728 /* Resources */ = {
+		134F9AE79DEF4280BB29D87D584440F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B574026D52E5B6CB0DE9102373BBA3B /* Resources */ = {
+		9D74E6EEBDA7BB97B6EBFDCBA5AAEFD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9A22D96D9BDD93C7D7201E8C42135DC /* Resources */ = {
+		D06648D6F2E59EA02079A31C13714267 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -556,95 +321,87 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0F5F078AD3068BCD3A0A07A28DB00421 /* Sources */ = {
+		98800AB5370F8CC7098C7564019EEEFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0AA05196CF67169E813C9F4A38ED348 /* Pods-nftTests-dummy.m in Sources */,
+				C0ED9E49B74BC16F65BDFA329C4892B2 /* Pods-nft-nftUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEE8303079B818849FCB671025938BA2 /* Sources */ = {
+		DE7C92184DBBFCDF34A8CC4542F25A60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43ACC94E1B9AE3EAF3712D896AD64E06 /* Pods-nft-nftUITests-dummy.m in Sources */,
+				0FFF8DEAA43E3C9FC30E57193BD2C9F6 /* Pods-nftTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC49F0060F623B153DC58B89DF3E53E3 /* Sources */ = {
+		F4855F5AF81359BC9324EF75D9FFAB76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9895F59ACF5C41F5A37EF2FEAD9A5F5 /* Pods-nft-dummy.m in Sources */,
+				C30BE3C0FCEA1B530180B65B2AD930A1 /* Pods-nft-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		196B646B25CEBFA21C3414D668BC412A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit;
-			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
-			targetProxy = 51669BDFDA9EDA39686CFA3889E7CC05 /* PBXContainerItemProxy */;
-		};
-		2C4DB67303FC8302271FEEC5B00A935C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = 687E0EE5B2B32B6E0424D5371BB6CE32 /* PBXContainerItemProxy */;
-		};
-		2D0E88DE94AF60E0B6AC5989E318DCB2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKLoginKit;
-			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
-			targetProxy = A24452605018F8B78EFE0DA1C9E09782 /* PBXContainerItemProxy */;
-		};
-		3BB67BC79405A77F217F26A2EAEB9E60 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = 3B2F1268F8062471BCB2AB53B24CF913 /* PBXContainerItemProxy */;
-		};
-		4B078B01FC47A85EDF29B0433E81C15B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit_Basics;
-			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = DFFF1D29871E5EEE75ECD1D916783C14 /* PBXContainerItemProxy */;
-		};
-		56CFA22F9CE61860676397811D16896C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit;
-			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
-			targetProxy = 0A5B6E037E90A0390F5EB4D205ED6406 /* PBXContainerItemProxy */;
-		};
-		5CA8E52CA8106438901DC48DA981DFD0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit_Basics;
-			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = A7CA70394E2F204C4B963147C53F63F0 /* PBXContainerItemProxy */;
-		};
-		9E7C7925741D36456CDB9294E5424B51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit_Basics;
-			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = 4D113CE8AF3E48BD091D1FCCC2F68DDA /* PBXContainerItemProxy */;
-		};
-		EA77546FEC9F2E796F5B29928729CDA0 /* PBXTargetDependency */ = {
+		6DF4AF4A4114B11B37909460275AC372 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-nft";
 			target = 24A4D7C6B0CE21EDDAD3E93F4E93D9EC /* Pods-nft */;
-			targetProxy = 8199042B5E40BA1CDFF21A7FF7D1832C /* PBXContainerItemProxy */;
+			targetProxy = 00F4D35159CF683B5932047F83CA8653 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A71467E331A45CF90069F924B86CA1D /* Debug */ = {
+		36C8F972A824018F03C34BA3D025FC50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CC42709BC995FCF87C5E2AD1B810179 /* Pods-nft.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nft/Pods-nft-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nft/Pods-nft.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AF48967F2446B220A47BD33EDB3CCEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8B58CB2FC3ECC1F96BBCA17D8517809 /* Pods-nft-nftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -677,10 +434,89 @@
 			};
 			name = Debug;
 		};
-		1ECA0555EE0836E3B5FFB136EEBE1F4E /* Debug */ = {
+		733BB6256C4148EE1CF7B485536E52CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D4E2A8E60E5680196866623063E11D /* Pods-nft-nftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89A65BFF9BD8BCA11B8AC79B34C4086D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04F76F6A81C830B74530213E20A2FBB /* Pods-nftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nftTests/Pods-nftTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nftTests/Pods-nftTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -742,137 +578,12 @@
 			};
 			name = Debug;
 		};
-		2B0D14A05AD65E72DACF5872670CF31A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FD5410E811B2A4BA546F0C1911EB882 /* FBSDKCoreKit.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2CB7783736056433B0570384932995A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8110132DC70BB9625F50F72488E39BBE /* FBAEMKit.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		50C74B2D8EAD0C9E3FF9678FDF08D7FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FD5410E811B2A4BA546F0C1911EB882 /* FBSDKCoreKit.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5927F3D779097E4E6F4AA0A560D1DD84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6D2F673B9C6AD5C0D480243D2748F09 /* FBSDKCoreKit_Basics.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		74E99DA39916BC30309FE2824BB1259E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CC42709BC995FCF87C5E2AD1B810179 /* Pods-nft.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-nft/Pods-nft-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-nft/Pods-nft.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8664C36584C60BBF7B1C9F327A1C156E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C7C56822A759752A308B2D582F61595 /* FBSDKLoginKit.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8B5DA30811130B1930948C53833D5748 /* Debug */ = {
+		9154A8C0609FB7D46F16DB9BCE402234 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3665EFC4B4AB6DE11D07D9F6A17D42F5 /* Pods-nftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -905,137 +616,11 @@
 			};
 			name = Debug;
 		};
-		8EA3B8A9F9AACC917D9895B90C38DC53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8110132DC70BB9625F50F72488E39BBE /* FBAEMKit.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		98C39A683F993C69C30BCC4CDA3149BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C7C56822A759752A308B2D582F61595 /* FBSDKLoginKit.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A9C25664A41400907F356C61DD18FC3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82D4E2A8E60E5680196866623063E11D /* Pods-nft-nftUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ADDF2704BC28567DF7C3F14ACC4A3BC7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 878F233079DE75CCDC8FCC472DDED0DF /* Pods-nft.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-nft/Pods-nft-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-nft/Pods-nft.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C2280F4559419936DEFEDE03F6BE4058 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6D2F673B9C6AD5C0D480243D2748F09 /* FBSDKCoreKit_Basics.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C3D64790A0FE037697A0C2CDF06EBC03 /* Release */ = {
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1093,11 +678,12 @@
 			};
 			name = Release;
 		};
-		DF0D0D0668AF858DC103999A2114DBF3 /* Release */ = {
+		D4C686065BACDAF3FBB3E8F5AC04D410 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E04F76F6A81C830B74530213E20A2FBB /* Pods-nftTests.release.xcconfig */;
+			baseConfigurationReference = 878F233079DE75CCDC8FCC472DDED0DF /* Pods-nft.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1107,7 +693,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-nftTests/Pods-nftTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-nft/Pods-nft-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1116,7 +702,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-nftTests/Pods-nftTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-nft/Pods-nft.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1125,83 +711,46 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D950C0BDBD21C5370CF7EDB7B15DC74 /* Build configuration list for PBXNativeTarget "Pods-nftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B5DA30811130B1930948C53833D5748 /* Debug */,
-				DF0D0D0668AF858DC103999A2114DBF3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3124A5526114F6598C44A1750479E52F /* Build configuration list for PBXNativeTarget "Pods-nft" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ADDF2704BC28567DF7C3F14ACC4A3BC7 /* Debug */,
-				74E99DA39916BC30309FE2824BB1259E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4303895DE6E6EA217C0B61DB74305354 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2280F4559419936DEFEDE03F6BE4058 /* Debug */,
-				5927F3D779097E4E6F4AA0A560D1DD84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1ECA0555EE0836E3B5FFB136EEBE1F4E /* Debug */,
-				C3D64790A0FE037697A0C2CDF06EBC03 /* Release */,
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD8030EA16B045813DE76BCC6DA51EC4 /* Build configuration list for PBXAggregateTarget "FBAEMKit" */ = {
+		5AA443AEF57232B2F80F859CBEF26C85 /* Build configuration list for PBXNativeTarget "Pods-nft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CB7783736056433B0570384932995A4 /* Debug */,
-				8EA3B8A9F9AACC917D9895B90C38DC53 /* Release */,
+				D4C686065BACDAF3FBB3E8F5AC04D410 /* Debug */,
+				36C8F972A824018F03C34BA3D025FC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7517F2D30D284C521B661C95B2B4F9A /* Build configuration list for PBXNativeTarget "Pods-nft-nftUITests" */ = {
+		948E14142FB5D97A75566756059F0FDB /* Build configuration list for PBXNativeTarget "Pods-nft-nftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A71467E331A45CF90069F924B86CA1D /* Debug */,
-				A9C25664A41400907F356C61DD18FC3D /* Release */,
+				4AF48967F2446B220A47BD33EDB3CCEF /* Debug */,
+				733BB6256C4148EE1CF7B485536E52CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3B6463DD035C03CBF877F5608B01243 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit" */ = {
+		F16DF2B48FBC977622EC045F83BC865C /* Build configuration list for PBXNativeTarget "Pods-nftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B0D14A05AD65E72DACF5872670CF31A /* Debug */,
-				50C74B2D8EAD0C9E3FF9678FDF08D7FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC1AD91374501137631602F12A7C7028 /* Build configuration list for PBXAggregateTarget "FBSDKLoginKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98C39A683F993C69C30BCC4CDA3149BC /* Debug */,
-				8664C36584C60BBF7B1C9F327A1C156E /* Release */,
+				9154A8C0609FB7D46F16DB9BCE402234 /* Debug */,
+				89A65BFF9BD8BCA11B8AC79B34C4086D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

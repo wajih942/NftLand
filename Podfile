@@ -10,8 +10,6 @@ target 'nft' do
   target 'nftTests' do
     inherit! :search_paths
     # Pods for testing
-	 pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit'
  
 
   end
