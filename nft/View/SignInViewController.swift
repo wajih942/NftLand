@@ -30,7 +30,10 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func LoginButton(_ sender: Any) {
         if postRequest(email: emailTextField.text!, password: passwordTextField.text!) {
-            
+           
+        }else{
+            self.dismiss(animated: true, completion: nil)
+            TryAgainLabel.text = "Try Again"
         }
         
     }
@@ -156,6 +159,13 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                 }*/
             }
         }.resume()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignInToProfile" {
+            let destination = segue.destination as! visitProfileViewController
+            
+            destination.profileInfo = userInfo
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

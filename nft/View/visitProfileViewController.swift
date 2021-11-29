@@ -8,10 +8,15 @@
 import UIKit
 
 class visitProfileViewController: UIViewController {
-
-    
+    //struct
+    struct UserInfo{
+        let name: String?
+        let wallet_address:String?
+        let bio:String?
+        let url:String?
+    }
     //var
-    
+    var profileInfo = UserInfo(name: "", wallet_address: "", bio: "", url: "")
     var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
     
     
