@@ -29,8 +29,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func LoginButton(_ sender: Any) {
-        if !postRequest(email: emailTextField.text!, password: passwordTextField.text!) {
-            self.dismiss(animated: true, completion: nil)
+        if postRequest(email: emailTextField.text!, password: passwordTextField.text!) {
+            
         }
         
     }

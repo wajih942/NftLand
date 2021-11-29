@@ -6340,7 +6340,7 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="LoginButton:" destination="8yE-rZ-vVT" eventType="touchUpInside" id="wA6-Dz-fEM"/>
-                                                            <segue destination="doZ-bs-fAa" kind="show" id="kYH-bL-RUV"/>
+                                                            <segue destination="doZ-bs-fAa" kind="show" identifier="SignInToProfile" id="kYH-bL-RUV"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9F-wM-ixg">
