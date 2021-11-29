@@ -160,13 +160,13 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             }
         }.resume()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SignInToProfile" {
             let destination = segue.destination as! visitProfileViewController
             
             destination.profileInfo = userInfo
         }
-    }
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
