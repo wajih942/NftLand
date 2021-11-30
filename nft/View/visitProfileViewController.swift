@@ -9,16 +9,11 @@ import UIKit
 
 class visitProfileViewController: UIViewController {
     //struct
-    struct UserInfo{
-        let name: String?
-        let wallet_address:String?
-        let bio:String?
-        let url:String?
-    }
-    //var
-    var profileInfo = UserInfo(name: "", wallet_address: "", bio: "", url: "")
-    var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
+   
     
+    var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
+    var token1 = ""
+    var id1 = ""
     
     //iboutlet
     
@@ -68,6 +63,9 @@ class visitProfileViewController: UIViewController {
         if segue.identifier == "ProfileToEditSegue" {
             let destination = segue.destination as! EditProfileViewController
             AccountBrain.copyAccount(account1: destination.edit , account2: profile)
+            destination.token2 = token1
+            destination.id2 = id1
+            
         }
     }
     

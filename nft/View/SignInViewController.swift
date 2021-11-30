@@ -19,7 +19,6 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var TryAgainLabel: UILabel!
@@ -29,14 +28,19 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func LoginButton(_ sender: Any) {
-        if postRequest(email: emailTextField.text!, password: passwordTextField.text!) {
-           
-        }else{
-            self.dismiss(animated: true, completion: nil)
+     
+        postRequest(email: emailTextField.text!, password: passwordTextField.text!)
+        if info.token == nil{
             TryAgainLabel.text = "Try Again"
+            
+        }else{
+            getInfo(url: "http://localhost:3001/customers", id: info.CustomerId!, token: info.token!)
+            performSegue(withIdentifier: "SignInToProfileSegue", sender: self)
         }
         
-    }
+        
+            
+        }
     //functions
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.endEditing(true)
@@ -57,8 +61,9 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         let url:String?
     }
     //post function
-    func postRequest (email:String ,password:String) -> Bool {
-        guard let url = URL(string: "http://localhost:3001/customers/login") else { return false }
+    func postRequest (email:String ,password:String) {
+        
+        guard let url = URL(string: "http://localhost:3001/customers/login") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
        request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -73,7 +78,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         } catch let error {
             print("an error happen while parssing the body into json ",error)
         }
-        URLSession.shared.dataTask(with: request) {(data,response,error) in
+        let semaphore = DispatchSemaphore(value: 0)
+        let task =  URLSession.shared.dataTask(with: request) {(data,response,error)  in
             
             if let error = error {
                 print("an error happen",error)
@@ -83,9 +89,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             {
                 
                 self.info = self.parseJSON(customerLogin: data)!
-                if self.info.token != nil && self.info.CustomerId != nil  {
-                    self.getInfo(url: "http://localhost:3001/customers", id: self.info.CustomerId!, token: self.info.token!)
-                }
+                
                 
             }/*{
                 do {
@@ -96,14 +100,12 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                 } catch let error  {
                     print("we couldn t parse data into json ",error)
                 }
-            }*/
-        }.resume()
-        if info.token != nil && info.CustomerId != nil  {
-            return false
-        }else{
-            return true
+            }*/semaphore.signal()
         }
+        task.resume()
+        semaphore.wait()
     }
+   
     func parseJSON(customerLogin:Data) ->CustomerLogin?  {
         let decoder = JSONDecoder()
         do{
@@ -135,7 +137,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         request.httpMethod = "GET"
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
        //request.setValue("application/json", forHTTPHeaderField: "content-type")
-    URLSession.shared.dataTask(with: request) {(data,response,error) in
+        let semaphore = DispatchSemaphore(value: 0)
+      let task = URLSession.shared.dataTask(with: request) {(data,response,error) in
             
             if let error = error {
                 print("an error happen",error)
@@ -144,6 +147,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             if let data = data
             {
                 self.userInfo = self.parseJSON(userInfo: data)!
+                
                 print(self.userInfo.wallet_address!)
                 print(self.userInfo.name!)
                 print(self.userInfo.bio!)
@@ -158,15 +162,23 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                     print("we couldn t parse data into json ",error)
                 }*/
             }
-        }.resume()
+          semaphore.signal()
+        }
+        task.resume()
+        semaphore.wait()
     }
-  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SignInToProfile" {
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignInToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
             
-            destination.profileInfo = userInfo
+            destination.profile.WalletAddress = userInfo.wallet_address!
+            destination.profile.DisplayName = userInfo.name!
+            destination.profile.Bio = userInfo.bio!
+            destination.profile.CustomUrl = userInfo.url!
+            destination.token1 = info.token!
+            destination.id1 = info.CustomerId!
         }
-    }*/
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
