@@ -41,6 +41,7 @@
 		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
 		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
 		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
+		46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C8E853275632D30042BFA7 /* ApiViewController.swift */; };
 		46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC966A274B14BD00ECB59C /* SignUpViewController.swift */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
 		4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D392731393C005F0177 /* SceneDelegate.swift */; };
@@ -110,6 +111,7 @@
 		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
 		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
+		46C8E853275632D30042BFA7 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				46DC966A274B14BD00ECB59C /* SignUpViewController.swift */,
 				46072994274C8F89001C1BC3 /* EditProfileViewController.swift */,
 				46297661275442AF00535877 /* SignInViewController.swift */,
+				46C8E853275632D30042BFA7 /* ApiViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				4F1F5D302731393C005F0177 /* Sources */,
 				4F1F5D312731393C005F0177 /* Frameworks */,
 				4F1F5D322731393C005F0177 /* Resources */,
+				5FDBFFD99A9D6134B8DE09BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +348,7 @@
 				4F1F5D532731393D005F0177 /* Sources */,
 				4F1F5D542731393D005F0177 /* Frameworks */,
 				4F1F5D552731393D005F0177 /* Resources */,
+				FB21F2A35E41798E92A8E509 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,6 +475,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5FDBFFD99A9D6134B8DE09BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nft/Pods-nft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nft/Pods-nft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nft/Pods-nft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		93CF77D16B85E2C84C96990E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +512,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB21F2A35E41798E92A8E509 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nft-nftUITests/Pods-nft-nftUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -515,6 +554,7 @@
 				466C70BC2743CC6F00054E16 /* LikeBrain.swift in Sources */,
 				4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */,
 				466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */,
+				46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */,
 				466C709627439F4200054E16 /* visitProfileViewController.swift in Sources */,
 				4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */,
 				466C709E2743A9B300054E16 /* notificationClickedViewController.swift in Sources */,
