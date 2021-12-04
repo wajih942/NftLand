@@ -10,9 +10,10 @@ import FBSDKLoginKit
 
 class ApiViewController: UIViewController,LoginButtonDelegate{
 
+    @IBOutlet weak var loginButton: FBLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let token = AccessToken.current {
+        if let token = AccessToken.current ,!token.isExpired{
             let token = token.tokenString
             let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
             
