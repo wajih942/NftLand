@@ -39,8 +39,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     
     @IBAction func UpdateButton(_ sender: Any) {
         edit = Account(WalletAddress: "0000000000000000000000", DisplayName: DisplayNameTextField.text!, CustomUrl: CustomUrlSessionTextField.text!, Bio: BioTextView.text!, Portfolio: PortfolioTextField.text!, Password: PasswordTextField.text!)
-        print(token2)
-        print(id2)
+        performRequest(account: edit, token: token2, id: id2)
         
     }
     
@@ -87,7 +86,6 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
             "url": account.CustomUrl,
             "bio":account.Bio,
             "email":account.Portfolio,
-            "password":account.Password
                     ]
   do {
             request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])

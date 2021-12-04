@@ -5876,7 +5876,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="9q4-5B-p5V">
             <objects>
-                <viewController id="ct5-JN-7Dx" customClass="SignUpViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ct5-JN-7Dx" customClass="SignUpViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fsc-7A-OnM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6249,6 +6249,7 @@
                         <viewLayoutGuide key="safeArea" id="Wd7-Sd-Ebm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4Jl-xH-ewx"/>
                     <connections>
                         <outlet property="BioTextView" destination="1hW-xc-tAw" id="cYc-4T-Hv5"/>
                         <outlet property="CustomUrlTextField" destination="azD-Qo-iRF" id="5Jc-nX-MXy"/>
@@ -6265,7 +6266,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="OTq-cV-cVw">
             <objects>
-                <viewController id="8yE-rZ-vVT" customClass="SignInViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8yE-rZ-vVT" customClass="SignInViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ndV-3y-USv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6444,6 +6445,109 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-Jl-8ul">
                                                 <rect key="frame" x="0.0" y="112" width="414" height="782"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="Vkr-yE-mp8">
+                                                        <rect key="frame" x="263" y="662" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-Pp-RWs">
+                                                        <rect key="frame" x="263" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gmail" translatesAutoresizingMaskIntoConstraints="NO" id="BdA-sS-hH3">
+                                                        <rect key="frame" x="341" y="666" width="38" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utW-im-MW5">
+                                                        <rect key="frame" x="341" y="664" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram-1" translatesAutoresizingMaskIntoConstraints="NO" id="IRL-8V-FTj">
+                                                        <rect key="frame" x="107" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZA-5X-Yrf">
+                                                        <rect key="frame" x="107" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook-1" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-3A-TPy">
+                                                        <rect key="frame" x="36" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1La-KM-vIB" customClass="FBLoginButton">
+                                                        <rect key="frame" x="36" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SC5-xK-DhA">
+                                                        <rect key="frame" x="167" y="335" width="94" height="41"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99992364649999999" green="1" blue="0.99988287689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Sign in">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="8yE-rZ-vVT" kind="show" id="hqa-1P-Rvo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account ? Sign in below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhn-gw-B1H">
+                                                        <rect key="frame" x="43" y="242" width="329" height="85"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up for a free account by clicking on sign up or simply by using any account below (facebook ,apple,instagram ..)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-i1-DNm">
+                                                        <rect key="frame" x="49" y="384" width="317" height="172"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter-1" translatesAutoresizingMaskIntoConstraints="NO" id="ofe-5b-jtR">
+                                                        <rect key="frame" x="193" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEX-Tu-nFJ">
+                                                        <rect key="frame" x="194" y="666" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to NFTLand" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-1h-n1f">
+                                                        <rect key="frame" x="64" y="34" width="287" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="43"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="symbol 2" translatesAutoresizingMaskIntoConstraints="NO" id="BnR-W9-up6">
+                                                        <rect key="frame" x="140" y="98" width="226" height="195"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-mU-Pb7">
+                                                        <rect key="frame" x="155" y="579" width="104" height="41"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99992364649999999" green="1" blue="0.99988287689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="ct5-JN-7Dx" kind="show" id="Mpw-BA-PPU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="782" id="xB0-4h-uhQ"/>
@@ -6466,14 +6570,17 @@
                         <viewLayoutGuide key="safeArea" id="cuV-9V-xiz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="1La-KM-vIB" id="g6q-d1-nHv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lu-mS-gyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11045" y="-88"/>
+            <point key="canvasLocation" x="9973.9130434782619" y="-386.38392857142856"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cQ2-K2-PQR"/>
+        <segue reference="GgA-Mg-cD9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="01" width="26" height="28"/>
@@ -6501,6 +6608,7 @@
         <image name="Shape-2" width="14" height="14"/>
         <image name="activity" width="20" height="21"/>
         <image name="alice-donovan-rouse-yu68fUQDvOI-unsplash 1" width="4000" height="3000"/>
+        <image name="apple" width="512" height="512"/>
         <image name="austin-wade-X6Uj51n5CE8-unsplash 1" width="41" height="40"/>
         <image name="avatar" width="720" height="720"/>
         <image name="black" width="20" height="20"/>
@@ -6518,8 +6626,10 @@
         <image name="editcover" width="172" height="40"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="facebook" width="21" height="20"/>
+        <image name="facebook-1" width="512" height="512"/>
         <image name="fuu-j-Lo7venJ_ywM-unsplash 1" width="311" height="478"/>
         <image name="global" width="17" height="16"/>
+        <image name="gmail" width="512" height="512"/>
         <image name="green" width="20" height="20"/>
         <image name="gustavo-centurion-O6fs4ablxw8-unsplash 1" width="4000" height="3000"/>
         <image name="icon" width="64" height="64"/>
@@ -6534,6 +6644,7 @@
         <image name="img 34444" width="4000" height="3000"/>
         <image name="img 36" width="4000" height="3000"/>
         <image name="instagram" width="21" height="20"/>
+        <image name="instagram-1" width="512" height="512"/>
         <image name="jakob-owens-BqSACXqDbBU-unsplash 1" width="311" height="432"/>
         <image name="left" width="15" height="9"/>
         <image name="notification-1" width="12" height="12"/>
@@ -6549,6 +6660,7 @@
         <image name="symbol" width="848" height="512"/>
         <image name="symbol 2" width="149" height="96"/>
         <image name="twitter" width="19" height="16"/>
+        <image name="twitter-1" width="512" height="512"/>
         <image name="user" width="40" height="40"/>
         <image name="vector (Stroke)" width="24" height="16"/>
         <systemColor name="labelColor">

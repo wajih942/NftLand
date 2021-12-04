@@ -12,7 +12,7 @@ class ApiViewController: UIViewController,LoginButtonDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let token = AccessToken.current {
+        let token = AccessToken.current {
             let token = token.tokenString
             let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
             
