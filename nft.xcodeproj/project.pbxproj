@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D7D74EB9A775815F371DFBB /* Pods_nft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646278BAC6C47E46C4B99245 /* Pods_nft.framework */; };
 		46072995274C8F89001C1BC3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46072994274C8F89001C1BC3 /* EditProfileViewController.swift */; };
+		461AF54B275B3498006D4563 /* Networking .swift in Sources */ = {isa = PBXBuildFile; fileRef = 461AF54A275B3498006D4563 /* Networking .swift */; };
 		46297662275442AF00535877 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46297661275442AF00535877 /* SignInViewController.swift */; };
 		466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708A2743939200054E16 /* stepsToUploadViewController.swift */; };
 		466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708C274397BC00054E16 /* connectWalletViewController.swift */; };
@@ -79,6 +80,7 @@
 		28699C2D44F180CE14DED147 /* Pods-nft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nft.release.xcconfig"; path = "Target Support Files/Pods-nft/Pods-nft.release.xcconfig"; sourceTree = "<group>"; };
 		350B27B1E271726BFAA18A62 /* Pods_nftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46072994274C8F89001C1BC3 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		461AF54A275B3498006D4563 /* Networking .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking .swift"; sourceTree = "<group>"; };
 		46297661275442AF00535877 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		466C708A2743939200054E16 /* stepsToUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsToUploadViewController.swift; sourceTree = "<group>"; };
 		466C708C274397BC00054E16 /* connectWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectWalletViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				466C70BF2743CD6E00054E16 /* OrdersBrain.swift */,
 				466C70C12743CE3000054E16 /* BidsBrain.swift */,
 				466C70C32743CE9900054E16 /* AssetsBrain.swift */,
+				461AF54A275B3498006D4563 /* Networking .swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				4F1F5D422731393C005F0177 /* nft.xcdatamodeld in Sources */,
 				466C70982743A23500054E16 /* activityViewController.swift in Sources */,
 				466C70B02743C21400054E16 /* Bids.swift in Sources */,
+				461AF54B275B3498006D4563 /* Networking .swift in Sources */,
 				466C709327439CC200054E16 /* faqViewController.swift in Sources */,
 				466C70BE2743CCE100054E16 /* FollowerBrain.swift in Sources */,
 				46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */,
