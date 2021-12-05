@@ -18,6 +18,6 @@ target 'nft' do
     # Pods for testing
   end
  pod 'FBSDKLoginKit'
-    
+ pod 'GoogleSignIn'   
     
 end

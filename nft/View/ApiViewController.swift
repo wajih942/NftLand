@@ -24,7 +24,9 @@ class ApiViewController: UIViewController,LoginButtonDelegate{
             let token = token.tokenString
             let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
             
-            request.start()
+            request.start(completion: {
+                connection,result,error  in print("\(result)")
+            })
         } else {
            let loginButton = FBLoginButton()
            // loginButton.center = view.center
@@ -36,13 +38,15 @@ class ApiViewController: UIViewController,LoginButtonDelegate{
        
     }
     
-    
+  
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        let token = result?.token?.tokenString
+     /*   let token = result?.token?.tokenString
         let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
         
-        request.start()
-        print(result)
+        request.start(completion: {
+            connection,result,error  in print("\(result)")
+        })
+        */
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
@@ -51,7 +55,7 @@ class ApiViewController: UIViewController,LoginButtonDelegate{
 
     func loginButtonClicked() {
         let loginManager = LoginManager()
-        loginManager.logIn(permissions: ["public_profile"], from: self) { result, error in
+        loginManager.logIn(permissions: ["public_profile","email"], from: self) { result, error in
             if let error = error {
                 print("Encountered Erorr: \(error)")
             } else if let result = result, result.isCancelled {

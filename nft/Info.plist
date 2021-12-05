@@ -21,40 +21,46 @@
 			</array>
 		</dict>
 	</dict>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>2138449262970299</string>
-      </array>
-      </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>2138449262970299</string>
-    <key>FacebookClientToken</key>
-    <string>49158cb514c8d22de367ba59e1269863</string>
-    <key>FacebookDisplayName</key>
-    <string>nft</string>
-    
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-      <string>fbapi</string>
-      <string>fbapi20130214</string>
-      <string>fbapi20130410</string>
-      <string>fbapi20130702</string>
-      <string>fbapi20131010</string>
-      <string>fbapi20131219</string>
-      <string>fbapi20140410</string>
-      <string>fbapi20140116</string>
-      <string>fbapi20150313</string>
-      <string>fbapi20150629</string>
-      <string>fbapi20160328</string>
-      <string>fbauth</string>
-      <string>fb-messenger-share-api</string>
-      <string>fbauth2</string>
-      <string>fbshareextension</string>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb2138449262970299</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>2138449262970299</string>
+	<key>FacebookClientToken</key>
+	<string>4712eec627da8c8615718971f90003a3</string>
+	<key>FacebookDisplayName</key>
+	<string>Nft</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fbapi20130214</string>
+		<string>fbapi20130410</string>
+		<string>fbapi20130702</string>
+		<string>fbapi20131010</string>
+		<string>fbapi20131219</string>
+		<string>fbapi20140410</string>
+		<string>fbapi20140116</string>
+		<string>fbapi20150313</string>
+		<string>fbapi20150629</string>
+		<string>fbapi20160328</string>
+		<string>fbauth</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>BUNDLE_ID</key>
+	<string>---.nft</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.149343891384-bm2593mjqvp3af1goi98imcl6leh2d9v</string>
+	<key>CLIENT_ID</key>
+	<string>149343891384-bm2593mjqvp3af1goi98imcl6leh2d9v.apps.googleusercontent.com</string>
 </dict>
 </plist>
