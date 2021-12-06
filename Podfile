@@ -17,7 +17,9 @@ target 'nft' do
   target 'nftUITests' do
     # Pods for testing
   end
- pod 'FBSDKLoginKit'
+
  pod 'GoogleSignIn'   
-    
+  pod 'FacebookCore'
+ pod 'FacebookLogin'
+
 end
