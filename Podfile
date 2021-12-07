@@ -21,5 +21,6 @@ target 'nft' do
  pod 'GoogleSignIn'   
   pod 'FacebookCore'
  pod 'FacebookLogin'
+pod 'SideMenu'
 
 end

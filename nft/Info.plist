@@ -20,6 +20,14 @@
 				<string>com.googleusercontent.apps.149343891384-bm2593mjqvp3af1goi98imcl6leh2d9v</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>nftland</string>
+			</array>
+		</dict>
 	</array>
 	<key>CLIENT_ID</key>
 	<string>149343891384-bm2593mjqvp3af1goi98imcl6leh2d9v.apps.googleusercontent.com</string>

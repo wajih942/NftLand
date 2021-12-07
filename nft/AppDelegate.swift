@@ -4,6 +4,7 @@ import UIKit
 import CoreData
 import FacebookCore
 import GoogleSignIn
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(
@@ -14,9 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 application,
                 didFinishLaunchingWithOptions: launchOptions
             )
-
+        
             return true
         }
+    
+    
+    //twitter
+    
    
         //gmail
     func application(
@@ -35,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // If not handled by this app, return false.
       return false
     }
+    
     /*func application(
       _ application: UIApplication,
       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?

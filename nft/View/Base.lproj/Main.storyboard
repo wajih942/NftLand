@@ -2215,7 +2215,7 @@
         <!--Connect Wallet View Controller-->
         <scene sceneID="YhH-wc-HpC">
             <objects>
-                <viewController id="DFf-rP-wcL" customClass="connectWalletViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DFf-rP-wcL" customClass="connectWalletViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afb-mk-8OZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2491,13 +2491,14 @@
                         <viewLayoutGuide key="safeArea" id="njT-Rl-A0m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vMc-Qy-Aub"/>
                     <connections>
                         <outlet property="wallet1Button" destination="bBC-D9-lhL" id="QFS-U4-AiW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJt-7d-kDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4365" y="-1722"/>
+            <point key="canvasLocation" x="14883" y="-915"/>
         </scene>
         <!--Scan Qr View Controller-->
         <scene sceneID="tLT-7E-jVf">
@@ -3941,11 +3942,12 @@
                         <outlet property="BioLabel" destination="jf8-ux-VVT" id="D4E-vR-nlZ"/>
                         <outlet property="LabelName" destination="GkK-SC-PvT" id="bPK-NP-qgn"/>
                         <outlet property="UrlLabel" destination="3Nc-QL-zSx" id="bsk-GF-Xsn"/>
+                        <segue destination="DFf-rP-wcL" kind="show" identifier="profileToWalletSegue" id="pCS-Jq-DFN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfP-Ff-qtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12518.840579710146" y="-832.36607142857144"/>
+            <point key="canvasLocation" x="13530" y="-386"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="NbU-Ec-q3m">
@@ -4367,7 +4369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXF-KM-OuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13559" y="-832"/>
+            <point key="canvasLocation" x="14884" y="-11"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oc5-PJ-zzq">
@@ -6262,7 +6264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdB-U6-4ef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11443" y="-832"/>
+            <point key="canvasLocation" x="12238" y="-11"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="OTq-cV-cVw">
@@ -6396,7 +6398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTn-xk-Mea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12328.985507246378" y="-98.4375"/>
+            <point key="canvasLocation" x="12238" y="-915"/>
         </scene>
         <!--Api View Controller-->
         <scene sceneID="eQV-yI-Nzr">
@@ -6456,6 +6458,9 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="appleLogin:" destination="xlv-nh-2wI" eventType="touchUpInside" id="nAY-cS-Gdm"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gmail" translatesAutoresizingMaskIntoConstraints="NO" id="BdA-sS-hH3">
                                                         <rect key="frame" x="340" y="644" width="38" height="38"/>
@@ -6577,14 +6582,15 @@
                         <viewLayoutGuide key="safeArea" id="cuV-9V-xiz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HHj-EJ-qQD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lu-mS-gyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9973.9130434782619" y="-386.38392857142856"/>
+            <point key="canvasLocation" x="10884.057971014494" y="-386.38392857142856"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GgA-Mg-cD9"/>
+        <segue reference="cQ2-K2-PQR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="01" width="26" height="28"/>

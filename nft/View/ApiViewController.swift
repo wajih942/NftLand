@@ -9,12 +9,44 @@ import UIKit
 import FacebookCore
 import GoogleSignIn
 import FacebookLogin
-
-class ApiViewController: UIViewController  {
-
+import AuthenticationServices
+class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentationContextProviding,ASAuthorizationControllerDelegate{
+    //apple
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("failed")
+    }
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let credentials as ASAuthorizationAppleIDCredential :
+            let firstName = credentials.fullName?.givenName
+            let lastName = credentials.fullName?.familyName
+            let email = credentials.email
+            print(firstName)
+            break
+        default :
+            break
+            
+        }
+    }
+    
+    @IBAction func appleLogin(_ sender: Any) {
+        appleSignIn()
+    }
+    func appleSignIn()  {
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.fullName,.email]
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
     
     
-    //gmail
+    //google
     let signInConfig = GIDConfiguration.init(clientID: "149343891384-bm2593mjqvp3af1goi98imcl6leh2d9v.apps.googleusercontent.com")
     var emailAddress :String?
     

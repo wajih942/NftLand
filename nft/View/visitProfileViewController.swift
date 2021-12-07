@@ -6,15 +6,45 @@
 //
 
 import UIKit
+import SideMenu
+class visitProfileViewController: UIViewController,MenuControllerDelegate {
+    func didSelectMenuItem(named: String) {
+        sideMenu?.dismiss(animated: true, completion:{[weak self] in
+            if named == "Connect My Wallet"
+            {
+            
+                
+            }else if named == "Settings" {
+                
+            }else if named == "Log Out" {
+               
+            }
+        })
+    }
+    private let wallet = connectWalletViewController()
+    private let logout = SignInViewController()
 
-class visitProfileViewController: UIViewController {
     //struct
-   
+    private func addChildControllers(){
+        addChild(wallet)
+        addChild(logout)
+        view.addSubview(wallet.view)
+        view.addSubview(logout.view)
+        
+        wallet.view.frame = view.bounds
+        logout.view.frame = view.bounds
+        
+        wallet.didMove(toParent: self)
+        logout.didMove(toParent: self)
+        
+        wallet.view.isHidden = true
+        logout.view.isHidden = true
+    }
     
     var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
     var token1 = ""
     var id1 = ""
-    
+    private var  sideMenu : UISideMenuNavigationController?
     //iboutlet
     
     @IBOutlet weak var LabelName: UILabel!
@@ -34,6 +64,7 @@ class visitProfileViewController: UIViewController {
     }
     
     @IBAction func burgerButton(_ sender: Any) {
+        present(sideMenu!,animated: true)
     }
     
     @IBAction func editCoverButton(_ sender: Any) {
@@ -74,12 +105,18 @@ class visitProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let menu = MenuController(with: ["Connect My Wallet", "Settings","Log Out"])
+        menu.delegate = self
         LabelName.text = profile.DisplayName
         AddressLabel.text = profile.WalletAddress
         BioLabel.text = profile.Bio
         UrlLabel.text = profile.CustomUrl
         print(profile.DisplayName)
+        sideMenu = UISideMenuNavigationController(rootViewController: menu)
+        SideMenuManager.default.menuRightNavigationController = sideMenu
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: view)
         // Do any additional setup after loading the view.
+        
     }
     
 
