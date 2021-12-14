@@ -45,7 +45,6 @@
 		46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C8E853275632D30042BFA7 /* ApiViewController.swift */; };
 		46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC966A274B14BD00ECB59C /* SignUpViewController.swift */; };
 		46F1CFF2275F32FB001D552E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F1CFF1275F32FB001D552E /* HealthKit.framework */; };
-		46F1CFF6275F5A1C001D552E /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F1CFF5275F5A1C001D552E /* MenuController.swift */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
 		4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D392731393C005F0177 /* SceneDelegate.swift */; };
 		4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D3B2731393C005F0177 /* ViewController.swift */; };
@@ -119,7 +118,6 @@
 		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		46F1CFF0275F32FB001D552E /* nft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nft.entitlements; sourceTree = "<group>"; };
 		46F1CFF1275F32FB001D552E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		46F1CFF5275F5A1C001D552E /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F1F5D392731393C005F0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 				46072994274C8F89001C1BC3 /* EditProfileViewController.swift */,
 				46297661275442AF00535877 /* SignInViewController.swift */,
 				46C8E853275632D30042BFA7 /* ApiViewController.swift */,
-				46F1CFF5275F5A1C001D552E /* MenuController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -571,7 +568,6 @@
 				466C709627439F4200054E16 /* visitProfileViewController.swift in Sources */,
 				4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */,
 				466C709E2743A9B300054E16 /* notificationClickedViewController.swift in Sources */,
-				46F1CFF6275F5A1C001D552E /* MenuController.swift in Sources */,
 				466C70A82743BE7B00054E16 /* Followers.swift in Sources */,
 				4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */,
 				466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */,

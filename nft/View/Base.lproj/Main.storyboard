@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xlv-nh-2wI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8e4-dh-ekB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -1098,12 +1098,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478.26086956521743" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="5057" y="-335"/>
         </scene>
         <!--Upload Item View Controller-->
         <scene sceneID="7DA-Gj-ePV">
             <objects>
-                <viewController id="MF7-7T-q2D" customClass="uploadItemViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="MF7-7T-q2D" customClass="uploadItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VtX-1j-0DX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1331,7 +1331,6 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="NFTLandButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="PaZ-LB-y7f"/>
                                                             <action selector="demosButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="jyy-hy-PRN"/>
                                                         </connections>
                                                     </button>
@@ -1347,9 +1346,6 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
-                                                        <connections>
-                                                            <action selector="NFTLandButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="MuZ-N2-hSC"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzR-9s-h6g">
                                                         <rect key="frame" x="29" y="303" width="189" height="21"/>
@@ -1357,7 +1353,6 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="NFTLandButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="zjl-Br-QEQ"/>
                                                             <action selector="connectWalletButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="gME-Wu-Pca"/>
                                                         </connections>
                                                     </button>
@@ -1383,7 +1378,6 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="NFTLandButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="6vd-3I-7x8"/>
                                                             <action selector="discoverButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="MZx-Sy-aSN"/>
                                                         </connections>
                                                     </button>
@@ -1417,7 +1411,6 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="NFTLandButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="6ZO-tj-Rsr"/>
                                                             <action selector="faqButton:" destination="MF7-7T-q2D" eventType="touchUpInside" id="h4i-6l-qlb"/>
                                                         </connections>
                                                     </button>
@@ -1451,18 +1444,16 @@
                         <viewLayoutGuide key="safeArea" id="T1a-oU-16q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="discoverButton" destination="63S-7B-xYv" id="9dB-sI-iEy"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="szu-af-B1U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgD-Om-enN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486.95652173913049" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="14674" y="-273"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="wFf-60-wNq">
             <objects>
-                <viewController id="yOU-nn-m6s" customClass="addItemViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yOU-nn-m6s" customClass="addItemViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="key-kn-uda">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1660,7 +1651,7 @@
                                                             <action selector="uploadButton:" destination="yOU-nn-m6s" eventType="touchUpInside" id="d4s-mJ-ATY"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e. g. &quot;Redeemable Bitcoin Card with..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mjz-Lo-5ok">
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e. g. &quot;Redeemable Bitcoin Card with..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mjz-Lo-5ok">
                                                         <rect key="frame" x="50" y="646" width="316" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -1669,7 +1660,7 @@
                                                             <action selector="itemNameText:" destination="yOU-nn-m6s" eventType="editingDidEnd" id="RHe-FI-Ehl"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e. g. “After purchasing you will able..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-m5-sCW">
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e. g. “After purchasing you will able..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-m5-sCW">
                                                         <rect key="frame" x="56" y="749" width="301" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -1716,7 +1707,7 @@
                                                             <action selector="propertieText:" destination="yOU-nn-m6s" eventType="editingDidEnd" id="g1m-CJ-MZJ"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the price for which the item will be instantly sold" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CM7-UX-StZ">
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the price for which the item will be instantly sold" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CM7-UX-StZ">
                                                         <rect key="frame" x="23" y="1187" width="367" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -1954,15 +1945,17 @@
                         <viewLayoutGuide key="safeArea" id="OBw-9L-W11"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MCo-B5-Xek"/>
                     <connections>
-                        <outlet property="notificationButton" destination="Ujr-mR-QOs" id="JFE-oO-lF2"/>
-                        <outlet property="profileButton" destination="75v-za-5XY" id="o5e-2d-yXz"/>
-                        <outlet property="singleToMutipleLabel" destination="hv5-8M-8Td" id="GHa-hg-x9h"/>
+                        <outlet property="descriptionText" destination="cv8-m5-sCW" id="B9l-gB-yOs"/>
+                        <outlet property="itemNameText" destination="Mjz-Lo-5ok" id="uf5-iU-uPF"/>
+                        <outlet property="priceText" destination="CM7-UX-StZ" id="VmJ-7X-u6R"/>
+                        <segue destination="8e4-dh-ekB" kind="show" identifier="createToNotificationSegue" id="sR4-yr-t54"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-18-Uom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="13845" y="-767"/>
         </scene>
         <!--Preview Uploaded Item View Controller-->
         <scene sceneID="jek-Og-NBr">
@@ -2086,7 +2079,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sC-NI-Lr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2420" y="-1722"/>
+            <point key="canvasLocation" x="16326" y="1088"/>
         </scene>
         <!--Steps To Upload View Controller-->
         <scene sceneID="4Ta-jy-95g">
@@ -2274,6 +2267,9 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="returnButton:" destination="DFf-rP-wcL" eventType="touchUpInside" id="GHv-3B-HNO"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-2" translatesAutoresizingMaskIntoConstraints="NO" id="rIF-lL-0ZV">
                                                         <rect key="frame" x="54" y="134" width="69" height="68"/>
@@ -2493,17 +2489,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="vMc-Qy-Aub"/>
                     <connections>
-                        <outlet property="wallet1Button" destination="bBC-D9-lhL" id="QFS-U4-AiW"/>
+                        <segue destination="G92-Xc-lAa" kind="show" identifier="walletsToQrSegue" id="yAq-iY-LBy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJt-7d-kDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14883" y="-915"/>
+            <point key="canvasLocation" x="16048" y="-1073"/>
         </scene>
         <!--Scan Qr View Controller-->
         <scene sceneID="tLT-7E-jVf">
             <objects>
-                <viewController id="G92-Xc-lAa" customClass="scanQrViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="G92-Xc-lAa" customClass="scanQrViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YS4-yS-hIT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2594,12 +2590,35 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don’t have a wallet app?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2h-cd-GyB">
-                                                        <rect key="frame" x="111" y="670" width="193" height="21"/>
+                                                        <rect key="frame" x="112" y="716" width="193" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scan Your Address OR Copy And Paste It Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19s-aZ-3WL">
+                                                        <rect key="frame" x="88" y="588" width="240" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Copy And Paste your Private key " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iar-Jc-H5L">
+                                                        <rect key="frame" x="88" y="630" width="240" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-MI-odF">
+                                                        <rect key="frame" x="158" y="672" width="95" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="connect">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="connectWallet:" destination="G92-Xc-lAa" eventType="touchUpInside" id="UyE-m6-gQ8"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -2732,19 +2751,22 @@
                         <viewLayoutGuide key="safeArea" id="BXV-yo-mLf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cfA-Cb-d5X"/>
                     <connections>
+                        <outlet property="addressText" destination="19s-aZ-3WL" id="Wxx-Yl-112"/>
                         <outlet property="burgerButton" destination="zQy-NF-QnV" id="na1-up-WXl"/>
-                        <outlet property="connectYourWalletButton" destination="Fcj-l9-t1c" id="WBH-8M-rwj"/>
+                        <outlet property="privateKey" destination="iar-Jc-H5L" id="nD2-pB-m8h"/>
+                        <segue destination="8e4-dh-ekB" kind="show" identifier="scanToBurgerSegue" id="N3b-CU-fJh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jE-j4-QR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5348" y="-1722"/>
+            <point key="canvasLocation" x="17411.594202898552" y="-1073.4375"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="i1G-KA-Vxt">
             <objects>
-                <viewController id="Qor-lG-UC7" customClass="termsViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qor-lG-UC7" customClass="termsViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gIZ-KG-QUM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2862,6 +2884,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="button-3"/>
                                                         <connections>
                                                             <action selector="getStartedButton:" destination="Qor-lG-UC7" eventType="touchUpInside" id="nHm-MG-fTA"/>
+                                                            <segue destination="DFf-rP-wcL" kind="show" id="2xA-yS-rDs"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2932,9 +2955,6 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
-                                                        <connections>
-                                                            <action selector="NFTLand:" destination="Qor-lG-UC7" eventType="touchUpInside" id="BHl-EB-E2I"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9E-LI-fJ4">
                                                         <rect key="frame" x="29" y="471" width="357" height="36"/>
@@ -2996,18 +3016,16 @@
                         <viewLayoutGuide key="safeArea" id="4Lw-iw-r8c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="burgerButton" destination="h74-DW-9vc" id="vRY-s2-by3"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="b8a-4P-2P4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYe-Kz-KnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6383" y="-1722"/>
+            <point key="canvasLocation" x="14674" y="-1073"/>
         </scene>
         <!--Faq View Controller-->
         <scene sceneID="rlC-Hb-2aQ">
             <objects>
-                <viewController id="Yas-d2-YEz" customClass="faqViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Yas-d2-YEz" customClass="faqViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o19-d8-NqL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3460,10 +3478,11 @@
                         <viewLayoutGuide key="safeArea" id="tG3-kr-Jzb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DcV-pM-yr0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXG-uy-E0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7750.7246376811599" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="16048" y="-101"/>
         </scene>
         <!--Visit Profile View Controller-->
         <scene sceneID="rTi-80-kbO">
@@ -3503,6 +3522,9 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="burgerButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="Kt9-vJ-BlP"/>
+                                                            <segue destination="8e4-dh-ekB" kind="popoverPresentation" popoverAnchorView="jS2-Gq-DHI" id="CpL-xQ-rFk">
+                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                            </segue>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Notification" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-39-cQn">
@@ -3942,12 +3964,12 @@
                         <outlet property="BioLabel" destination="jf8-ux-VVT" id="D4E-vR-nlZ"/>
                         <outlet property="LabelName" destination="GkK-SC-PvT" id="bPK-NP-qgn"/>
                         <outlet property="UrlLabel" destination="3Nc-QL-zSx" id="bsk-GF-Xsn"/>
-                        <segue destination="DFf-rP-wcL" kind="show" identifier="profileToWalletSegue" id="pCS-Jq-DFN"/>
+                        <outlet property="coverImage" destination="FST-yF-lrZ" id="2Kx-Db-vWq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfP-Ff-qtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13530" y="-386"/>
+            <point key="canvasLocation" x="12852" y="-293"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="NbU-Ec-q3m">
@@ -4369,7 +4391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXF-KM-OuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14884" y="-11"/>
+            <point key="canvasLocation" x="13509" y="441"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oc5-PJ-zzq">
@@ -5722,7 +5744,7 @@
             <objects>
                 <viewController id="8e4-dh-ekB" customClass="notificationClickedViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p1I-1b-l1c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-By-gSg">
@@ -5758,8 +5780,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4,521 ETH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-bZ-g7h">
-                                        <rect key="frame" x="71" y="136" width="82" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 ETH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-bZ-g7h">
+                                        <rect key="frame" x="71" y="136" width="49" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -5772,8 +5794,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-dc-Pmw">
-                                        <rect key="frame" x="94" y="268" width="80" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-dc-Pmw">
+                                        <rect key="frame" x="94" y="260" width="112" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -5793,22 +5815,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manage fund on Coinbase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIH-GO-5Xf">
-                                        <rect key="frame" x="71" y="165" width="211" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect Your Wallet " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIH-GO-5Xf">
+                                        <rect key="frame" x="71" y="165" width="169" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3i-ya-zaf">
-                                        <rect key="frame" x="71" y="165" width="211" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="manageFunds:" destination="8e4-dh-ekB" eventType="touchUpInside" id="7v8-J9-orA"/>
-                                        </connections>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line4" translatesAutoresizingMaskIntoConstraints="NO" id="B36-kg-mRp">
                                         <rect key="frame" x="48" y="209" width="24" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -5841,6 +5854,7 @@
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="itemsButton:" destination="8e4-dh-ekB" eventType="touchUpInside" id="Iup-ca-UcC"/>
+                                            <segue destination="yOU-nn-m6s" kind="show" identifier="notificationToUploadSegue" id="ZhN-BZ-0wH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3au-ux-pBb">
@@ -5859,6 +5873,7 @@
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="Disconnect:" destination="8e4-dh-ekB" eventType="touchUpInside" id="tHz-Ci-kdl"/>
+                                            <segue destination="8yE-rZ-vVT" kind="show" id="7xa-tF-r0b"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -5867,14 +5882,17 @@
                         <viewLayoutGuide key="safeArea" id="bco-8J-s8a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rIZ-vi-5zt"/>
                     <connections>
+                        <outlet property="balanceLabel" destination="T3z-bZ-g7h" id="HEp-Tc-V8A"/>
                         <outlet property="userNameLabel" destination="pG5-Bc-ckW" id="STa-1D-96x"/>
                         <outlet property="walletAddressButton" destination="dTb-q1-Jbt" id="Hgq-VC-WFX"/>
+                        <outlet property="walletStateLabel" destination="dIH-GO-5Xf" id="cX4-wL-e5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJp-E9-A4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15150.72463768116" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="12818.840579710146" y="-1051.3392857142858"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="9q4-5B-p5V">
@@ -6264,7 +6282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdB-U6-4ef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12238" y="-11"/>
+            <point key="canvasLocation" x="11296" y="400"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="OTq-cV-cVw">
@@ -6398,7 +6416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTn-xk-Mea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12238" y="-915"/>
+            <point key="canvasLocation" x="11296" y="-886"/>
         </scene>
         <!--Api View Controller-->
         <scene sceneID="eQV-yI-Nzr">
@@ -6586,10 +6604,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lu-mS-gyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10884.057971014494" y="-386.38392857142856"/>
+            <point key="canvasLocation" x="10458" y="-504"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="7xa-tF-r0b"/>
+        <segue reference="N3b-CU-fJh"/>
         <segue reference="cQ2-K2-PQR"/>
     </inferredMetricsTieBreakers>
     <resources>

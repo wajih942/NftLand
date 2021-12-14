@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
+class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     //var
     var account = Account(WalletAddress: "0000000000000000000000", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
     func aaa(account : Account) {
@@ -63,8 +63,21 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
     
     @IBOutlet weak var PasswordTextField: UITextField!
     //ibactions
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            ProfileImageView.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     @IBAction func UploadButton(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc,animated: true)
     }
     
     @IBAction func AddSocialMediaAccountButton(_ sender: Any) {
@@ -136,3 +149,4 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
     */
 
 }
+

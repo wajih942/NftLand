@@ -10,12 +10,16 @@ import UIKit
 class notificationClickedViewController: UIViewController {
 
     //var
-    
-    
-    
+    var privateKey1:String?
+    var address1:String?
+    var state = "Connect To Wallet"
     
     
     //iboutlet
+    
+    @IBOutlet weak var balanceLabel: UILabel!
+    
+    @IBOutlet weak var walletStateLabel: UILabel!
     
     @IBOutlet weak var userNameLabel: UILabel!
     
@@ -41,10 +45,21 @@ class notificationClickedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        walletAddressButton.text = address1
+        walletStateLabel.text = state
+        
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "notificationToUploadSegue" {
+               let destination = segue.destination as! addItemViewController
+               
+               destination.address2 = address1
+               destination.privatekey2 = privateKey1
+               
+           }
+       }
 
     /*
     // MARK: - Navigation

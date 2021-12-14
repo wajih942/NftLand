@@ -19,7 +19,11 @@ class connectWalletViewController: UIViewController {
     
     //ibactions
     
+    @IBAction func returnButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func wallet1Button(_ sender: Any) {
+        performSegue(withIdentifier: "walletsToQrSegue", sender: self)
     }
     
     

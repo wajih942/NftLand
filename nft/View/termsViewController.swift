@@ -22,6 +22,7 @@ class termsViewController: UIViewController {
     }
     
     @IBAction func connectYourWalletButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButton(_ sender: Any) {

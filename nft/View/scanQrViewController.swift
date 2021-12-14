@@ -17,14 +17,34 @@ class scanQrViewController: UIViewController {
     //iboutlets
     
     
-
+    @IBOutlet weak var addressText: UITextField!
+    
+    @IBOutlet weak var privateKey: UITextField!
     
     //ibactions
     
+   
     @IBOutlet weak var burgerButton: UIButton!
     
+ 
+    @IBAction func connectWallet(_ sender: Any) {
+        
+        performSegue(withIdentifier: "scanToBurgerSegue", sender: self)
+        
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "scanToBurgerSegue" {
+               let destination = segue.destination as! notificationClickedViewController
+               var state = "Wallet Connectd"
+               destination.address1 = addressText.text!
+               destination.privateKey1 = privateKey.text!
+               destination.state = state
+           }
+       }
     
     @IBAction func connectYourWalletButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
