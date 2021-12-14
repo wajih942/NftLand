@@ -3144,15 +3144,6 @@
                                                         <rect key="frame" x="328" y="1132" width="35" height="10"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPu-qr-s2T">
-                                                        <rect key="frame" x="26" y="424" width="337" height="31"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain"/>
-                                                        <connections>
-                                                            <action selector="generalButton:" destination="Yas-d2-YEz" eventType="touchUpInside" id="dRj-c5-RWN"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DD-YH-uRn">
                                                         <rect key="frame" x="34" y="585" width="337" height="31"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3204,6 +3195,15 @@
                                                         <connections>
                                                             <action selector="howDoesItWorkButton:" destination="Yas-d2-YEz" eventType="touchUpInside" id="Er1-Z1-gLl"/>
                                                             <action selector="whatIsStacksDesignButton:" destination="Yas-d2-YEz" eventType="touchUpInside" id="kbZ-s0-Kow"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPu-qr-s2T">
+                                                        <rect key="frame" x="26" y="424" width="337" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="generalButton:" destination="Yas-d2-YEz" eventType="touchUpInside" id="dRj-c5-RWN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
