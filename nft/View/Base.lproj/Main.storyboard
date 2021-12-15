@@ -5742,9 +5742,9 @@
         <!--Notification Clicked View Controller-->
         <scene sceneID="j11-2g-PSy">
             <objects>
-                <viewController id="8e4-dh-ekB" customClass="notificationClickedViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8e4-dh-ekB" customClass="notificationClickedViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p1I-1b-l1c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-By-gSg">
@@ -5845,6 +5845,7 @@
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="profileButton:" destination="8e4-dh-ekB" eventType="touchUpInside" id="0qh-s3-P6G"/>
+                                            <segue destination="doZ-bs-fAa" kind="show" id="VLv-v1-KAl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3e-f9-6ba">
@@ -5874,6 +5875,15 @@
                                         <connections>
                                             <action selector="Disconnect:" destination="8e4-dh-ekB" eventType="touchUpInside" id="tHz-Ci-kdl"/>
                                             <segue destination="8yE-rZ-vVT" kind="show" id="7xa-tF-r0b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfD-5Z-8uy">
+                                        <rect key="frame" x="48" y="161" width="216" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="Qor-lG-UC7" kind="show" id="ZWX-Ov-ShR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -6608,9 +6618,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ZhN-BZ-0wH"/>
         <segue reference="7xa-tF-r0b"/>
-        <segue reference="N3b-CU-fJh"/>
-        <segue reference="cQ2-K2-PQR"/>
+        <segue reference="sR4-yr-t54"/>
+        <segue reference="VLv-v1-KAl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="01" width="26" height="28"/>

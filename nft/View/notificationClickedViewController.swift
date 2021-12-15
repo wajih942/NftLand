@@ -55,8 +55,8 @@ class notificationClickedViewController: UIViewController {
            if segue.identifier == "notificationToUploadSegue" {
                let destination = segue.destination as! addItemViewController
                
-               destination.address2 = address1
-               destination.privatekey2 = privateKey1
+               destination.address2 = address1!
+               destination.privatekey2 = privateKey1!
                
            }
        }

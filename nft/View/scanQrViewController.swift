@@ -36,7 +36,7 @@ class scanQrViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "scanToBurgerSegue" {
                let destination = segue.destination as! notificationClickedViewController
-               var state = "Wallet Connectd"
+               var state = "Wallet Connected"
                destination.address1 = addressText.text!
                destination.privateKey1 = privateKey.text!
                destination.state = state
@@ -58,7 +58,7 @@ class scanQrViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

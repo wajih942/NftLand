@@ -140,7 +140,7 @@ class addItemViewController: UIViewController {
         print(itemNameText.text!)
         print(descriptionText.text!)
         print(priceText.text!)
-        postRequest(name: itemNameText.text!, description: descriptionText.text!, price: priceText.text!, address: "", privateKey: "")
+        postRequest(name: itemNameText.text!, description: descriptionText.text!, price: priceText.text!, address: address2!, privateKey: privatekey2!)
         performSegue(withIdentifier: "createToNotificationSegue", sender: self)
     }
     
