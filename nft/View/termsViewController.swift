@@ -15,20 +15,24 @@ class termsViewController: UIViewController {
     
     //iboutlets
     
+    @IBOutlet weak var getstartedshape: UIButton!
     
     //ibactions
-
+    
+    
     @IBAction func burgerButton(_ sender: Any) {
     }
     
     @IBAction func connectYourWalletButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancelButton(_ sender: Any) {
+        performSegue(withIdentifier: "termsToProfileSegue", sender: self)
     }
     
     @IBAction func getStartedButton(_ sender: Any) {
+        performSegue(withIdentifier: "termsToQrSegue", sender: self)
     }
     
     @IBAction func NFTLandButton(_ sender: Any) {
@@ -38,7 +42,7 @@ class termsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getstartedshape.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     

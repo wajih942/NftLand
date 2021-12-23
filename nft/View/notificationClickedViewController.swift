@@ -28,6 +28,13 @@ class notificationClickedViewController: UIViewController {
     
     //ibactions
     
+    @IBAction func ConnectwalletButton(_ sender: Any) {
+        performSegue(withIdentifier: "functionalitiesToTermsSegue", sender: self)
+    }
+    @IBAction func returnButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func manageFunds(_ sender: Any) {
     }
     
@@ -48,8 +55,8 @@ class notificationClickedViewController: UIViewController {
         walletAddressButton.text = address1
         walletStateLabel.text = state
         
-        // Do any additional setup after loading the view.
-    }
+        
+        }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "notificationToUploadSegue" {

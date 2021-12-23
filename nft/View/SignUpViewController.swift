@@ -49,8 +49,11 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
     }
     
     
+    
     //iboutlets
     
+    
+    @IBOutlet weak var signupshape: UIButton!
     @IBOutlet weak var ProfileImageView: UIImageView!
     
     @IBOutlet weak var DisplayNameTextField: UITextField!
@@ -91,6 +94,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
         print(PasswordTextField.text!)
         account = Account(WalletAddress: "0000000000000000000000", DisplayName: DisplayNameTextField.text!, CustomUrl: CustomUrlTextField.text!, Bio: BioTextView.text!, Portfolio: PortfolioTextField.text!, Password: PasswordTextField.text!)
         aaa(account: account)
+        performSegue(withIdentifier: "signupToProfileSegue", sender: self)
     }
     
     @IBAction func ClearAllButton(_ sender: Any) {
@@ -133,6 +137,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
         PortfolioTextField.delegate = self
         PasswordTextField.delegate = self
         BioTextView.delegate = self
+        signupshape.layer.cornerRadius = 20
         
         // Do any additional setup after loading the view.
     }

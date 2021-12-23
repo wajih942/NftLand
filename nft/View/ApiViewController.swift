@@ -11,6 +11,38 @@ import GoogleSignIn
 import FacebookLogin
 import AuthenticationServices
 class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentationContextProviding,ASAuthorizationControllerDelegate{
+    //vars
+    
+    
+    
+    
+    
+    //ibactions
+    
+    
+    @IBAction func signinbutton(_ sender: Any) {
+        
+        performSegue(withIdentifier: "welcomeToSigninSegue", sender: self)
+    }
+    
+    
+    @IBAction func signupbutton(_ sender: Any) {
+        performSegue(withIdentifier: "welcomeToSignupSegue", sender: self)
+    }
+    
+    //iboutlets
+    
+    
+    
+    
+    
+    //functions
+
+
+    
+    
+    
+    
     //apple
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return view.window!
@@ -83,6 +115,8 @@ class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
      /* if let token = AccessToken.current ,!token.isExpired{
             let token = token.tokenString
             let request = FacebookCore.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
@@ -99,7 +133,7 @@ class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentatio
         }
         
         */
-       
+        
     }
     
 

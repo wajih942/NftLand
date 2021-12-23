@@ -16,6 +16,9 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     //iboutlets
     
+    @IBOutlet weak var loginbuttonshape: UIButton!
+    
+    @IBOutlet weak var forgetpasswordbuttonshape: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -42,6 +45,12 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             
         }
     //functions
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
@@ -183,6 +192,9 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        viewWillDisappear(true)
+        loginbuttonshape.layer.cornerRadius = 20
+        forgetpasswordbuttonshape.layer.cornerRadius = 20
         
 
         // Do any additional setup after loading the view.

@@ -36,7 +36,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     }
     
     @IBAction func burgerButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "profileToFunctionalitiesSegue", sender: self)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
@@ -92,6 +92,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         AddressLabel.text = profile.WalletAddress
         BioLabel.text = profile.Bio
         UrlLabel.text = profile.CustomUrl
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
         // Do any additional setup after loading the view.
         

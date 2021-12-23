@@ -27,7 +27,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     
     //ibactions
     @IBAction func BackToProfileButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func UploadButton(_ sender: Any) {

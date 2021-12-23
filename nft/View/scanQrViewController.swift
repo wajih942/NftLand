@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import AVFoundation
 
-class scanQrViewController: UIViewController {
+class scanQrViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
 
     
     //var
-    
+    var captureSession = AVCaptureSession()
+    var videoPreviewLayer : AVCaptureVideoPreviewLayer?
+    var qrcodeFrameView : UIView?
     
     
     //iboutlets
     
+    @IBOutlet weak var nextshape: UIButton!
     
     @IBOutlet weak var addressText: UITextField!
     
@@ -23,16 +27,14 @@ class scanQrViewController: UIViewController {
     
     //ibactions
     
-   
+    @IBAction func nextButton(_ sender: Any) {
+        print(addressText.text!)
+    }
+    
     @IBOutlet weak var burgerButton: UIButton!
     
  
-    @IBAction func connectWallet(_ sender: Any) {
-        
-        performSegue(withIdentifier: "scanToBurgerSegue", sender: self)
-        
-        
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "scanToBurgerSegue" {
                let destination = segue.destination as! notificationClickedViewController
@@ -44,7 +46,7 @@ class scanQrViewController: UIViewController {
        }
     
     @IBAction func connectYourWalletButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     
@@ -56,10 +58,82 @@ class scanQrViewController: UIViewController {
     @IBAction func infoButton(_ sender: Any) {
     }
     
+    
+    
+    
+    //functions
+    /*func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+            // Check if the metadataObjects array is not nil and it contains at least one object.
+            if metadataObjects.count == 0 {
+                qrCodeFrameView?.frame = CGRect.zero
+                messageLabel.text = "No QR code is detected"
+                return
+            }
+            
+            // Get the metadata object.
+            let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+            
+            if supportedCodeTypes.contains(metadataObj.type) {
+                // If the found metadata is equal to the QR code metadata (or barcode) then update the status label's text and set the bounds
+                let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
+                qrCodeFrameView?.frame = barCodeObject!.bounds
+                
+                if metadataObj.stringValue != nil {
+                    launchApp(decodedURL: metadataObj.stringValue!)
+                    messageLabel.text = metadataObj.stringValue
+                }
+            }
+        }*/
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextshape.layer.cornerRadius = 15
+        /*
         
-        // Do any additional setup after loading the view.
+        //get the back facing camera for capturing the videos
+        guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+            print("Failed to get the camera device")
+            return
+        }
+        
+        do{
+            //get instance of the avcapturedeviceinput class using the previous device object
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            //set the input device on  the capture session
+            captureSession.addInput(input)
+            
+            //initialize a avcapturemetadata output object and set it as the output device to the capture session
+            let captureMetaDataOutput = AVCaptureMetadataOutput()
+            captureSession.addOutput(captureMetaDataOutput)
+            //set delegate and use the default dispatch queu to execute the call back
+            captureMetaDataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            captureMetaDataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+            
+            
+            //INITIALIZE the video preview layer and add it as a sublayer to the viewPreview view s layer
+            
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            videoPreviewLayer?.frame = view.layer.bounds
+            view.layer.addSublayer(videoPreviewLayer!)
+            
+            //start video capture
+            captureSession.startRunning()
+            //Move the messsage label and top bar to front
+            //view.bringSubviewToFront(messageLabel)
+            //view.bringSubviewToFront(topbar)
+            
+            
+        }catch{
+            //if an error ocurrs ,simply print it out and don t continue anymore
+            print(error)
+            return
+        }*/
+        
     }
     
 
