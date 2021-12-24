@@ -21,6 +21,7 @@ class termsViewController: UIViewController {
     
     
     @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "termsToFunctionalitiesSegue", sender: self)
     }
     
     @IBAction func connectYourWalletButton(_ sender: Any) {

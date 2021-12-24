@@ -10,9 +10,8 @@ import UIKit
 class notificationClickedViewController: UIViewController {
 
     //var
-    var privateKey1:String?
-    var address1:String?
-    var state = "Connect To Wallet"
+    let defaults = UserDefaults.standard
+    
     
     
     //iboutlet
@@ -39,9 +38,11 @@ class notificationClickedViewController: UIViewController {
     }
     
     @IBAction func profileButton(_ sender: Any) {
+        performSegue(withIdentifier: "functionalitiesToProfileSegue", sender: self)
     }
     
     @IBAction func itemsButton(_ sender: Any) {
+        performSegue(withIdentifier: "functionalitiesToCreateSegue", sender: self)
     }
     
     @IBAction func darkThemeButton(_ sender: Any) {
@@ -52,21 +53,16 @@ class notificationClickedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        walletAddressButton.text = address1
-        walletStateLabel.text = state
+        if let info =  defaults.array(forKey: "info") as? [String]{
+            balanceLabel.text = "get req"
+            walletAddressButton.text = info[0]
+            walletStateLabel.text = "wallet connected"
+        }
         
         
         }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "notificationToUploadSegue" {
-               let destination = segue.destination as! addItemViewController
-               
-               destination.address2 = address1!
-               destination.privatekey2 = privateKey1!
-               
-           }
-       }
+    
 
     /*
     // MARK: - Navigation

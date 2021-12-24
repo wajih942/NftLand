@@ -15,7 +15,8 @@ class scanQrViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
     var captureSession = AVCaptureSession()
     var videoPreviewLayer : AVCaptureVideoPreviewLayer?
     var qrcodeFrameView : UIView?
-    
+    var walletinfo = ["wallet address", "private key"]//[String]()
+    let defaults = UserDefaults.standard
     
     //iboutlets
     
@@ -28,22 +29,16 @@ class scanQrViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
     //ibactions
     
     @IBAction func nextButton(_ sender: Any) {
-        print(addressText.text!)
+        walletinfo[0] = addressText.text!
+        defaults.set(walletinfo,forKey: "info")
+        performSegue(withIdentifier: "scanToPrivateSegue", sender: self)
+        
     }
     
-    @IBOutlet weak var burgerButton: UIButton!
     
- 
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "scanToBurgerSegue" {
-               let destination = segue.destination as! notificationClickedViewController
-               var state = "Wallet Connected"
-               destination.address1 = addressText.text!
-               destination.privateKey1 = privateKey.text!
-               destination.state = state
-           }
-       }
+    @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "scanToFunctionalitiesSegue", sender: self)
+    }
     
     @IBAction func connectYourWalletButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
@@ -51,6 +46,7 @@ class scanQrViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
     
     
     @IBAction func qrCodeButton(_ sender: Any) {
+        
     }
     
     @IBAction func NFTLand(_ sender: Any) {

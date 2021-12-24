@@ -7,15 +7,19 @@
 
 import UIKit
 
-class addItemViewController: UIViewController {
+class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    
+    
     //var
-    var info = mintInfo(url: "", hash: "")
+    let datePicker = UIDatePicker()
+    var item = Item(itemName: "", description: "", details:  [""], instantSalePrice: "", auctionEntrancePrice: "", instantSale: false, auctionSale: false, time: "")
+   /* var info = mintInfo(url: "", hash: "")
     var privatekey2 : String?
     var address2 : String?
-    
+    */
     //functions
-    
+    /*
     func postRequest (name:String ,description:String ,price:String,address:String,privateKey:String) {
         
         guard let url = URL(string: "http://localhost:3001/upload") else { return }
@@ -79,82 +83,156 @@ class addItemViewController: UIViewController {
         let url:String?
         let hash:String?
     }
+    */
+    //@IBOutlet weak var singleToMutipleLabel: UILabel!
     
-    @IBOutlet weak var singleToMutipleLabel: UILabel!
     
-    @IBOutlet weak var itemNameText: UITextField!
-    //ibactions
+    //iboutlets
+    
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var setTime: UITextField!
+    @IBOutlet weak var instantsaleswitch: UISwitch!
+    @IBOutlet weak var auctionswitch: UISwitch!
+    @IBOutlet weak var createshape: UIButton!
     @IBOutlet weak var descriptionText: UITextField!
+    @IBOutlet weak var sizetext: UITextField!
+    @IBOutlet weak var itemNameText: UITextField!
+  
+    @IBOutlet weak var propritietext: UITextField!
     
-    @IBOutlet weak var priceText: UITextField!
+    @IBOutlet weak var auctionPricetext: UITextField!
+    
+    @IBOutlet weak var instantsalePrice: UITextField!
     //ibactions
     @IBAction func notificationButton(_ sender: Any) {
     }
+    @IBAction func CreateItemButton(_ sender: Any) {
+        item = Item(itemName: itemNameText.text!, description: descriptionText.text!, details: [sizetext.text!,propritietext.text!], instantSalePrice: instantsalePrice.text!, auctionEntrancePrice: auctionPricetext.text!, instantSale: instantsaleswitch.isOn, auctionSale:auctionswitch.isOn,time: setTime.text!)
+        print(item)
+        performSegue(withIdentifier: "createToPreview", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createToPreview" {
+            let destination = segue.destination as! previewUploadedItemViewController
+            destination.item2 = item
+            destination.itemImage2 = itemImage.image
+        }
+    }
     
-    
+    @IBAction func uploadItemButton(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc,animated: true)
+    }
     @IBAction func profileButton(_ sender: Any) {
     }
     
     @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "createToFunctionalitiesSegue", sender: self)
     }
     
     
     @IBAction func switchToMultipleButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func uploadButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func itemNameText(_ sender: Any) {
-    }
-    
-    @IBAction func descriptionText(_ sender: Any) {
-    }
-    
-    
-    @IBAction func royaltiesButton(_ sender: Any) {
-    }
-    
-    @IBAction func sizeText(_ sender: Any) {
+    @IBAction func auctionSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            instantsaleswitch.isEnabled = false
+            instantsalePrice.isEnabled = false
+        }else{
+            instantsaleswitch.isEnabled = true
+            instantsalePrice.isEnabled = true
+        }
     }
     
     
-    @IBAction func propertieText(_ sender: Any) {
+    @IBAction func instantSaleSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            auctionswitch.isEnabled = false
+            auctionPricetext.isEnabled = false
+        }else{
+            auctionswitch.isEnabled = true
+            auctionPricetext.isEnabled = true
+        }
     }
     
-    
-    @IBAction func saleSwitch(_ sender: Any) {
-    }
-    
-    @IBAction func instantSaleSwitch(_ sender: Any) {
-    }
-    
-    @IBAction func unlockOncePurchasedSwitch(_ sender: Any) {
-    }
-    
-    @IBAction func createCollection(_ sender: Any) {
-    }
-    
-    @IBAction func createItem(_ sender: Any) {
-        print(itemNameText.text!)
-        print(descriptionText.text!)
-        print(priceText.text!)
-        postRequest(name: itemNameText.text!, description: descriptionText.text!, price: priceText.text!, address: address2!, privateKey: privatekey2!)
-        performSegue(withIdentifier: "createToNotificationSegue", sender: self)
-    }
     
     @IBAction func NFTLandButton(_ sender: Any) {
     }
     
     @IBAction func infoButton(_ sender: Any) {
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        itemNameText.endEditing(true)
+        descriptionText.endEditing(true)
+        sizetext.endEditing(true)
+        propritietext.endEditing(true)
+        auctionPricetext.endEditing(true)
+        instantsalePrice.endEditing(true)
+        setTime.endEditing(true)
+        
+        return true
+    }
+    //functions
+    func createDatePicker()  {
+        //toolbar
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        //barButton
+        let donebtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(datePickerValueChanged))
+        toolBar.setItems([donebtn], animated: true)
+        //style
+        datePicker.frame.size = CGSize(width: 0, height: 250)
+        //assign toolbar
+        setTime.inputAccessoryView = toolBar
+        
+        //assign date picker to the text field
+        setTime.inputView = datePicker
+        
+        //date picker mode
+        datePicker.datePickerMode = .dateAndTime
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            itemImage.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createshape.layer.cornerRadius = 20
+        instantsaleswitch.isOn = false
+        auctionswitch.isOn = false
+        
+        itemNameText.delegate = self
+        descriptionText.delegate = self
+        sizetext.delegate = self
+        propritietext.delegate = self
+        instantsalePrice.delegate = self
+        auctionPricetext.delegate = self
+        setTime.delegate = self
+        createDatePicker()
+      
         
         // Do any additional setup after loading the view.
     }
-    
+    @objc func datePickerValueChanged(){
+        // formater
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        
+        setTime.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+        
+    }
 
 }

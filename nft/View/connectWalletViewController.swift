@@ -10,42 +10,36 @@ import UIKit
 class connectWalletViewController: UIViewController {
 
     //var
-    
-    
+    let defaults = UserDefaults.standard
+    var walletinfo = ["wallet address", "private key"]
     //iboutlets
     
+    @IBOutlet weak var connectShape: UIButton!
     
+    @IBOutlet weak var privateKeyText: UITextField!
     
     
     //ibactions
+  
+    @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "privateToFunctionalitiesSegue", sender: self)
+    }
     
     @IBAction func returnButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
-    @IBAction func wallet1Button(_ sender: Any) {
-        performSegue(withIdentifier: "walletsToQrSegue", sender: self)
-    }
-    
-    
-    @IBAction func wallet2Button(_ sender: Any) {
-    }
-    
-    
-    @IBAction func wallet3Button(_ sender: Any) {
+    @IBAction func connectButton(_ sender: Any) {
+        if let info =  defaults.array(forKey: "info") as? [String]{
+            walletinfo[0] = info[0]
+            walletinfo[1] = privateKeyText.text!
+            defaults.set(walletinfo,forKey: "info")
+        }
+        performSegue(withIdentifier: "privateToFunctionalitiesSegue", sender: self)
     }
     
-    @IBAction func wallet4Button(_ sender: Any) {
-    }
-    
-    @IBAction func NFTLandButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func infoButton(_ sender: Any) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        connectShape.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
