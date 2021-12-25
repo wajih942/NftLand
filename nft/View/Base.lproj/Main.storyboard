@@ -1976,7 +1976,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sC-NI-Lr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16692.753623188408" y="-186.16071428571428"/>
+            <point key="canvasLocation" x="16987" y="-187"/>
         </scene>
         <!--Steps To Upload View Controller-->
         <scene sceneID="4Ta-jy-95g">
@@ -2100,7 +2100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Bo-n7-NCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3379.7101449275365" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="16291" y="-188"/>
         </scene>
         <!--Connect Wallet View Controller-->
         <scene sceneID="YhH-wc-HpC">
