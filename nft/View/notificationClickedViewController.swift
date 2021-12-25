@@ -42,7 +42,7 @@ class notificationClickedViewController: UIViewController {
     }
     
     @IBAction func itemsButton(_ sender: Any) {
-        performSegue(withIdentifier: "functionalitiesToCreateSegue", sender: self)
+        performSegue(withIdentifier: "functionalitiesToStepsSegue", sender: self)
     }
     
     @IBAction func darkThemeButton(_ sender: Any) {

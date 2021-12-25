@@ -36,6 +36,7 @@ class previewUploadedItemViewController: UIViewController {
    
     
     @IBAction func mintButton(_ sender: Any) {
+        performSegue(withIdentifier: "perviewToStepsSegue", sender: self)
     }
     
     override func viewDidLoad() {
@@ -48,7 +49,14 @@ class previewUploadedItemViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "perviewToStepsSegue" {
+            let destination = segue.destination as! stepsToUploadViewController
+            destination.state[0] = false
+            destination.state[1] = true
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

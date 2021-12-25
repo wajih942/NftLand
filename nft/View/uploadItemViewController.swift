@@ -13,6 +13,9 @@ class uploadItemViewController: UIViewController {
     //var
     
     
+    @IBOutlet weak var cancelshape: UIButton!
+    
+    @IBOutlet weak var confirmShape: UIButton!
     
     
     
@@ -20,61 +23,41 @@ class uploadItemViewController: UIViewController {
     
     //iboutlets
     
+    @IBOutlet weak var gasfeeText: UILabel!
     
+    @IBOutlet weak var gaspricetext: UITextField!
+    
+    @IBOutlet weak var gaslimitprice: UITextField!
     //ibactions
     
-    
-    @IBAction func notificationButton(_ sender: Any) {
-    }
-    
-    @IBAction func profileButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func burgerButton(_ sender: Any) {
+    @IBAction func confirmButton(_ sender: Any) {
+        performSegue(withIdentifier: "mintToStepsSegue", sender: self)
+        print(gaspricetext.text!)
+        print(gaslimitprice.text!)
     }
     
     
-    
-    @IBAction func backToHomeButton(_ sender: Any) {
+    @IBAction func cancelButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
     
-    
-    @IBAction func createSingleButton(_ sender: Any) {
-    }
-    
-    
-    
-    @IBAction func createMultipleButton(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mintToStepsSegue" {
+            let destination = segue.destination as! stepsToUploadViewController
+            destination.state[0] = false
+            destination.state[1] = false
+            destination.state[2] = true
+            
+        }
     }
     
     
     
-    @IBAction func NFTLandButton(_ sender: Any) {
-    }
     
-    
-    @IBAction func connectWalletButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func discoverButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func faqButton(_ sender: Any) {
-    }
-    
-    @IBAction func infoButton(_ sender: Any) {
-    }
-    
-    @IBAction func demosButton(_ sender: Any) {
-    }
-    @IBAction func supportButton(_ sender: Any) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        cancelshape.layer.cornerRadius = 20
+        confirmShape.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
@@ -88,5 +71,6 @@ class uploadItemViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }
