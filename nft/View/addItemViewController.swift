@@ -110,7 +110,10 @@ class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     
     @IBAction func CreateItemButton(_ sender: Any) {
         item = Item(itemName: itemNameText.text!, description: descriptionText.text!, details: [sizetext.text!,propritietext.text!], instantSalePrice: instantsalePrice.text!, auctionEntrancePrice: auctionPricetext.text!, instantSale: instantsaleswitch.isOn, auctionSale:auctionswitch.isOn,time: setTime.text!)
-        performSegue(withIdentifier: "createToPreview", sender: self)
+        if AssetsBrain.inputValidation(item: item,image: itemImage.image,self: self) {
+            performSegue(withIdentifier: "createToPreview", sender: self)
+        }
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "createToPreview" {

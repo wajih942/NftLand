@@ -7,6 +7,76 @@
 import UIKit
 import Foundation
 struct AssetsBrain {
+    
+    static func inputValidation(item:Item,image:UIImage?,self:UIViewController) -> Bool {
+        var message = ""
+        let SalePrice = (item.instantSalePrice as NSString).floatValue
+        let auctionPrice = (item.auctionEntrancePrice as NSString).floatValue
+        let date = Date()
+        
+
+        
+
+        
+        print(date)
+        if item.itemName.count > 2 && item.description.count > 16 && item.details[0].count > 0 && item.details[0].count > 0 && ( ( item.instantSale && SalePrice > 0) || (item.auctionSale && auctionPrice > 0)) && AssetsBrain.unwrapImage(image: image) {
+            return true
+        }
+        if !AssetsBrain.unwrapImage(image: image) {
+            message = message + "Please upload the item image"
+        }
+        if item.itemName.count <= 2 {
+            message = message + "ItemName should contain at least 3 caractere"
+        }
+        if item.description.count <= 16 {
+            message = message + " Description should contain at least 5 words"
+        }
+        if item.details[0].count <= 0 {
+            message = message + " Size should not be empty"
+        }
+        if item.details[1].count <= 0 {
+            message = message + " Proprities should not be empty"
+        }
+        if item.instantSale {
+            if item.instantSalePrice.count == 0 {
+                message = message + " Enter the price"
+            }else{
+                if SalePrice == 0 {
+                    message = message + " you can not list items for free"
+                }
+            }
+        }
+        if item.auctionSale {
+            if item.auctionEntrancePrice.count == 0 {
+                message = message + " Enter the price"
+            }else{
+                if auctionPrice == 0 {
+                    message = message + " you can not list items for free"
+                }
+            }
+        }
+        let alert = UIAlertController(title: "Input validation warning", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok" , style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert,animated: true)
+        
+        return false
+    }
+    
+    static func unwrapImage(image : UIImage?) -> Bool {
+        if  image != nil {
+            return true
+        }
+        return false
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     func uploadImage(item: Item,paramName: String, fileName: String, image: UIImage) {
         let url = URL(string: "http://localhost:3001/upload")
         
