@@ -1530,11 +1530,12 @@
                         <outlet property="sizetext" destination="jDW-vA-jJb" id="agk-Rh-6ph"/>
                         <segue destination="8e4-dh-ekB" kind="show" identifier="createToFunctionalitiesSegue" id="cAl-Kk-NSb"/>
                         <segue destination="AWk-1T-aK1" kind="show" identifier="createToPreview" id="Re1-Db-Kbj"/>
+                        <segue destination="vvU-pm-Mvr" kind="show" identifier="createToNotifSegue" id="ckF-b3-RQi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-18-Uom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16030" y="-188"/>
+            <point key="canvasLocation" x="14961" y="-119"/>
         </scene>
         <!--Preview Uploaded Item View Controller-->
         <scene sceneID="jek-Og-NBr">
@@ -3019,10 +3020,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="DcV-pM-yr0"/>
+                    <connections>
+                        <segue destination="8e4-dh-ekB" kind="show" identifier="freqToFunctionSegue" id="YC7-cs-eL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXG-uy-E0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14281" y="1643"/>
+            <point key="canvasLocation" x="13839" y="1692"/>
         </scene>
         <!--Visit Profile View Controller-->
         <scene sceneID="rTi-80-kbO">
@@ -3503,6 +3507,7 @@
                         <outlet property="UrlLabel" destination="3Nc-QL-zSx" id="bsk-GF-Xsn"/>
                         <outlet property="coverImage" destination="FST-yF-lrZ" id="2Kx-Db-vWq"/>
                         <segue destination="8e4-dh-ekB" kind="show" identifier="profileToFunctionalitiesSegue" id="4U1-Fc-Yy0"/>
+                        <segue destination="vvU-pm-Mvr" kind="show" identifier="profileToNotifSegue" id="e46-Wr-Mx6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfP-Ff-qtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3546,6 +3551,7 @@
                                                             <backgroundConfiguration key="background"/>
                                                         </buttonConfiguration>
                                                         <connections>
+                                                            <action selector="BurgerButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="iSa-4t-HHS"/>
                                                             <action selector="burgerButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="IaX-9D-UNc"/>
                                                         </connections>
                                                     </button>
@@ -3561,6 +3567,7 @@
                                                             <backgroundConfiguration key="background"/>
                                                         </buttonConfiguration>
                                                         <connections>
+                                                            <action selector="notificationButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="GHV-9y-9MG"/>
                                                             <action selector="notificationButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="sKY-Ee-dvD"/>
                                                         </connections>
                                                     </button>
@@ -3925,16 +3932,18 @@
                         <outlet property="DisplayNameTextField" destination="dQt-Mn-gY5" id="YWq-54-zIX"/>
                         <outlet property="PasswordTextField" destination="5LQ-YS-Pki" id="bof-3T-pFC"/>
                         <outlet property="PortfolioTextField" destination="RPf-EC-SrG" id="FFa-YM-69S"/>
+                        <segue destination="vvU-pm-Mvr" kind="show" identifier="EditToNotifSegue" id="D1f-Rw-LLo"/>
+                        <segue destination="8e4-dh-ekB" kind="show" identifier="editToFunctionSegue" id="fv3-Lm-v3Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXF-KM-OuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13577" y="941"/>
+            <point key="canvasLocation" x="12267" y="1643"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oc5-PJ-zzq">
             <objects>
-                <viewController id="vvU-pm-Mvr" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="vvU-pm-Mvr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="10i-tn-kUg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4001,10 +4010,11 @@
                         <viewLayoutGuide key="safeArea" id="KPg-2g-xe1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fso-4Z-Z7Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwk-Zo-VUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9873.9130434782619" y="-1722.3214285714284"/>
+            <point key="canvasLocation" x="14759" y="850"/>
         </scene>
         <!--Activity View Controller-->
         <scene sceneID="yI6-yC-yf6">
@@ -4323,10 +4333,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IFG-St-lSW"/>
+                    <connections>
+                        <segue destination="8e4-dh-ekB" kind="show" identifier="activityTofunctionSegue" id="zwX-zL-pT6"/>
+                        <segue destination="vvU-pm-Mvr" kind="show" identifier="activityToNotificationSegue" id="DU6-pn-lwZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdH-Ty-UCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18441" y="1683"/>
+            <point key="canvasLocation" x="15017" y="1721"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ehd-rQ-CLN">
@@ -5458,7 +5472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJp-E9-A4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14586.956521739132" y="-888.61607142857144"/>
+            <point key="canvasLocation" x="13700" y="850"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="9q4-5B-p5V">
@@ -5803,7 +5817,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdB-U6-4ef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12217" y="441"/>
+            <point key="canvasLocation" x="12216" y="728"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="OTq-cV-cVw">
@@ -6078,21 +6092,7 @@
                         <viewLayoutGuide key="safeArea" id="cuV-9V-xiz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="NFT Land" id="HHj-EJ-qQD">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="8n3-MY-Ipd">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LZb-8L-f8H">
-                                <rect key="frame" x="338" y="0.0" width="56" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Line">
-                                    <backgroundConfiguration key="background"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="burgerButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="FaR-Jc-LqW"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="NFT Land" id="HHj-EJ-qQD"/>
                     <connections>
                         <segue destination="8yE-rZ-vVT" kind="show" identifier="welcomeToSigninSegue" id="sOy-eF-HCH"/>
                         <segue destination="ct5-JN-7Dx" kind="show" identifier="welcomeToSignupSegue" id="eyQ-Qv-qSK"/>
@@ -6286,7 +6286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zJ-VB-Lhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17175" y="840"/>
+            <point key="canvasLocation" x="18441" y="605"/>
         </scene>
         <!--Market Sale View Controller-->
         <scene sceneID="8Cv-r0-Up6">
@@ -6456,13 +6456,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEd-Yz-huB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14796" y="1002"/>
+            <point key="canvasLocation" x="16029" y="1683"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cAl-Kk-NSb"/>
+        <segue reference="ckF-b3-RQi"/>
         <segue reference="5fh-RX-nbn"/>
-        <segue reference="Ted-LO-v6G"/>
+        <segue reference="gTW-1N-nID"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

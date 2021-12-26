@@ -29,6 +29,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     //ibaction
     
     @IBAction func notificationButton(_ sender: Any) {
+        performSegue(withIdentifier: "profileToNotifSegue", sender: self)
     }
     
     

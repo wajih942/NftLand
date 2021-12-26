@@ -43,6 +43,7 @@
 		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
 		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
 		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
+		469E3E3B27787F2800BC2399 /* UploadBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E3E3A27787F2800BC2399 /* UploadBrain.swift */; };
 		46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C8E853275632D30042BFA7 /* ApiViewController.swift */; };
 		46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC966A274B14BD00ECB59C /* SignUpViewController.swift */; };
 		46F1CFF2275F32FB001D552E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F1CFF1275F32FB001D552E /* HealthKit.framework */; };
@@ -116,6 +117,7 @@
 		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
 		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
+		469E3E3A27787F2800BC2399 /* UploadBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadBrain.swift; sourceTree = "<group>"; };
 		46C8E853275632D30042BFA7 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		46F1CFF0275F32FB001D552E /* nft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nft.entitlements; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				466C70C12743CE3000054E16 /* BidsBrain.swift */,
 				466C70C32743CE9900054E16 /* AssetsBrain.swift */,
 				461AF54A275B3498006D4563 /* Networking .swift */,
+				469E3E3A27787F2800BC2399 /* UploadBrain.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				466C70C22743CE3000054E16 /* BidsBrain.swift in Sources */,
 				4F1F5D422731393C005F0177 /* nft.xcdatamodeld in Sources */,
 				466C70982743A23500054E16 /* activityViewController.swift in Sources */,
+				469E3E3B27787F2800BC2399 /* UploadBrain.swift in Sources */,
 				466C70B02743C21400054E16 /* Bids.swift in Sources */,
 				461AF54B275B3498006D4563 /* Networking .swift in Sources */,
 				466C709327439CC200054E16 /* faqViewController.swift in Sources */,

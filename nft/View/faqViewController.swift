@@ -23,6 +23,7 @@ class faqViewController: UIViewController {
     //ibactions
     
     @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "freqToFunctionSegue", sender: self)
     }
     
     @IBAction func generalButton(_ sender: Any) {

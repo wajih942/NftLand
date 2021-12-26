@@ -26,6 +26,17 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     @IBOutlet weak var PasswordTextField: UITextField!
     
     //ibactions
+    
+    @IBAction func notificationButton(_ sender: Any) {
+        performSegue(withIdentifier: "EditToNotifSegue", sender: self)
+    }
+    
+    
+    @IBAction func BurgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "editToFunctionSegue", sender: self)
+    }
+    
+    
     @IBAction func BackToProfileButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }

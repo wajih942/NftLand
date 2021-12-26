@@ -105,6 +105,7 @@ class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     @IBOutlet weak var instantsalePrice: UITextField!
     //ibactions
     @IBAction func notificationButton(_ sender: Any) {
+        performSegue(withIdentifier: "createToNotifSegue", sender: self)
     }
     @IBAction func CreateItemButton(_ sender: Any) {
         item = Item(itemName: itemNameText.text!, description: descriptionText.text!, details: [sizetext.text!,propritietext.text!], instantSalePrice: instantsalePrice.text!, auctionEntrancePrice: auctionPricetext.text!, instantSale: instantsaleswitch.isOn, auctionSale:auctionswitch.isOn,time: setTime.text!)

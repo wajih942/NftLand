@@ -26,12 +26,14 @@ class activityViewController: UIViewController {
     
   
     @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "activityTofunctionSegue", sender: self)
     }
     
     @IBAction func profileButton(_ sender: Any) {
     }
     
     @IBAction func notificationButton(_ sender: Any) {
+        performSegue(withIdentifier: "activityToNotificationSegue", sender: self)
     }
     
     @IBAction func backToHomeButton(_ sender: Any) {
