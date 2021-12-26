@@ -11,47 +11,66 @@ import AVFoundation
 struct UploadBrain {
     
     
-    func generateBoundary() -> String {
-            return "Boundary-\(NSUUID().uuidString)"
-        }
     
-    func addItem(item : Item , image :UIImage, callback: @escaping (Bool,Any?)->Void){
+    static func uploadItem(item :Item,paramName: String, fileName: String, image: UIImage) {
+        let url = URL(string: "http://localhost:3001/upload")
         
         
-       
-       guard let mediaImage = Media(withImage: image, forKey: "image") else { return }
-       guard let url = URL(string: "http://localhost:3000/article") else { return }
-       var request = URLRequest(url: url)
-       request.httpMethod = "POST"
-       //create boundary
-       let boundary = generateBoundary()
-       //set content type
-       request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-       //call createDataBody method
-       
-       let dataBody = DataBody(article:article, media: [mediaImage], boundary: boundary)
-       request.httpBody = dataBody
-       let session = URLSession.shared
-       session.dataTask(with: request) { (data, response, error) in
-           DispatchQueue.main.async {
-         
-               if let data = data {
-                   let decoder = JSONDecoder()
-                   do {
-                       let test = try decoder.decode(Article.self, from: data)
-                       callback(true,test)
-                   }catch{
-                       print("erreur de decodage (add): ",error)
-                       callback(false,"erreur decodage")
-                   }
-               } else{
-                   callback(false,"no data")
-               }
-           }
-       }.resume()
-   }
+        let nameBody = "name"
+        let itemName = item.itemName
+        let descriptionBody = "description"
+        let itemDescription = item.description
+        let priceBody = "price"
+        let itemPrice = item.instantSalePrice
+
+        // generate boundary string using a unique per-app string
+        let boundary = UUID().uuidString
+
+        let session = URLSession.shared
+
+        // Set the URLRequest to POST and to the specified URL
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "POST"
+
+        // Set Content-Type Header to multipart/form-data, this is equivalent to submitting form data with file upload in a web browser
+        // And the boundary is also set here
+        urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+        var data = Data()
+        // Add the reqtype field and its value to the raw http request data
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(nameBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(itemName)".data(using: .utf8)!)
+
+        // Add the userhash field and its value to the raw http reqyest data
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(descriptionBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(itemDescription)".data(using: .utf8)!)
+        
+        // Add the userhash field and its value to the raw http reqyest data
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(priceBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(itemPrice)".data(using: .utf8)!)
+
+        // Add the image data to the raw http request data
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(paramName)\";filename=\"\(fileName)\"\r\n".data(using: .utf8)!)
+        data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+        data.append(image.pngData()!)
+
+        data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+
+        // Send a POST request to the URL, with the data we created earlier
+        session.uploadTask(with: urlRequest, from: data, completionHandler: { responseData, response, error in
+            if error == nil {
+                let jsonData = try? JSONSerialization.jsonObject(with: responseData!, options: .allowFragments)
+                if let json = jsonData as? [String: Any] {
+                    print(json)
+                }
+            }
+        }).resume()
+    }
+
     
 
 }
-    
-

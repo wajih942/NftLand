@@ -107,9 +107,9 @@ class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     @IBAction func notificationButton(_ sender: Any) {
         performSegue(withIdentifier: "createToNotifSegue", sender: self)
     }
+    
     @IBAction func CreateItemButton(_ sender: Any) {
         item = Item(itemName: itemNameText.text!, description: descriptionText.text!, details: [sizetext.text!,propritietext.text!], instantSalePrice: instantsalePrice.text!, auctionEntrancePrice: auctionPricetext.text!, instantSale: instantsaleswitch.isOn, auctionSale:auctionswitch.isOn,time: setTime.text!)
-        print(item)
         performSegue(withIdentifier: "createToPreview", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
