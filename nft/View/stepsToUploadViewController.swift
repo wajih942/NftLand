@@ -14,7 +14,8 @@ class stepsToUploadViewController: UIViewController {
     
     //var
     var state = [true,false,false]
-    
+    var item3 = Item(itemName: "", description: "", details:  [""], instantSalePrice: "", auctionEntrancePrice: "", instantSale: false, auctionSale: false, time: "")
+    var itemImage3 = UIImage(named: "")
     
     //iboutlets
     
@@ -52,7 +53,15 @@ class stepsToUploadViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "stepsToMintSegue" {
+            let destination = segue.destination as! uploadItemViewController
+            
+            destination.item4 = item3
+            destination.itemImage4 = itemImage3
+            
+        }
+    }
     /*
     // MARK: - Navigation
 

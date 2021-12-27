@@ -11,7 +11,9 @@ class uploadItemViewController: UIViewController {
 
     
     //var
-    
+    let defaults = UserDefaults.standard
+    var item4 = Item(itemName: "", description: "", details:  [""], instantSalePrice: "", auctionEntrancePrice: "", instantSale: false, auctionSale: false, time: "")
+    var itemImage4 = UIImage(named: "")
     
     @IBOutlet weak var cancelshape: UIButton!
     
@@ -32,6 +34,10 @@ class uploadItemViewController: UIViewController {
     
     @IBAction func confirmButton(_ sender: Any) {
         performSegue(withIdentifier: "mintToStepsSegue", sender: self)
+       /* if let info =  defaults.array(forKey: "info") as? [String]{
+            AssetsBrain.uploadImage(item: item4, paramName: "image", fileName: "image", image: itemImage4!)
+        }*/
+        
         print(gaspricetext.text!)
         print(gaslimitprice.text!)
     }
@@ -61,7 +67,7 @@ class uploadItemViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
     // MARK: - Navigation
 

@@ -70,24 +70,45 @@ struct AssetsBrain {
         return false
     }
     
+    static func sellingState(item:Item,Price:String,state:String) {
+        if item.instantSale {
+            let Price = item.instantSalePrice + " ETH"
+            let state = "Instant sale please verify the item price before continuing"
+        }else{
+            let Price = item.auctionEntrancePrice + " ETH"
+            let state = "Auction Sale please verify the entrance auction price before continuing"
+        }
+    }
     
     
     
     
     
     
-    
-    func uploadImage(item: Item,paramName: String, fileName: String, image: UIImage) {
+    static func uploadImage(item: Item,paramName: String, fileName: String, image: UIImage,address :String,privateKey:String,gasLimit:String,gasPrice:String) {
         let url = URL(string: "http://localhost:3001/upload")
         
         
         let nameBody = "name"
         let descriptionBody = "description"
         let priceBody = "price"
+        let detailsBody = "details"
+        let addressBody = "address"
+        let privateKeyBody = "privateKey"
+        let gaslimitBody = "gaslimit"
+        let gasPriceBody = "gasprice"
+        
         
         let itemName = item.itemName
         let description = item.description
-        let price = item.instantSalePrice
+        var price = ""
+        let details = item.details
+        if item.instantSale {
+             price = item.instantSalePrice
+        }else{
+             price = item.auctionEntrancePrice
+        }
+        
 
         // generate boundary string using a unique per-app string
         let boundary = UUID().uuidString
@@ -114,8 +135,33 @@ struct AssetsBrain {
         data.append("\(description)".data(using: .utf8)!)
         
         data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(detailsBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(details)".data(using: .utf8)!)
+        
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
         data.append("Content-Disposition: form-data; name=\"\(priceBody)\"\r\n\r\n".data(using: .utf8)!)
         data.append("\(price)".data(using: .utf8)!)
+        
+        
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(addressBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(address)".data(using: .utf8)!)
+        
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(privateKeyBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(privateKey)".data(using: .utf8)!)
+        
+        
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(gaslimitBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(gasLimit)".data(using: .utf8)!)
+        
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"\(gasPriceBody)\"\r\n\r\n".data(using: .utf8)!)
+        data.append("\(gasPrice)".data(using: .utf8)!)
+        
+        
+        
 
         // Add the image data to the raw http request data
         data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
@@ -135,5 +181,15 @@ struct AssetsBrain {
             }
         }).resume()
     }
-
+    
+    
+    
+    
+    
+    /*
+    
+    func gasInputValidation() -> Bool {
+        
+    }
+*/
 }

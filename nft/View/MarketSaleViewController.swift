@@ -34,6 +34,7 @@ class MarketSaleViewController: UIViewController {
     
     
     @IBAction func confirmButton(_ sender: Any) {
+        
         performSegue(withIdentifier: "marketsaleToActivitySegue", sender: self)
     }
     

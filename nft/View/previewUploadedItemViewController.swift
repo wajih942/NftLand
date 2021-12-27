@@ -19,6 +19,9 @@ class previewUploadedItemViewController: UIViewController {
     
     //iboutlets
     
+    @IBOutlet weak var propritiesLabel: UILabel!
+    
+    @IBOutlet weak var sizeLabel: UILabel!
     
     @IBOutlet weak var mintshape: UIButton!
     
@@ -34,6 +37,9 @@ class previewUploadedItemViewController: UIViewController {
     @IBOutlet weak var saleState: UILabel!
     //ibactions
    
+    @IBAction func exitButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func mintButton(_ sender: Any) {
         performSegue(withIdentifier: "perviewToStepsSegue", sender: self)
@@ -43,9 +49,19 @@ class previewUploadedItemViewController: UIViewController {
         super.viewDidLoad()
         mintshape.layer.cornerRadius = 20
         assetImage.image = itemImage2
-        itemPrice.text = item2.auctionEntrancePrice + "ETH"
         itemDescription.text = item2.description
-        saleState.text = item2.time
+        sizeLabel.text = item2.details[0]
+        propritiesLabel.text = item2.details[1]
+        itemName.text = item2.itemName + " :"
+        if item2.instantSale {
+           itemPrice.text = item2.instantSalePrice + " ETH"
+            saleState.text = "Instant sale please verify the item price before continuing"
+        }else{
+            itemPrice.text = item2.auctionEntrancePrice + " ETH"
+            saleState.text = "Auction Sale please verify the  auction entry price before continuing"
+        }
+        AssetsBrain.sellingState(item: item2, Price: itemPrice.text!, state: saleState.text!)
+        
         
         // Do any additional setup after loading the view.
     }
@@ -54,6 +70,8 @@ class previewUploadedItemViewController: UIViewController {
             let destination = segue.destination as! stepsToUploadViewController
             destination.state[0] = false
             destination.state[1] = true
+            destination.item3 = item2
+            destination.itemImage3 = itemImage2
             
         }
     }
