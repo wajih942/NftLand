@@ -14,6 +14,7 @@ class uploadItemViewController: UIViewController {
     let defaults = UserDefaults.standard
     var item4 = Item(itemName: "", description: "", details:  [""], instantSalePrice: "", auctionEntrancePrice: "", instantSale: false, auctionSale: false, time: "")
     var itemImage4 = UIImage(named: "")
+    var response = MintResponse(err: "", txHash: "", result: "")
     
     @IBOutlet weak var cancelshape: UIButton!
     
@@ -33,13 +34,18 @@ class uploadItemViewController: UIViewController {
     //ibactions
     
     @IBAction func confirmButton(_ sender: Any) {
-        performSegue(withIdentifier: "mintToStepsSegue", sender: self)
-       /* if let info =  defaults.array(forKey: "info") as? [String]{
-            AssetsBrain.uploadImage(item: item4, paramName: "image", fileName: "image", image: itemImage4!)
-        }*/
         
-        print(gaspricetext.text!)
-        print(gaslimitprice.text!)
+        if let info =  defaults.array(forKey: "info") as? [String]{
+            print(info[0])
+            print(info[1])
+            
+           response = AssetsBrain.uploadImage(item: item4, paramName: "image", fileName: "image", image: itemImage4!,address: info[0],privateKey: info[1],gasLimit: gaslimitprice.text!,gasPrice: gaspricetext.text!)
+        }
+        
+        print(response.txHash)
+        print(response.result)
+        print(response.err)
+        performSegue(withIdentifier: "mintToStepsSegue", sender: self)
     }
     
     
@@ -50,6 +56,9 @@ class uploadItemViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mintToStepsSegue" {
             let destination = segue.destination as! stepsToUploadViewController
+            
+            destination.response2 = response
+            destination.item3 = item4
             destination.state[0] = false
             destination.state[1] = false
             destination.state[2] = true

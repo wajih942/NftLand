@@ -81,14 +81,14 @@ struct AssetsBrain {
     }
     
     
+   
     
     
     
-    
-    static func uploadImage(item: Item,paramName: String, fileName: String, image: UIImage,address :String,privateKey:String,gasLimit:String,gasPrice:String) {
+    static func uploadImage(item: Item,paramName: String, fileName: String, image: UIImage,address :String,privateKey:String,gasLimit:String,gasPrice:String) -> MintResponse{
         let url = URL(string: "http://localhost:3001/upload")
         
-        
+        var res = MintResponse(err: "", txHash: "", result: "")
         let nameBody = "name"
         let descriptionBody = "description"
         let priceBody = "price"
@@ -133,10 +133,10 @@ struct AssetsBrain {
         data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
         data.append("Content-Disposition: form-data; name=\"\(descriptionBody)\"\r\n\r\n".data(using: .utf8)!)
         data.append("\(description)".data(using: .utf8)!)
-        
+        /*
         data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
         data.append("Content-Disposition: form-data; name=\"\(detailsBody)\"\r\n\r\n".data(using: .utf8)!)
-        data.append("\(details)".data(using: .utf8)!)
+        data.append("\(details)".data(using: .utf8)!)*/
         
         data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
         data.append("Content-Disposition: form-data; name=\"\(priceBody)\"\r\n\r\n".data(using: .utf8)!)
@@ -170,26 +170,116 @@ struct AssetsBrain {
         data.append(image.pngData()!)
 
         data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
-
+        
         // Send a POST request to the URL, with the data we created earlier
-        session.uploadTask(with: urlRequest, from: data, completionHandler: { responseData, response, error in
-            if error == nil {
-                let jsonData = try? JSONSerialization.jsonObject(with: responseData!, options: .allowFragments)
-                if let json = jsonData as? [String: Any] {
-                    print(json)
+        let semaphore = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.uploadTask(with: urlRequest, from: data) { data, response, error in
+
+                guard error == nil && data != nil else {
+                  return
                 }
-            }
-        }).resume()
+
+                if let data = data {
+                    res = AssetsBrain.parseJSON(res: data)!
+                    
+                }
+            semaphore.signal()
+
+                }
+                task.resume()
+                semaphore.wait()
+        return res
     }
     
-    
-    
-    
-    
-    /*
-    
-    func gasInputValidation() -> Bool {
+    static func createMarketSale(txhash:String,price:String,address:String,privateKey:String,gasLimit:String,gasPrice:String)->MarketSaleResponse  {
+        
+            var marketsaleResponse = MarketSaleResponse(err: "", txHash: "")
+            guard let url = URL(string: "http://localhost:3001/marketsale") else { return marketsaleResponse }
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+           request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
+            //if we want to use a post we should put the request in the body of the request
+           let body:[String:Any] = [
+            "txhash":txhash,
+            "price":price ,
+            "address":address,
+            "privateKey":privateKey,
+            "gaslimit":gasLimit,
+            "gasprice": gasPrice
+                
+               
+                        ]
+      do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            } catch let error {
+                print("an error happen while parssing the body into json ",error)
+            }
+            let semaphore = DispatchSemaphore(value: 0)
+            let task =  URLSession.shared.dataTask(with: request) {(data,response,error)  in
+                
+                if let error = error {
+                    print("an error happen",error)
+                    return
+                }
+                if let data = data
+                {
+                    
+                    marketsaleResponse = AssetsBrain.parseJSON1(res: data)!
+                    
+                    
+                }/*{
+                    do {
+                        if let json = try? JSONSerialization.jsonObject(with: data, options: []){
+                            
+                            print(json)
+                        }
+                    } catch let error  {
+                        print("we couldn t parse data into json ",error)
+                    }
+                }*/semaphore.signal()
+            }
+            task.resume()
+            semaphore.wait()
+        return marketsaleResponse
         
     }
-*/
-}
+    
+    static func parseJSON1(res:Data) ->MarketSaleResponse?  {
+        let decoder = JSONDecoder()
+        do{
+            let decodedData = try decoder.decode(MarketSaleResponse.self,from: res)
+            return decodedData
+        }catch{
+            print(error)
+            return nil
+            
+    
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    static func parseJSON(res:Data) ->MintResponse?  {
+        let decoder = JSONDecoder()
+        do{
+            let decodedData = try decoder.decode(MintResponse.self,from: res)
+            return decodedData
+        }catch{
+            print(error)
+            return nil
+            
+    
+    }
+    }
+    
+    }
+
+

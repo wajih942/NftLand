@@ -126,7 +126,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SignUpSegue" {
             let destination = segue.destination as! visitProfileViewController
-            AccountBrain.copyAccount(account1: destination.profile , account2: account)
+            //AccountBrain.copyAccount(account1: destination.profile , account2: account)
         }
     }
     

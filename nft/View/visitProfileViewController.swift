@@ -80,7 +80,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ProfileToEditSegue" {
             let destination = segue.destination as! EditProfileViewController
-            AccountBrain.copyAccount(account1: destination.edit , account2: profile)
+           /*AccountBrain.copyAccount(account1: destination.edit , account2: profile)*/
             destination.token2 = token1
             destination.id2 = id1
             

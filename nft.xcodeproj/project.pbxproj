@@ -43,6 +43,9 @@
 		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
 		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
 		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
+		46932A50277ACFE100E19ED1 /* MintResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A4F277ACFE100E19ED1 /* MintResponse.swift */; };
+		46932A52277B291F00E19ED1 /* MarketSaleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */; };
+		46932A54277B4C5E00E19ED1 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A53277B4C5E00E19ED1 /* Balance.swift */; };
 		46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C8E853275632D30042BFA7 /* ApiViewController.swift */; };
 		46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC966A274B14BD00ECB59C /* SignUpViewController.swift */; };
 		46F1CFF2275F32FB001D552E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F1CFF1275F32FB001D552E /* HealthKit.framework */; };
@@ -116,6 +119,9 @@
 		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
 		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
+		46932A4F277ACFE100E19ED1 /* MintResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintResponse.swift; sourceTree = "<group>"; };
+		46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSaleResponse.swift; sourceTree = "<group>"; };
+		46932A53277B4C5E00E19ED1 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		46C8E853275632D30042BFA7 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		46F1CFF0275F32FB001D552E /* nft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nft.entitlements; sourceTree = "<group>"; };
@@ -240,6 +246,9 @@
 				466C70AD2743C07000054E16 /* Orders.swift */,
 				466C70AF2743C21400054E16 /* Bids.swift */,
 				466C70B12743C64200054E16 /* Assets.swift */,
+				46932A4F277ACFE100E19ED1 /* MintResponse.swift */,
+				46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */,
+				46932A53277B4C5E00E19ED1 /* Balance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -568,6 +577,7 @@
 				466C70BC2743CC6F00054E16 /* LikeBrain.swift in Sources */,
 				4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */,
 				466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */,
+				46932A54277B4C5E00E19ED1 /* Balance.swift in Sources */,
 				46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */,
 				466C709627439F4200054E16 /* visitProfileViewController.swift in Sources */,
 				4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */,
@@ -584,9 +594,11 @@
 				46297662275442AF00535877 /* SignInViewController.swift in Sources */,
 				46072995274C8F89001C1BC3 /* EditProfileViewController.swift in Sources */,
 				466C70A02743B3BF00054E16 /* Customer.swift in Sources */,
+				46932A50277ACFE100E19ED1 /* MintResponse.swift in Sources */,
 				466C70B42743C87E00054E16 /* CustomerBrain.swift in Sources */,
 				466C70C02743CD6E00054E16 /* OrdersBrain.swift in Sources */,
 				466C708F2743997300054E16 /* scanQrViewController.swift in Sources */,
+				46932A52277B291F00E19ED1 /* MarketSaleResponse.swift in Sources */,
 				466C70A62743BD7800054E16 /* Favorites.swift in Sources */,
 				466C70A22743B82000054E16 /* Account.swift in Sources */,
 				466C70BA2743CBCA00054E16 /* FavoritesBrain.swift in Sources */,

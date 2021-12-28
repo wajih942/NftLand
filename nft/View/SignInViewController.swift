@@ -115,6 +115,10 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         semaphore.wait()
     }
    
+    
+    
+    
+    
     func parseJSON(customerLogin:Data) ->CustomerLogin?  {
         let decoder = JSONDecoder()
         do{

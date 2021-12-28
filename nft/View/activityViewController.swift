@@ -17,9 +17,12 @@ class activityViewController: UIViewController {
     
     //iboutlets
     
+    @IBOutlet weak var activityshape: UIButton!
     
     
+    @IBOutlet weak var followingshape: UIButton!
     
+    @IBOutlet weak var allshape: UIButton!
     
     //ibactions
     
@@ -36,6 +39,32 @@ class activityViewController: UIViewController {
         performSegue(withIdentifier: "activityToNotificationSegue", sender: self)
     }
     
+    @IBAction func allActivityButton(_ sender: Any) {
+        allshape.backgroundColor = UIColor.systemBlue
+        allshape.tintColor = UIColor.white
+        followingshape.backgroundColor = UIColor.white
+        followingshape.tintColor = UIColor.black
+        activityshape.backgroundColor = UIColor.white
+        activityshape.tintColor = UIColor.black
+    }
+    @IBAction func followingButton(_ sender: Any) {
+        followingshape.backgroundColor = UIColor.systemBlue
+        followingshape.tintColor = UIColor.white
+        activityshape.backgroundColor = UIColor.white
+        activityshape.tintColor = UIColor.black
+        allshape.backgroundColor = UIColor.white
+        allshape.tintColor = UIColor.black
+    }
+    @IBAction func MyActivityButton(_ sender: Any) {
+        activityshape.backgroundColor = UIColor.systemBlue
+        activityshape.tintColor = UIColor.white
+        followingshape.backgroundColor = UIColor.white
+        followingshape.tintColor = UIColor.black
+        allshape.backgroundColor = UIColor.white
+        allshape.tintColor = UIColor.black
+        
+        
+    }
     @IBAction func backToHomeButton(_ sender: Any) {
     }
     
@@ -49,7 +78,13 @@ class activityViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        activityshape.layer.cornerRadius = 15
+        followingshape.layer.cornerRadius = 15
+        allshape.layer.cornerRadius = 15
+        followingshape.backgroundColor = UIColor.white
+        followingshape.tintColor = UIColor.black
+        allshape.backgroundColor = UIColor.white
+        allshape.tintColor = UIColor.black
         // Do any additional setup after loading the view.
     }
     

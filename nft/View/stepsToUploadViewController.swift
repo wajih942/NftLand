@@ -16,8 +16,16 @@ class stepsToUploadViewController: UIViewController {
     var state = [true,false,false]
     var item3 = Item(itemName: "", description: "", details:  [""], instantSalePrice: "", auctionEntrancePrice: "", instantSale: false, auctionSale: false, time: "")
     var itemImage3 = UIImage(named: "")
-    
+    var response2 = MintResponse(err: "" , txHash: "123", result: "")
     //iboutlets
+    
+    @IBOutlet weak var ipfsInfoLabel: UILabel!
+    
+    @IBOutlet weak var txhashInfoLabel: UILabel!
+    
+    @IBOutlet weak var ipfsUrlLabel: UILabel!
+    
+    @IBOutlet weak var txHashLabel: UILabel!
     
     @IBOutlet weak var start1shape: UIButton!
     
@@ -43,12 +51,23 @@ class stepsToUploadViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(response2.err)
+        print(response2.txHash!)
         start1shape.layer.cornerRadius = 20
         start2shape.layer.cornerRadius = 20
         start3shape.layer.cornerRadius = 20
         start1shape.isEnabled = state[0]
         start2shape.isEnabled = state[1]
         start3shape.isEnabled = state[2]
+        if response2.err == nil  {
+            start1shape.alpha = 0
+            start2shape.alpha = 0
+            ipfsUrlLabel.text = response2.result!
+            txHashLabel.text = response2.txHash!
+            txhashInfoLabel.text = "token created check the transaction hash on etherscan"
+            ipfsInfoLabel.text = "your item has been stored properly on ipfs"
+        }
+        
         
         // Do any additional setup after loading the view.
     }
@@ -61,7 +80,20 @@ class stepsToUploadViewController: UIViewController {
             destination.itemImage4 = itemImage3
             
         }
+        if segue.identifier == "stepsToListSegue" {
+            let destination = segue.destination as! MarketSaleViewController
+            if item3.instantSale {
+                destination.price = item3.instantSalePrice
+            }else{
+                destination.price = item3.auctionEntrancePrice
+            }
+            destination.txhash = response2.txHash!
+            
+            
+        }
     }
+    
+    
     /*
     // MARK: - Navigation
 

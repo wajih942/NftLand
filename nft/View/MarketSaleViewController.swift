@@ -11,7 +11,10 @@ class MarketSaleViewController: UIViewController {
 
     
     //vars
-    
+    var response = MarketSaleResponse(err: "", txHash: "")
+    var price = ""
+    var txhash = ""
+    let defaults = UserDefaults.standard
     //iboutlets
     
     @IBOutlet weak var cancelshape: UIButton!
@@ -35,7 +38,15 @@ class MarketSaleViewController: UIViewController {
     
     @IBAction func confirmButton(_ sender: Any) {
         
+        if let info =  defaults.array(forKey: "info") as? [String]{
+            print(info[0])
+            print(info[1])
+            response = AssetsBrain.createMarketSale(txhash: txhash , price: price , address: info[0], privateKey: info[1], gasLimit: gaslimittext.text!, gasPrice: gaspricetext.text!)
+            print(response)
+
+        }
         performSegue(withIdentifier: "marketsaleToActivitySegue", sender: self)
+        
     }
     
     
@@ -46,6 +57,8 @@ class MarketSaleViewController: UIViewController {
         super.viewDidLoad()
         cancelshape.layer.cornerRadius = 20
         confirmshape.layer.cornerRadius = 20
+        print(price)
+        print(txhash)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

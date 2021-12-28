@@ -54,12 +54,13 @@ class notificationClickedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let info =  defaults.array(forKey: "info") as? [String]{
-            balanceLabel.text = "get req"
+            
             walletAddressButton.text = info[0]
             walletStateLabel.text = "wallet connected"
+            balanceLabel.text = AccountBrain.getBalance(address: info[0]).balance! + " ETH"
         }
-        
-        
+       
+
         }
     
     

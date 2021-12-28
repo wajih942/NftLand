@@ -80,7 +80,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
-            AccountBrain.copyAccount(account1: destination.profile , account2: edit)
+           // AccountBrain.copyAccount(account1: destination.profile , account2: edit)
         }
     }
     //functions
