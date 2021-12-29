@@ -256,10 +256,67 @@ struct AssetsBrain {
     
     }
     }
+    static func getAllItems() ->[Meta]{
+        var items = [Meta]()
+        guard let url = URL(string: "http://localhost:3001/allitems") else { return items }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "content-type")
+        
+       //request.setValue("application/json", forHTTPHeaderField: "content-type")
+        let semaphore = DispatchSemaphore(value: 0)
+      let task = URLSession.shared.dataTask(with: request) {(data,response,error) in
+            
+            if let error = error {
+                print("an error happen",error)
+                return
+            }
+            if let data = data
+            {
+                items = AssetsBrain.parseJSON3(res: data)!
+                
+                
+            }
+          semaphore.signal()
+        }
+        task.resume()
+        semaphore.wait()
+        return items
+    }
     
     
+    static func parseJSON3(res:Data) ->[Meta]?  {
+        let decoder = JSONDecoder()
+        do{
+            let decodedData = try decoder.decode([Meta].self,from: res)
+            return decodedData
+        }catch{
+            print(error)
+            return nil
+            
     
-    
+    }
+    }
+    static func getImage(url :String) -> UIImage  {
+        let url = URL(string: url)!
+        var image = UIImage()
+        // Create Data Task
+        
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
+            if let data = data {
+                DispatchQueue.main.async {
+                    // Create Image and Update Image View
+                    image = UIImage(data: data)!
+                }
+            }
+            
+        }
+
+        // Start Data Task
+        dataTask.resume()
+        
+        return image
+    }
     
     
     

@@ -47,6 +47,7 @@
 		46932A52277B291F00E19ED1 /* MarketSaleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */; };
 		46932A54277B4C5E00E19ED1 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A53277B4C5E00E19ED1 /* Balance.swift */; };
 		46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C8E853275632D30042BFA7 /* ApiViewController.swift */; };
+		46D9B29C277C8BDA00644C69 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D9B29B277C8BDA00644C69 /* Meta.swift */; };
 		46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC966A274B14BD00ECB59C /* SignUpViewController.swift */; };
 		46F1CFF2275F32FB001D552E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F1CFF1275F32FB001D552E /* HealthKit.framework */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
@@ -123,6 +124,7 @@
 		46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSaleResponse.swift; sourceTree = "<group>"; };
 		46932A53277B4C5E00E19ED1 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		46C8E853275632D30042BFA7 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
+		46D9B29B277C8BDA00644C69 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		46F1CFF0275F32FB001D552E /* nft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nft.entitlements; sourceTree = "<group>"; };
 		46F1CFF1275F32FB001D552E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -249,6 +251,7 @@
 				46932A4F277ACFE100E19ED1 /* MintResponse.swift */,
 				46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */,
 				46932A53277B4C5E00E19ED1 /* Balance.swift */,
+				46D9B29B277C8BDA00644C69 /* Meta.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				466C709327439CC200054E16 /* faqViewController.swift in Sources */,
 				466C70BE2743CCE100054E16 /* FollowerBrain.swift in Sources */,
 				4615CECC277756D50024ACA6 /* MarketSaleViewController.swift in Sources */,
+				46D9B29C277C8BDA00644C69 /* Meta.swift in Sources */,
 				46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */,
 				4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */,
 				466C709127439B0500054E16 /* termsViewController.swift in Sources */,

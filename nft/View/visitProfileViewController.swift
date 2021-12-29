@@ -18,6 +18,18 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     private var  sideMenu : UISideMenuNavigationController?
     //iboutlet
     
+    
+    @IBOutlet weak var onsaleShape: UIButton!
+    
+    @IBOutlet weak var purshasedshape: UIButton!
+
+    
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var LabelName: UILabel!
     
@@ -28,12 +40,30 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     @IBOutlet weak var UrlLabel: UILabel!
     //ibaction
     
+    
+    
+    @IBAction func onSaleButton(_ sender: Any) {
+        onsaleShape.backgroundColor = UIColor.black
+        onsaleShape.tintColor = UIColor.white
+        
+        purshasedshape.backgroundColor = UIColor.white
+        purshasedshape.tintColor = UIColor.black
+    }
     @IBAction func notificationButton(_ sender: Any) {
         performSegue(withIdentifier: "profileToNotifSegue", sender: self)
     }
+   
     
+    @IBAction func purchasedButton(_ sender: Any) {
+        purshasedshape.backgroundColor = UIColor.black
+        purshasedshape.tintColor = UIColor.white
+        onsaleShape.backgroundColor = UIColor.white
+        onsaleShape.tintColor = UIColor.black
+        
+    }
     
     @IBAction func profileButton(_ sender: Any) {
+    
     }
     
     @IBAction func burgerButton(_ sender: Any) {
@@ -94,6 +124,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         BioLabel.text = profile.Bio
         UrlLabel.text = profile.CustomUrl
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
         
         // Do any additional setup after loading the view.
         
