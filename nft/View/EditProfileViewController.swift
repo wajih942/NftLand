@@ -7,11 +7,11 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate  {
+class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImagePickerControllerDelegate & UINavigationControllerDelegate  {
 
     //var
     
-    var edit = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
+    var edit = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", email: "", Password: "")
     var token2 = ""
     var id2 = ""
     
@@ -19,6 +19,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     
     
   
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var DisplayNameTextField: UITextField!
     @IBOutlet weak var CustomUrlSessionTextField: UITextField!
     @IBOutlet weak var BioTextView: UITextView!
@@ -42,6 +43,11 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     }
     
     @IBAction func UploadButton(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc,animated: true)
     }
     
     @IBAction func AddSocialButton(_ sender: Any) {
@@ -49,8 +55,9 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     
     
     @IBAction func UpdateButton(_ sender: Any) {
-        edit = Account(WalletAddress: "0000000000000000000000", DisplayName: DisplayNameTextField.text!, CustomUrl: CustomUrlSessionTextField.text!, Bio: BioTextView.text!, Portfolio: PortfolioTextField.text!, Password: PasswordTextField.text!)
+        edit = Account(WalletAddress: "0000000000000000000000", DisplayName: DisplayNameTextField.text!, CustomUrl: CustomUrlSessionTextField.text!, Bio: BioTextView.text!, email: "", Password: "")
         performRequest(account: edit, token: token2, id: id2)
+    
         
     }
     
@@ -80,7 +87,8 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
-           // AccountBrain.copyAccount(account1: destination.profile , account2: edit)
+            destination.profile = edit
+            destination.profileImage = profileImage.image
         }
     }
     //functions
@@ -96,7 +104,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
             "name" : account.DisplayName,
             "url": account.CustomUrl,
             "bio":account.Bio,
-            "email":account.Portfolio,
+            "email":account.email,
                     ]
   do {
             request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
@@ -123,14 +131,22 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     }
     
     
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            profileImage.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DisplayNameTextField.delegate = self
         CustomUrlSessionTextField.delegate = self
         PortfolioTextField.delegate = self
-        PasswordTextField.delegate = self
+        
         BioTextView.delegate = self
 
         // Do any additional setup after loading the view.

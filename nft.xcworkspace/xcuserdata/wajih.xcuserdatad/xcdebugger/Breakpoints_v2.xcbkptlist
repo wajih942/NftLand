@@ -14,10 +14,118 @@
             filePath = "nft/View/visitProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "followButton(_:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "uploadButton(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nft/View/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "SignUpViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155 - a572c351fbb1c6ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.SignUpViewController.DisplayNameTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155 - ee4d5a9b65f39aa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.SignUpViewController.DisplayNameTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155 - 10ffc339b3be5875"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.SignUpViewController.DisplayNameTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155 - bb2962d622fa69a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.SignUpViewController.DisplayNameTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155 - 21a8b956c140f06b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.SignUpViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; nft.SignUpViewController"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "6164EBC1-2BE1-4B44-B949-AC801B61E155 - 31c1ce89db5005af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.SignUpViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;nft.SignUpViewController&gt;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "528">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -12,9 +12,10 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     //struct
     
     
-    var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", Portfolio: "", Password: "")
+    var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", email: "", Password: "")
     var token1 = ""
     var id1 = ""
+    var profileImage = UIImage(named: "")
     private var  sideMenu : UISideMenuNavigationController?
     //iboutlet
     
@@ -24,7 +25,9 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     @IBOutlet weak var purshasedshape: UIButton!
 
     
+    @IBOutlet weak var smallImage: UIImageView!
     
+    @IBOutlet weak var profileImageView: UIImageView!
     
     
     
@@ -62,9 +65,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         
     }
     
-    @IBAction func profileButton(_ sender: Any) {
     
-    }
     
     @IBAction func burgerButton(_ sender: Any) {
         performSegue(withIdentifier: "profileToFunctionalitiesSegue", sender: self)
@@ -124,7 +125,10 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         BioLabel.text = profile.Bio
         UrlLabel.text = profile.CustomUrl
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
+        profileImageView.image = profileImage
+        profileImageView.layer.cornerRadius = 70
+        smallImage.layer.cornerRadius = 20
+        smallImage.image = profileImage
         
         // Do any additional setup after loading the view.
         

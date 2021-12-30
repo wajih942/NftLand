@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="doZ-bs-fAa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E0k-qD-eYE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -3140,21 +3140,10 @@
                                                             <action selector="notificationButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="K7O-sh-Z46"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cercle image" translatesAutoresizingMaskIntoConstraints="NO" id="4Ft-1N-GbD">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img 16" translatesAutoresizingMaskIntoConstraints="NO" id="4Ft-1N-GbD">
                                                         <rect key="frame" x="299" y="43" width="40" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s45-T3-jhd">
-                                                        <rect key="frame" x="299" y="43" width="40" height="38"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="profileButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="klk-O9-Mzf"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -3172,7 +3161,7 @@
                                                         <rect key="frame" x="52" y="126" width="311" height="414"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="DX4-no-F6H">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img 34444" translatesAutoresizingMaskIntoConstraints="NO" id="DX4-no-F6H">
                                                                 <rect key="frame" x="80" y="30" width="150" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
@@ -3489,7 +3478,9 @@
                         <outlet property="UrlLabel" destination="3Nc-QL-zSx" id="bsk-GF-Xsn"/>
                         <outlet property="coverImage" destination="FST-yF-lrZ" id="2Kx-Db-vWq"/>
                         <outlet property="onsaleShape" destination="NsZ-dR-m1d" id="2e7-AT-9DX"/>
+                        <outlet property="profileImageView" destination="DX4-no-F6H" id="NPD-c0-tFP"/>
                         <outlet property="purshasedshape" destination="uff-CR-9TC" id="sxd-nv-n9T"/>
+                        <outlet property="smallImage" destination="4Ft-1N-GbD" id="3Cj-2Z-ZSM"/>
                         <segue destination="8e4-dh-ekB" kind="show" identifier="profileToFunctionalitiesSegue" id="4U1-Fc-Yy0"/>
                         <segue destination="vvU-pm-Mvr" kind="show" identifier="profileToNotifSegue" id="e46-Wr-Mx6"/>
                     </connections>
@@ -3511,7 +3502,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I1w-an-l5i">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2492"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2324"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4N-Ze-Hzr">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
@@ -3566,9 +3557,6 @@
                                                         <buttonConfiguration key="configuration" style="plain">
                                                             <backgroundConfiguration key="background"/>
                                                         </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="profileButton:" destination="doZ-bs-fAa" eventType="touchUpInside" id="Csg-kI-2LK"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3577,7 +3565,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE4-sm-LbA">
-                                                <rect key="frame" x="0.0" y="112" width="414" height="1580"/>
+                                                <rect key="frame" x="0.0" y="112" width="414" height="1412"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vector (Stroke)" translatesAutoresizingMaskIntoConstraints="NO" id="to5-wT-4VX">
                                                         <rect key="frame" x="28" y="29" width="27" height="16"/>
@@ -3620,11 +3608,12 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="YAO-Ca-4A0">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAO-Ca-4A0">
                                                         <rect key="frame" x="28" y="290" width="75" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We recommend an image of at least 400x400. Gifs work too 🙌" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yJ-Od-fOc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We recommend an image of at least 400x400 🙌" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yJ-Od-fOc">
                                                         <rect key="frame" x="131" y="313" width="260" height="52"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -3696,19 +3685,6 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PASSWORD (TO MODIFY YOUR PROFILE SECURELY)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-fn-0Jw">
-                                                        <rect key="frame" x="28" y="1245" width="350" height="50"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER PASSWORD " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5LQ-YS-Pki">
-                                                        <rect key="frame" x="25" y="1319" width="356" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gY-4g-ph2">
                                                         <rect key="frame" x="28" y="888" width="24" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3724,28 +3700,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add more social account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVH-iz-sUJ">
-                                                        <rect key="frame" x="131" y="1391" width="188" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PLUS" translatesAutoresizingMaskIntoConstraints="NO" id="VqY-9X-gW9">
-                                                        <rect key="frame" x="90" y="1392" width="21" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-n7-bzx">
-                                                        <rect key="frame" x="81" y="1387" width="249" height="33"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain"/>
-                                                        <connections>
-                                                            <action selector="AddSocialButton:" destination="E0k-qD-eYE" eventType="touchUpInside" id="19t-hG-CRf"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtH-QH-204">
-                                                        <rect key="frame" x="87" y="1454" width="240" height="37"/>
+                                                        <rect key="frame" x="86" y="1258" width="240" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Update Profile">
@@ -3757,18 +3713,18 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reset" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-pH-9U8">
-                                                        <rect key="frame" x="151" y="1515" width="21" height="23"/>
+                                                        <rect key="frame" x="144" y="1327" width="21" height="23"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clear All " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyK-FH-giY">
-                                                        <rect key="frame" x="200" y="1515" width="75" height="23"/>
+                                                        <rect key="frame" x="193" y="1327" width="75" height="23"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GV-Tj-9bH">
-                                                        <rect key="frame" x="90" y="1509" width="237" height="34"/>
+                                                        <rect key="frame" x="89" y="1321" width="237" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3780,11 +3736,11 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1580" id="cVc-nR-62S"/>
+                                                    <constraint firstAttribute="height" constant="1412" id="ayr-ur-z01"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbS-jQ-gvS">
-                                                <rect key="frame" x="0.0" y="1692" width="414" height="800"/>
+                                                <rect key="frame" x="0.0" y="1524" width="414" height="800"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="symbol 2" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-6k-Yrd">
                                                         <rect key="frame" x="8" y="-19" width="136" height="105"/>
@@ -3914,15 +3870,15 @@
                         <outlet property="BioTextView" destination="7ao-Re-RV4" id="laR-VO-nVk"/>
                         <outlet property="CustomUrlSessionTextField" destination="CWF-P7-nlk" id="J1U-Qb-Tcn"/>
                         <outlet property="DisplayNameTextField" destination="dQt-Mn-gY5" id="YWq-54-zIX"/>
-                        <outlet property="PasswordTextField" destination="5LQ-YS-Pki" id="bof-3T-pFC"/>
                         <outlet property="PortfolioTextField" destination="RPf-EC-SrG" id="FFa-YM-69S"/>
+                        <outlet property="profileImage" destination="YAO-Ca-4A0" id="KYz-vb-76j"/>
                         <segue destination="vvU-pm-Mvr" kind="show" identifier="EditToNotifSegue" id="D1f-Rw-LLo"/>
                         <segue destination="8e4-dh-ekB" kind="show" identifier="editToFunctionSegue" id="fv3-Lm-v3Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXF-KM-OuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12267" y="1643"/>
+            <point key="canvasLocation" x="12266.666666666668" y="1642.6339285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oc5-PJ-zzq">
@@ -5220,11 +5176,12 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="O7T-MV-K6f">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7T-MV-K6f">
                                                         <rect key="frame" x="28" y="290" width="75" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We recommend an image of at least 400x400. Gifs work too 🙌" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-aR-l1H">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We recommend an image of at least 400x400🙌" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-aR-l1H">
                                                         <rect key="frame" x="131" y="313" width="260" height="52"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -5516,8 +5473,8 @@
                         <outlet property="CustomUrlTextField" destination="azD-Qo-iRF" id="5Jc-nX-MXy"/>
                         <outlet property="DisplayNameTextField" destination="Lwi-bH-q1B" id="VYt-ZQ-nx8"/>
                         <outlet property="PasswordTextField" destination="F6u-gc-6RH" id="Kpn-ZM-6bt"/>
-                        <outlet property="PortfolioTextField" destination="RiA-bQ-w8a" id="E8W-ZQ-a88"/>
                         <outlet property="ProfileImageView" destination="O7T-MV-K6f" id="aYF-sb-khU"/>
+                        <outlet property="emailtextField" destination="RiA-bQ-w8a" id="dqJ-ll-2J7"/>
                         <outlet property="signupshape" destination="x5h-xW-loo" id="XOK-Ns-9LB"/>
                         <segue destination="doZ-bs-fAa" kind="show" identifier="signupToProfileSegue" id="tPc-6Q-LKZ"/>
                     </connections>
@@ -6650,9 +6607,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4U1-Fc-Yy0"/>
-        <segue reference="e46-Wr-Mx6"/>
-        <segue reference="miz-yu-yLw"/>
+        <segue reference="fv3-Lm-v3Y"/>
+        <segue reference="D1f-Rw-LLo"/>
+        <segue reference="5fh-RX-nbn"/>
         <segue reference="gTW-1N-nID"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -6682,7 +6639,6 @@
         <image name="alice-donovan-rouse-yu68fUQDvOI-unsplash 1" width="4000" height="3000"/>
         <image name="apple" width="512" height="512"/>
         <image name="austin-wade-X6Uj51n5CE8-unsplash 1" width="41" height="40"/>
-        <image name="avatar" width="720" height="720"/>
         <image name="button-4" width="75" height="40"/>
         <image name="cercle image" width="56" height="56"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
