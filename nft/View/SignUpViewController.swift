@@ -9,7 +9,7 @@ import UIKit
 
 class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     //var
-    var account = Account(WalletAddress: "0000000000000000000000", DisplayName: "", CustomUrl: "", Bio: "", email: "", Password: "")
+    var account = UserInfo(_id : "",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
 
     
     
@@ -56,11 +56,11 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
         print(BioTextView.text!)
         print(emailtextField.text!)
         print(PasswordTextField.text!)
-        account = Account(WalletAddress: "0000000000000000000000", DisplayName: DisplayNameTextField.text!, CustomUrl: CustomUrlTextField.text!, Bio: BioTextView.text!, email: emailtextField.text!, Password: PasswordTextField.text!)
         
+        account = UserInfo(_id:"",name: DisplayNameTextField.text!, wallet_address: "", bio: BioTextView.text!, url: CustomUrlTextField.text!, profile_picture: "", couverture_picture: "",email: emailtextField.text!,password: PasswordTextField.text!)
         
         if AccountBrain.inputValidation(account: account, self: self,image: ProfileImageView.image) {
-            AccountBrain.uploadWithImage(account: account, image: ProfileImageView.image!)
+            account = AccountBrain.postprofile(account: account, coverImage: ProfileImageView.image!, profileImage: ProfileImageView.image!)
             performSegue(withIdentifier: "signupToProfileSegue", sender: self)
             
         }
@@ -98,7 +98,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate,UITextViewDeleg
         if segue.identifier == "signupToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
             destination.profile = account
-            destination.profileImage = ProfileImageView.image!
         }
     }
     

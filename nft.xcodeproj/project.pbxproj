@@ -43,6 +43,12 @@
 		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
 		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
 		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
+		4681EB9D277E7B2C00BFBCA2 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681EB9C277E7B2C00BFBCA2 /* ResetViewController.swift */; };
+		4681EB9F277E7E0A00BFBCA2 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681EB9E277E7E0A00BFBCA2 /* NewPasswordViewController.swift */; };
+		4681EBA1277E853C00BFBCA2 /* CustomerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681EBA0277E853C00BFBCA2 /* CustomerLogin.swift */; };
+		4681EBA3277E85B800BFBCA2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681EBA2277E85B800BFBCA2 /* UserInfo.swift */; };
+		4681EBA5277E914D00BFBCA2 /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681EBA4277E914D00BFBCA2 /* Reset.swift */; };
+		4681EBA7277E9C2600BFBCA2 /* NewPasswordRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681EBA6277E9C2600BFBCA2 /* NewPasswordRes.swift */; };
 		46932A50277ACFE100E19ED1 /* MintResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A4F277ACFE100E19ED1 /* MintResponse.swift */; };
 		46932A52277B291F00E19ED1 /* MarketSaleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */; };
 		46932A54277B4C5E00E19ED1 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46932A53277B4C5E00E19ED1 /* Balance.swift */; };
@@ -120,6 +126,12 @@
 		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
 		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
+		4681EB9C277E7B2C00BFBCA2 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		4681EB9E277E7E0A00BFBCA2 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		4681EBA0277E853C00BFBCA2 /* CustomerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLogin.swift; sourceTree = "<group>"; };
+		4681EBA2277E85B800BFBCA2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		4681EBA4277E914D00BFBCA2 /* Reset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reset.swift; sourceTree = "<group>"; };
+		4681EBA6277E9C2600BFBCA2 /* NewPasswordRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRes.swift; sourceTree = "<group>"; };
 		46932A4F277ACFE100E19ED1 /* MintResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintResponse.swift; sourceTree = "<group>"; };
 		46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSaleResponse.swift; sourceTree = "<group>"; };
 		46932A53277B4C5E00E19ED1 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
@@ -232,6 +244,8 @@
 				46297661275442AF00535877 /* SignInViewController.swift */,
 				46C8E853275632D30042BFA7 /* ApiViewController.swift */,
 				4615CECB277756D50024ACA6 /* MarketSaleViewController.swift */,
+				4681EB9C277E7B2C00BFBCA2 /* ResetViewController.swift */,
+				4681EB9E277E7E0A00BFBCA2 /* NewPasswordViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +266,10 @@
 				46932A51277B291F00E19ED1 /* MarketSaleResponse.swift */,
 				46932A53277B4C5E00E19ED1 /* Balance.swift */,
 				46D9B29B277C8BDA00644C69 /* Meta.swift */,
+				4681EBA0277E853C00BFBCA2 /* CustomerLogin.swift */,
+				4681EBA2277E85B800BFBCA2 /* UserInfo.swift */,
+				4681EBA4277E914D00BFBCA2 /* Reset.swift */,
+				4681EBA6277E9C2600BFBCA2 /* NewPasswordRes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,10 +585,12 @@
 				466C70982743A23500054E16 /* activityViewController.swift in Sources */,
 				466C70B02743C21400054E16 /* Bids.swift in Sources */,
 				461AF54B275B3498006D4563 /* Networking .swift in Sources */,
+				4681EBA7277E9C2600BFBCA2 /* NewPasswordRes.swift in Sources */,
 				466C709327439CC200054E16 /* faqViewController.swift in Sources */,
 				466C70BE2743CCE100054E16 /* FollowerBrain.swift in Sources */,
 				4615CECC277756D50024ACA6 /* MarketSaleViewController.swift in Sources */,
 				46D9B29C277C8BDA00644C69 /* Meta.swift in Sources */,
+				4681EBA1277E853C00BFBCA2 /* CustomerLogin.swift in Sources */,
 				46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */,
 				4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */,
 				466C709127439B0500054E16 /* termsViewController.swift in Sources */,
@@ -580,6 +600,7 @@
 				466C709C2743A72100054E16 /* noResultsViewController.swift in Sources */,
 				466C70BC2743CC6F00054E16 /* LikeBrain.swift in Sources */,
 				4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */,
+				4681EBA5277E914D00BFBCA2 /* Reset.swift in Sources */,
 				466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */,
 				46932A54277B4C5E00E19ED1 /* Balance.swift in Sources */,
 				46C8E854275632D30042BFA7 /* ApiViewController.swift in Sources */,
@@ -587,6 +608,7 @@
 				4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */,
 				466C709E2743A9B300054E16 /* notificationClickedViewController.swift in Sources */,
 				466C70A82743BE7B00054E16 /* Followers.swift in Sources */,
+				4681EBA3277E85B800BFBCA2 /* UserInfo.swift in Sources */,
 				4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */,
 				466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */,
 				466C70B82743CABE00054E16 /* PaymentBrain.swift in Sources */,
@@ -603,7 +625,9 @@
 				466C70C02743CD6E00054E16 /* OrdersBrain.swift in Sources */,
 				466C708F2743997300054E16 /* scanQrViewController.swift in Sources */,
 				46932A52277B291F00E19ED1 /* MarketSaleResponse.swift in Sources */,
+				4681EB9F277E7E0A00BFBCA2 /* NewPasswordViewController.swift in Sources */,
 				466C70A62743BD7800054E16 /* Favorites.swift in Sources */,
+				4681EB9D277E7B2C00BFBCA2 /* ResetViewController.swift in Sources */,
 				466C70A22743B82000054E16 /* Account.swift in Sources */,
 				466C70BA2743CBCA00054E16 /* FavoritesBrain.swift in Sources */,
 				4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */,

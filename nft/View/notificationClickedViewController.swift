@@ -49,6 +49,7 @@ class notificationClickedViewController: UIViewController {
     }
     
     @IBAction func Disconnect(_ sender: Any) {
+        performSegue(withIdentifier: "deconnectSegue1", sender: self)
     }
     
     override func viewDidLoad() {

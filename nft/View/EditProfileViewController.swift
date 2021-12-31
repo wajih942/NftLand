@@ -11,10 +11,9 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
 
     //var
     
-    var edit = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", email: "", Password: "")
-    var token2 = ""
-    var id2 = ""
-    
+    var edit = UserInfo(_id : "",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
+    var info3 = CustomerLogin(CustomerId: "", token: "")
+    var coverImage = UIImage(named: "")
     //iboutlets
     
     
@@ -54,13 +53,23 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     }
     
     
-    @IBAction func UpdateButton(_ sender: Any) {
-        edit = Account(WalletAddress: "0000000000000000000000", DisplayName: DisplayNameTextField.text!, CustomUrl: CustomUrlSessionTextField.text!, Bio: BioTextView.text!, email: "", Password: "")
-        performRequest(account: edit, token: token2, id: id2)
     
+    
+    
+    @IBAction func updateButton(_ sender: Any) {
+        edit.name = DisplayNameTextField.text!
+        edit.url = CustomUrlSessionTextField.text!
+        edit.bio = BioTextView.text!
         
+        if info3.CustomerId! == "" {
+            AccountBrain.updateprofile(account: edit,coverImage: coverImage!, profileImage: profileImage.image!, id: edit._id!)
+        }else{
+            
+            AccountBrain.updateprofile(account: edit,coverImage: coverImage!, profileImage: profileImage.image!, id: info3.CustomerId!)
+        }
+        
+        performSegue(withIdentifier: "EditToProfileSegue", sender: self)
     }
-    
     @IBAction func ClearAllButton(_ sender: Any) {
         DisplayNameTextField.text = ""
         CustomUrlSessionTextField.text = ""
@@ -87,8 +96,13 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
-            destination.profile = edit
-            destination.profileImage = profileImage.image
+            if info3.CustomerId! == "" {
+                destination.profile = AccountBrain.getInfo(url: "http://localhost:3001/customers", id: edit._id!, token: edit._id!)
+            }else{
+                
+                destination.profile = AccountBrain.getInfo(url: "http://localhost:3001/customers", id: info3.CustomerId!, token: info3.token!)
+            }
+            
         }
     }
     //functions
@@ -148,7 +162,8 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
         PortfolioTextField.delegate = self
         
         BioTextView.delegate = self
-
+        print(edit)
+        print(info3)
         // Do any additional setup after loading the view.
     }
     

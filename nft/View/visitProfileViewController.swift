@@ -12,9 +12,8 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     //struct
     
     
-    var profile = Account(WalletAddress: "", DisplayName: "", CustomUrl: "", Bio: "", email: "", Password: "")
-    var token1 = ""
-    var id1 = ""
+    var profile =  UserInfo(_id : "",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
+    var info2 = CustomerLogin(CustomerId: "", token: "")
     var profileImage = UIImage(named: "")
     private var  sideMenu : UISideMenuNavigationController?
     //iboutlet
@@ -63,6 +62,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         onsaleShape.backgroundColor = UIColor.white
         onsaleShape.tintColor = UIColor.black
         
+        
     }
     
     
@@ -73,6 +73,10 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             coverImage.image = image
+            if  info2.token! == "" {
+                AccountBrain.uploadCoverImage(coverImage: coverImage.image! , profileImage: profileImageView.image!, id: profile._id!)
+            }
+            AccountBrain.uploadCoverImage(coverImage: coverImage.image! , profileImage: profileImageView.image!, id: info2.CustomerId!)
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -85,8 +89,11 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         vc.delegate = self
         vc.allowsEditing = true
         present(vc,animated: true)
+        
+        
     }
     @IBAction func editProfileButton(_ sender: Any) {
+        performSegue(withIdentifier: "profileToEditSegue", sender: self)
     }
     @IBAction func followButton(_ sender: Any) {
     }
@@ -109,31 +116,80 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     //functions
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ProfileToEditSegue" {
+        if segue.identifier == "profileToEditSegue" {
             let destination = segue.destination as! EditProfileViewController
+            destination.coverImage = coverImage.image
+            destination.info3 = info2
+            destination.edit = profile
            /*AccountBrain.copyAccount(account1: destination.edit , account2: profile)*/
-            destination.token2 = token1
-            destination.id2 = id1
+            
             
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LabelName.text = profile.DisplayName
-        AddressLabel.text = profile.WalletAddress
-        BioLabel.text = profile.Bio
-        UrlLabel.text = profile.CustomUrl
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        profileImageView.image = profileImage
+        print(info2.token!)
+        LabelName.text = profile.name!
+        AddressLabel.text = profile.wallet_address!
+        BioLabel.text = profile.bio
+        UrlLabel.text = profile.url!
+        print(profile.couverture_picture!)
+        
+        if  URL(string: profile.profile_picture!) != nil {
+            let url = URL(string: profile.profile_picture!)!
+            let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        // Create Image and Update Image View
+                        self.smallImage.image = UIImage(data: data)!
+                        self.profileImageView.image = UIImage(data: data)!
+                    }
+                }
+                
+            }
+
+            // Start Data Task
+            dataTask.resume()
+            
+        }
+        
+        if  URL(string: profile.couverture_picture!) != nil {
+            let url2 = URL(string: profile.couverture_picture!)!
+            let dataTask2 = URLSession.shared.dataTask(with: url2) { (data, _, _) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        // Create Image and Update Image View
+                        self.coverImage.image = UIImage(data: data)!
+                        
+                    }
+                }
+                
+            }
+            dataTask2.resume()
+        }
+        
+        
+            
+        
+        
+
+        print(profile.profile_picture!)
+    
+        
         profileImageView.layer.cornerRadius = 70
         smallImage.layer.cornerRadius = 20
         smallImage.image = profileImage
         
+
+        
         // Do any additional setup after loading the view.
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
     /*
     // MARK: - Navigation

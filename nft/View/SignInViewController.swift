@@ -10,10 +10,10 @@ import UIKit
 class SignInViewController: UIViewController,UITextFieldDelegate {
     
     //var
-   var info = CustomerLogin(CustomerId: "", token: "")
-   var userInfo = UserInfo(name: "", wallet_address: "", bio: "", url: "")
+    var info = CustomerLogin(CustomerId: "", token: "")
+    var userInfo = UserInfo(_id : "",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
     
-    
+    var code = Reset(Token: "")
     //iboutlets
     
     @IBOutlet weak var loginbuttonshape: UIButton!
@@ -28,16 +28,33 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     //ibactions
     
     @IBAction func ForgetPasswordButton(_ sender: Any) {
+        
+        
+        if emailTextField.text! == "" {
+            let alert = UIAlertController(title: "Empty Email", message: "Please Enter Your Email", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok" , style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert,animated: true)
+        }else{
+            code = AccountBrain.resetPassword(email: emailTextField.text!)
+            performSegue(withIdentifier: "signInToResetPassword ", sender: self)
+        }
+        
     }
+    
     
     @IBAction func LoginButton(_ sender: Any) {
      
-        postRequest(email: emailTextField.text!, password: passwordTextField.text!)
+            info = AccountBrain.postRequest(email: emailTextField.text!, password: passwordTextField.text!) 
         if info.token == nil{
-            TryAgainLabel.text = "Try Again"
+            let alert = UIAlertController(title: "Login failed", message: "Please try again ", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok" , style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert,animated: true)
+            
             
         }else{
-            getInfo(url: "http://localhost:3001/customers", id: info.CustomerId!, token: info.token!)
+              userInfo = AccountBrain.getInfo(url: "http://localhost:3001/customers", id: info.CustomerId!, token: info.token!)
             performSegue(withIdentifier: "SignInToProfileSegue", sender: self)
         }
         
@@ -58,139 +75,25 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
-    //struct
-    struct CustomerLogin : Decodable {
-        let CustomerId:String?
-        let token:String?
-    }
-    struct UserInfo: Decodable{
-        let name: String?
-        let wallet_address:String?
-        let bio:String?
-        let url:String?
-    }
-    //post function
-    func postRequest (email:String ,password:String) {
-        
-        guard let url = URL(string: "http://localhost:3001/customers/login") else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-       request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
-        //if we want to use a post we should put the request in the body of the request
-       let body:[String:Any] = [
-            "email": email,
-            "password" : password,
-           
-                    ]
-  do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
-        } catch let error {
-            print("an error happen while parssing the body into json ",error)
-        }
-        let semaphore = DispatchSemaphore(value: 0)
-        let task =  URLSession.shared.dataTask(with: request) {(data,response,error)  in
-            
-            if let error = error {
-                print("an error happen",error)
-                return
-            }
-            if let data = data
-            {
-                
-                self.info = self.parseJSON(customerLogin: data)!
-                
-                
-            }/*{
-                do {
-                    if let json = try? JSONSerialization.jsonObject(with: data, options: []){
-                        
-                        print(json)
-                    }
-                } catch let error  {
-                    print("we couldn t parse data into json ",error)
-                }
-            }*/semaphore.signal()
-        }
-        task.resume()
-        semaphore.wait()
-    }
+    
+    
    
     
     
     
     
-    func parseJSON(customerLogin:Data) ->CustomerLogin?  {
-        let decoder = JSONDecoder()
-        do{
-            let decodedData = try decoder.decode(CustomerLogin.self,from: customerLogin)
-            return decodedData
-        }catch{
-            print(error)
-            return nil
-            
     
-    }
-    }
-    func parseJSON(userInfo:Data) ->UserInfo?  {
-        let decoder = JSONDecoder()
-        do{
-            let decodedData = try decoder.decode(UserInfo.self,from: userInfo)
-            return decodedData
-        }catch{
-            print(error)
-            return nil
-            
-    
-    }
-    }
-    func getInfo(url:String,id:String,token:String) {
-       
-        guard let url1 = URL(string: "\(url)/\(id)") else { return }
-        var request = URLRequest(url: url1)
-        request.httpMethod = "GET"
-        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-       //request.setValue("application/json", forHTTPHeaderField: "content-type")
-        let semaphore = DispatchSemaphore(value: 0)
-      let task = URLSession.shared.dataTask(with: request) {(data,response,error) in
-            
-            if let error = error {
-                print("an error happen",error)
-                return
-            }
-            if let data = data
-            {
-                self.userInfo = self.parseJSON(userInfo: data)!
-                
-                print(self.userInfo.wallet_address!)
-                print(self.userInfo.name!)
-                print(self.userInfo.bio!)
-                print(self.userInfo.url!)
-                
-                /*do {
-                    if let json = try? JSONSerialization.jsonObject(with: data, options: []){
-                        
-                        print(json)
-                    }
-                } catch let error  {
-                    print("we couldn t parse data into json ",error)
-                }*/
-            }
-          semaphore.signal()
-        }
-        task.resume()
-        semaphore.wait()
-    }
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SignInToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
-            
-            destination.profile.WalletAddress = userInfo.wallet_address!
-            destination.profile.DisplayName = userInfo.name!
-            destination.profile.Bio = userInfo.bio!
-            destination.profile.CustomUrl = userInfo.url!
-            destination.token1 = info.token!
-            destination.id1 = info.CustomerId!
+            destination.info2 = info
+            destination.profile = userInfo
         }
+     if segue.identifier == "signInToResetPassword " {
+         let destination = segue.destination as! ResetViewController
+         destination.email = emailTextField.text!
+         destination.token = code
+     }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -200,7 +103,6 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         loginbuttonshape.layer.cornerRadius = 20
         forgetpasswordbuttonshape.layer.cornerRadius = 20
         
-
         // Do any additional setup after loading the view.
     }
     

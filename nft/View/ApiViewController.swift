@@ -115,8 +115,8 @@ class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    
+
      /* if let token = AccessToken.current ,!token.isExpired{
             let token = token.tokenString
             let request = FacebookCore.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
