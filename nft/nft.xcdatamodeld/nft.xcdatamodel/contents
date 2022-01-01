@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Favorites" representedClassName="Favorites" syncable="YES" codeGenerationType="class">
+        <attribute name="imageurl" optional="YES" attributeType="String"/>
+        <attribute name="itemdescription" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
+        <attribute name="seller" optional="YES" attributeType="String"/>
+        <attribute name="tokenid" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Favorites" positionX="-63" positionY="-18" width="128" height="119"/>
+    </elements>
 </model>

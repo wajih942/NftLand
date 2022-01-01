@@ -25,8 +25,17 @@ class notificationClickedViewController: UIViewController {
     @IBOutlet weak var walletAddressButton: UILabel!
     
     
-    //ibactions
     
+    //ibactions
+    @IBAction func searchButton(_ sender: Any) {
+        performSegue(withIdentifier: "functionalitiestoshearchSegue", sender: self)
+    }
+    
+    
+    
+    @IBAction func hallButton(_ sender: Any) {
+        performSegue(withIdentifier: "functionalitiesTohallSegue", sender: self)
+    }
     @IBAction func ConnectwalletButton(_ sender: Any) {
         performSegue(withIdentifier: "functionalitiesToTermsSegue", sender: self)
     }
@@ -34,8 +43,7 @@ class notificationClickedViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func manageFunds(_ sender: Any) {
-    }
+
     
     @IBAction func profileButton(_ sender: Any) {
         performSegue(withIdentifier: "functionalitiesToProfileSegue", sender: self)
@@ -48,6 +56,7 @@ class notificationClickedViewController: UIViewController {
     @IBAction func darkThemeButton(_ sender: Any) {
     }
     
+    
     @IBAction func Disconnect(_ sender: Any) {
         performSegue(withIdentifier: "deconnectSegue1", sender: self)
     }
@@ -58,7 +67,12 @@ class notificationClickedViewController: UIViewController {
             
             walletAddressButton.text = info[0]
             walletStateLabel.text = "wallet connected"
-            balanceLabel.text = AccountBrain.getBalance(address: info[0]).balance! + " ETH"
+            DispatchQueue.main.async {
+                // Create Image and Update Image View
+                self.balanceLabel.text = AccountBrain.getBalance(address: info[0]).balance! + " ETH"
+                
+            }
+            
         }
        
 

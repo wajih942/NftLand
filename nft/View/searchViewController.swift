@@ -10,7 +10,6 @@ import UIKit
 class searchViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
     //var
-    
     var data = AssetsBrain.getAllItems()
     
     
@@ -27,6 +26,7 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "searchTofunctionSegue", sender: self)
     }
     
     @IBAction func search(_ sender: Any) {
@@ -87,6 +87,27 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
             
             return cell!
         }
+    
+    
+    //cellule onClickListener
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+            performSegue(withIdentifier: "searchtoDetailsSegue", sender: indexPath)
+            
+            
+        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            if segue.identifier == "searchtoDetailsSegue" {
+                let indexPath = sender as! IndexPath
+                let destination = segue.destination as! detailsViewController
+                destination.info = data[indexPath.row]
+                
+            }
+            
+        }
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

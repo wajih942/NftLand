@@ -6,6 +6,7 @@
 //
 import UIKit
 import Foundation
+import CoreData
 struct AssetsBrain {
     
     static func inputValidation(item:Item,image:UIImage?,self:UIViewController) -> Bool {
@@ -264,7 +265,7 @@ struct AssetsBrain {
         request.setValue("application/json", forHTTPHeaderField: "content-type")
         
        //request.setValue("application/json", forHTTPHeaderField: "content-type")
-        let semaphore = DispatchSemaphore(value: 0)
+       let semaphore = DispatchSemaphore(value: 0)
       let task = URLSession.shared.dataTask(with: request) {(data,response,error) in
             
             if let error = error {
@@ -337,6 +338,95 @@ struct AssetsBrain {
     }
     }
     
+    static func buyNft(token:String,price:String,address:String,privateKey:String,gasLimit:String,gasPrice:String)->MarketSaleResponse  {
+        
+            var marketsaleResponse = MarketSaleResponse(err: "", txHash: "")
+            guard let url = URL(string: "http://localhost:3001/buynft") else { return marketsaleResponse }
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+           request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
+            //if we want to use a post we should put the request in the body of the request
+           let body:[String:Any] = [
+            "token":token,
+            "price":price ,
+            "address":address,
+            "privateKey":privateKey,
+            "gaslimit":gasLimit,
+            "gasprice": gasPrice
+                
+               
+                        ]
+      do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            } catch let error {
+                print("an error happen while parssing the body into json ",error)
+            }
+            let semaphore = DispatchSemaphore(value: 0)
+            let task =  URLSession.shared.dataTask(with: request) {(data,response,error)  in
+                
+                if let error = error {
+                    print("an error happen",error)
+                    return
+                }
+                if let data = data
+                {
+                    
+                    marketsaleResponse = AssetsBrain.parseJSON1(res: data)!
+                    
+                    
+                }/*{
+                    do {
+                        if let json = try? JSONSerialization.jsonObject(with: data, options: []){
+                            
+                            print(json)
+                        }
+                    } catch let error  {
+                        print("we couldn t parse data into json ",error)
+                    }
+                }*/semaphore.signal()
+            }
+            task.resume()
+            semaphore.wait()
+        return marketsaleResponse
+        
+    }
+    static func prompt(title:String,text:String,self:UIViewController) {
+            let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+            let action = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    
+    
+    
+    static func addtoFavorites(meta:Meta,self:UIViewController) {
+               let appDelegate = UIApplication.shared.delegate as! AppDelegate
+               let persistentContainer = appDelegate.persistentContainer
+               let managedContext = persistentContainer.viewContext // list des nsmangedobject
+               
+               let entityDescription = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)
+               let object = NSManagedObject(entity: entityDescription!, insertInto: managedContext)
+               
+               object.setValue(meta.name!, forKey: "name")
+               object.setValue(meta.price!, forKey: "price")
+        object.setValue(meta.tokenId!, forKey: "tokenid")
+        object.setValue(meta.seller!, forKey: "seller")
+        object.setValue(meta.description, forKey: "itemdescription")
+        object.setValue(meta.image!, forKey: "imageurl")
+        
+        
+                
+                
+               
+               do{
+                   try managedContext.save()
+                   prompt(title: "Asset", text: "insert successfully",self: self)
+               }catch{
+                   print("insert error")
+                   prompt(title: "Asset", text: "insert failed",self: self)
+               }
+               
+           }
     }
 
 

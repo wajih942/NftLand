@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func burgerButton(_ sender: Any) {
+        performSegue(withIdentifier: "hallTofunctionalitiesSegue", sender: self)
     }
     
     

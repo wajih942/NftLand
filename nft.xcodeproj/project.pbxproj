@@ -40,6 +40,9 @@
 		466C70C02743CD6E00054E16 /* OrdersBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70BF2743CD6E00054E16 /* OrdersBrain.swift */; };
 		466C70C22743CE3000054E16 /* BidsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70C12743CE3000054E16 /* BidsBrain.swift */; };
 		466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70C32743CE9900054E16 /* AssetsBrain.swift */; };
+		466F2F8A277FCD5F0093A317 /* detailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F2F89277FCD5F0093A317 /* detailsViewController.swift */; };
+		466F2F8C278043D40093A317 /* BuynftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F2F8B278043D40093A317 /* BuynftViewController.swift */; };
+		466F2F8E27804B760093A317 /* waitingForHashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F2F8D27804B760093A317 /* waitingForHashViewController.swift */; };
 		4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2427437D2000604D1D /* uploadItemViewController.swift */; };
 		4671BA282743896800604D1D /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA272743896800604D1D /* addItemViewController.swift */; };
 		4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */; };
@@ -123,6 +126,9 @@
 		466C70BF2743CD6E00054E16 /* OrdersBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersBrain.swift; sourceTree = "<group>"; };
 		466C70C12743CE3000054E16 /* BidsBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsBrain.swift; sourceTree = "<group>"; };
 		466C70C32743CE9900054E16 /* AssetsBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsBrain.swift; sourceTree = "<group>"; };
+		466F2F89277FCD5F0093A317 /* detailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsViewController.swift; sourceTree = "<group>"; };
+		466F2F8B278043D40093A317 /* BuynftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuynftViewController.swift; sourceTree = "<group>"; };
+		466F2F8D27804B760093A317 /* waitingForHashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waitingForHashViewController.swift; sourceTree = "<group>"; };
 		4671BA2427437D2000604D1D /* uploadItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadItemViewController.swift; sourceTree = "<group>"; };
 		4671BA272743896800604D1D /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewUploadedItemViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +252,9 @@
 				4615CECB277756D50024ACA6 /* MarketSaleViewController.swift */,
 				4681EB9C277E7B2C00BFBCA2 /* ResetViewController.swift */,
 				4681EB9E277E7E0A00BFBCA2 /* NewPasswordViewController.swift */,
+				466F2F89277FCD5F0093A317 /* detailsViewController.swift */,
+				466F2F8B278043D40093A317 /* BuynftViewController.swift */,
+				466F2F8D27804B760093A317 /* waitingForHashViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -582,6 +591,7 @@
 			files = (
 				466C70C22743CE3000054E16 /* BidsBrain.swift in Sources */,
 				4F1F5D422731393C005F0177 /* nft.xcdatamodeld in Sources */,
+				466F2F8E27804B760093A317 /* waitingForHashViewController.swift in Sources */,
 				466C70982743A23500054E16 /* activityViewController.swift in Sources */,
 				466C70B02743C21400054E16 /* Bids.swift in Sources */,
 				461AF54B275B3498006D4563 /* Networking .swift in Sources */,
@@ -607,9 +617,11 @@
 				466C709627439F4200054E16 /* visitProfileViewController.swift in Sources */,
 				4671BA2527437D2000604D1D /* uploadItemViewController.swift in Sources */,
 				466C709E2743A9B300054E16 /* notificationClickedViewController.swift in Sources */,
+				466F2F8A277FCD5F0093A317 /* detailsViewController.swift in Sources */,
 				466C70A82743BE7B00054E16 /* Followers.swift in Sources */,
 				4681EBA3277E85B800BFBCA2 /* UserInfo.swift in Sources */,
 				4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */,
+				466F2F8C278043D40093A317 /* BuynftViewController.swift in Sources */,
 				466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */,
 				466C70B82743CABE00054E16 /* PaymentBrain.swift in Sources */,
 				466C709A2743A4D700054E16 /* searchViewController.swift in Sources */,

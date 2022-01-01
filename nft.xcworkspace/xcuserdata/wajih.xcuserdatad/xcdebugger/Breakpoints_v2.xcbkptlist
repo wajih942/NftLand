@@ -144,5 +144,53 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A1F8532-8F82-4604-BFAD-9DEEF44606C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nft/View/addItemViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "addItemViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1A1F8532-8F82-4604-BFAD-9DEEF44606C4 - 75824b42c79588be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.addItemViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; nft.addItemViewController"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/addItemViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "1A1F8532-8F82-4604-BFAD-9DEEF44606C4 - 892d27308c4bc82d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.addItemViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;nft.addItemViewController&gt;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/addItemViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
