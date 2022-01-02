@@ -10,12 +10,13 @@ import UIKit
 class searchViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
     //var
-    var data = AssetsBrain.getAllItems()
+    //var data = AssetsBrain.getAllItems()
     
+    //{ (Result) in print(Result) }
     
-    
+    @IBOutlet weak var tableview: UITableView!
     //iboutlets
-    
+    var data = [Meta]()
     
     //ibactions
     
@@ -106,12 +107,29 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
             }
             
         }
-
+    func fetchitemsData(completion: @escaping () -> ()) {
+            
+            // weak self - prevent retain cycles
+            AssetsBrain.getitemData { [weak self] (result) in
+                
+                switch result {
+                case .success(let listOf):
+                   self?.data = listOf
+                    completion()
+                case .failure(let error):
+                    // Something is wrong with the JSON file or the model
+                    print("Error processing json data: \(error)")
+                }
+            }
+        }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       // AssetsBrain.getitemData{ (Result) in }
+        fetchitemsData {
+            self.tableview.reloadData()
+        }
         // Do any additional setup after loading the view.
     }
     

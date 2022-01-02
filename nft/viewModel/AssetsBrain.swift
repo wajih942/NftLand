@@ -257,6 +257,58 @@ struct AssetsBrain {
     
     }
     }
+   ////////////////////////////////////////////////////////////////////
+    ///
+    ///
+    //private var dataTask: URLSessionDataTask?
+    static func getitemData(completion: @escaping (Result<[Meta], Error>) -> Void) {
+        var dataTask: URLSessionDataTask?
+        let itemsURL = "http://localhost:3001/allitems"
+        
+        guard let url = URL(string: itemsURL) else {return}
+        
+        // Create URL Session - work on the background
+        dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            // Handle Error
+            if let error = error {
+                completion(.failure(error))
+                print("DataTask error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                // Handle Empty Response
+                print("Empty Response")
+                return
+            }
+            print("Response status code: \(response.statusCode)")
+            
+            guard let data = data else {
+                // Handle Empty Data
+                print("Empty Data")
+                return
+            }
+            
+            do {
+                // Parse the data
+                let decoder = JSONDecoder()
+                let jsonData = AssetsBrain.parseJSON3(res: data)!
+                
+                // Back to the main thread
+                DispatchQueue.main.async {
+                    completion(.success(jsonData))
+                }
+            } catch let error {
+                completion(.failure(error))
+            }
+            
+        }
+        dataTask?.resume()
+    }
+    
+    
+    ////////////////////////////////////////////////////////////
     static func getAllItems() ->[Meta]{
         var items = [Meta]()
         guard let url = URL(string: "http://localhost:3001/allitems") else { return items }

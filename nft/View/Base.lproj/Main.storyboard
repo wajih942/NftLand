@@ -4634,6 +4634,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BJB-TV-DUO"/>
                     <connections>
+                        <outlet property="tableview" destination="xCQ-Y6-3ry" id="08d-I6-85b"/>
                         <segue destination="co5-tW-ObH" kind="show" identifier="searchtoDetailsSegue" id="BCJ-cA-M2y"/>
                         <segue destination="8e4-dh-ekB" kind="show" identifier="searchTofunctionSegue" id="VDf-Lf-GxS"/>
                     </connections>
@@ -7295,7 +7296,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Phw-8P-CIF"/>
-        <segue reference="4U1-Fc-Yy0"/>
+        <segue reference="VDf-Lf-GxS"/>
         <segue reference="e46-Wr-Mx6"/>
         <segue reference="tPc-6Q-LKZ"/>
         <segue reference="gTW-1N-nID"/>

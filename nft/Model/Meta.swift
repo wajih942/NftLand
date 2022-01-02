@@ -6,6 +6,12 @@
 //
 
 import Foundation
+
+struct Itemstable : Decodable{
+    let itemtable : [Meta]
+}
+
+
 struct Meta : Decodable{
     var tokenId : String?
     var seller : String?
