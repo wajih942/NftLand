@@ -31,8 +31,9 @@ struct AccountBrain {
             }
             if let data = data
             {
-                
-               // balance = AccountBrain.parseJSON(res: data)!
+                if AccountBrain.parseJSON(res: data) != nil {
+                    balance = AccountBrain.parseJSON(res: data)!
+                }
                 
                 
             }/*{

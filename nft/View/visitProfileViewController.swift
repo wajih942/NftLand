@@ -7,10 +7,12 @@
 
 import UIKit
 import SideMenu
-class visitProfileViewController: UIViewController,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class visitProfileViewController: UIViewController,UIImagePickerControllerDelegate & UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    
     
     //struct
-    
+    var fav = [Meta]()
     
     var profile =  UserInfo(_id : "",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
     var info2 = CustomerLogin(CustomerId: "", token: "")
@@ -126,7 +128,47 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             
         }
     }
+    //functions
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return fav.count
+        }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fcell", for: indexPath as IndexPath)
+            let contentView = cell.contentView
+                    
+            let label = contentView.viewWithTag(2) as! UILabel
+            let imageView = contentView.viewWithTag(1) as! UIImageView
+                    
+        label.text = fav[indexPath.row].name!
+        if  URL(string: fav[indexPath.row].image!) != nil {
+            let url2 = URL(string:fav[indexPath.row].image!)!
+            let dataTask2 = URLSession.shared.dataTask(with: url2) { (data, _, _) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        // Create Image and Update Image View
+                        imageView.image = UIImage(data: data)!
+                        
+                    }
+                }
+                
+            }
+            dataTask2.resume()
+        }
+            //imageView.image = UIImage(named: "")
+                    
+                    return cell
+
+        }
+
+   
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+            AssetsBrain.deleteItem(index: indexPath.row, fav: fav)
+            fav.remove(at: indexPath.row)
+            collectionView.reloadData()
+               }
     override func viewDidLoad() {
         super.viewDidLoad()
         print(info2.token!)
@@ -135,7 +177,8 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         BioLabel.text = profile.bio
         UrlLabel.text = profile.url!
         print(profile.couverture_picture!)
-        
+        fav = AssetsBrain.fetchData()
+        print(fav)
         if  URL(string: profile.profile_picture!) != nil {
             let url = URL(string: profile.profile_picture!)!
             let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in

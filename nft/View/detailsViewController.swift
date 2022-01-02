@@ -42,7 +42,13 @@ class detailsViewController: UIViewController {
     
     
     @IBAction func addfavoritesButton(_ sender: Any) {
-        AssetsBrain.addtoFavorites(meta: info, self: self)
+        
+        if AssetsBrain.checkAsset(meta: info) {
+            AssetsBrain.prompt(title: "Asset exist", text: "you already added this asset to your favorites", self: self)
+        }else{
+            AssetsBrain.addtoFavorites(meta: info, self: self)
+        }
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             

@@ -427,6 +427,87 @@ struct AssetsBrain {
                }
                
            }
+    
+    
+    static func fetchData() -> [Meta]{
+           var favorites = [Meta]()
+           let appDelegate = UIApplication.shared.delegate as! AppDelegate
+           let persistentContainer = appDelegate.persistentContainer
+           let managedContext = persistentContainer.viewContext // list des nsmangedobject
+           
+           let request = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
+           do {
+               let result = try managedContext.fetch(request)
+               for item in result{
+                   favorites.append(Meta(tokenId: item.value(forKey: "tokenid") as! String,
+                                         seller: item.value(forKey: "seller") as! String,
+                                         owner: "",
+                                         price: item.value(forKey: "price") as! String,
+                                         name: item.value(forKey: "name") as! String,
+                                         description: item.value(forKey: "itemdescription") as! String,
+                                         image: item.value(forKey: "imageurl") as! String))
+               }
+           } catch  {
+               print("fetching error")
+           }
+        return favorites
+       }
+    
+    
+    
+    
+    
+    
+
+static func checkAsset(meta:Meta) -> Bool {
+        var ImposterExist = false
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let persistentContainer = appDelegate.persistentContainer
+        let managedContext = persistentContainer.viewContext // list des nsmangedobject
+
+        let request = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
+    let predicate = NSPredicate(format: "imageurl = %@", meta.image!)
+        request.predicate = predicate
+        do {
+             let result = try managedContext.fetch(request)
+            if result.count > 0  {
+                ImposterExist = true
+            }
+        } catch {
+            print("fetching error")
+        }
+        
+        return ImposterExist
     }
-
-
+    
+    
+    static func deleteItem(index :Int,fav : [Meta])  {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let persistentContainer = appDelegate.persistentContainer
+        let managedContext = persistentContainer.viewContext // list des nsmangedobject
+        
+        let request = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
+        let predicate = NSPredicate(format: "imageurl = %@", fav[index].image!)
+        request.predicate = predicate
+        do {
+            let result = try managedContext.fetch(request)
+            if result.count > 0 {
+                let obj = result[0]
+                managedContext.delete(obj)
+                print("deleted succefully")
+            }
+        } catch  {
+            print("fetching error")
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
