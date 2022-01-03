@@ -49,10 +49,6 @@ Swift is a robust and intuitive programming language created by Apple to create 
 
 ## Libraries and frameworks:
 
-## RealityKit :
-
-RealityKit is a new framework that's baked into Xcode 11 and iOS 13 to allow developers to get photo-realistic rendering in their augmented reality scenes
-
 ## xcode :
 
 Xcode is an application that developers use to build apps for Apple's various platforms such as iPhone, iPad, Macs, AppleTV and Apple Watch
