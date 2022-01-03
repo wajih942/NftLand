@@ -7,7 +7,7 @@
 
 import UIKit
 
-class searchViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
+class searchViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate{
 
     //var
     //var data = AssetsBrain.getAllItems()
@@ -17,12 +17,16 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
     @IBOutlet weak var tableview: UITableView!
     //iboutlets
     var data = [Meta]()
-    
+    var filtredData = [Meta]()
     //ibactions
+
+    @IBOutlet weak var searchcontroller: UISearchBar!
     
-    @IBAction func notificationButton(_ sender: Any) {
+    
+    @IBAction func restore(_ sender: Any) {
+        filtredData = data
+        tableview.reloadData()
     }
-    
     @IBAction func profileButton(_ sender: Any) {
     }
     
@@ -51,7 +55,7 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
     //functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return data.count
+            return filtredData.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,11 +72,11 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
             
             let imageView = contentView?.viewWithTag(1) as! UIImageView
             
-            name.text = data[indexPath.row].name!
+            name.text = filtredData[indexPath.row].name!
 
-            price.text = data[indexPath.row].price! + " ETH"
+            price.text = filtredData[indexPath.row].price! + " ETH"
             
-            let url = URL(string: data[indexPath.row].image!)!
+            let url = URL(string: filtredData[indexPath.row].image!)!
             let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
                 if let data = data {
                     DispatchQueue.main.async {
@@ -115,6 +119,7 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 switch result {
                 case .success(let listOf):
                    self?.data = listOf
+                    self?.filtredData = listOf
                     completion()
                 case .failure(let error):
                     // Something is wrong with the JSON file or the model
@@ -122,14 +127,31 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 }
             }
         }
-
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filtredData = [Meta]()
+        if searchText == "" {
+            filtredData = data
+        }
+        else{
+            for item in data{
+                if item.name!.lowercased() .contains(searchText.lowercased()) {
+                    filtredData.append(item)
+                }
+            }
+            self.tableview.reloadData()
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        // AssetsBrain.getitemData{ (Result) in }
         fetchitemsData {
             self.tableview.reloadData()
         }
+        searchcontroller.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
