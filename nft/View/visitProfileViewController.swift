@@ -54,9 +54,10 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         purshasedshape.tintColor = UIColor.black
     }
     @IBAction func notificationButton(_ sender: Any) {
-        performSegue(withIdentifier: "profileToNotifSegue", sender: self)
+        
         var userinfo = [profile._id!,profile.name!,profile.wallet_address!,profile.bio!,profile.url!,profile.profile_picture!,profile.couverture_picture!,profile.email!,""]
         defaults.set(userinfo,forKey: "user")
+        performSegue(withIdentifier: "profileToNotifSegue", sender: self)
     }
    
     
@@ -127,11 +128,11 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             destination.edit = profile
            /*AccountBrain.copyAccount(account1: destination.edit , account2: profile)*/
             }
-        if segue.identifier == "profileToFunctionalitiesSegue" {
+        /*if segue.identifier == "profileToFunctionalitiesSegue" {
             let destination = segue.destination as! notificationClickedViewController
             destination.userinfo1 = [profile._id!,profile.name!,profile.wallet_address!,profile.bio!,profile.url!,profile.profile_picture!,profile.couverture_picture!,profile.email!,""]
            
-            }
+            }*/
         
     }
     //functions

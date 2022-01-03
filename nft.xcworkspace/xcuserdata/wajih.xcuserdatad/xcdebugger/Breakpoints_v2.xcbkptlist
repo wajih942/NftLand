@@ -14,9 +14,9 @@
             filePath = "nft/View/visitProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "followButton(_:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "uploadButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
