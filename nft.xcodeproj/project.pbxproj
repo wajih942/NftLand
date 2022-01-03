@@ -15,6 +15,8 @@
 		46683A3E2782B4680066BDC9 /* CollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A3D2782B4680066BDC9 /* CollectionViewCell1.swift */; };
 		46683A402782B4780066BDC9 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A3F2782B4780066BDC9 /* CollectionViewCell2.swift */; };
 		46683A422782DFC30066BDC9 /* CollectionViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A412782DFC30066BDC9 /* CollectionViewCell3.swift */; };
+		46683A442783042C0066BDC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A432783042C0066BDC9 /* ViewController.swift */; };
+		46683A46278306620066BDC9 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 46683A45278306620066BDC9 /* cards.json */; };
 		466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708A2743939200054E16 /* stepsToUploadViewController.swift */; };
 		466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708C274397BC00054E16 /* connectWalletViewController.swift */; };
 		466C708F2743997300054E16 /* scanQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708E2743997300054E16 /* scanQrViewController.swift */; };
@@ -64,7 +66,6 @@
 		46F1CFF2275F32FB001D552E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F1CFF1275F32FB001D552E /* HealthKit.framework */; };
 		4F1F5D382731393C005F0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D372731393C005F0177 /* AppDelegate.swift */; };
 		4F1F5D3A2731393C005F0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D392731393C005F0177 /* SceneDelegate.swift */; };
-		4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D3B2731393C005F0177 /* ViewController.swift */; };
 		4F1F5D3F2731393C005F0177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1F5D3D2731393C005F0177 /* Main.storyboard */; };
 		4F1F5D422731393C005F0177 /* nft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5D402731393C005F0177 /* nft.xcdatamodeld */; };
 		4F1F5D442731393D005F0177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1F5D432731393D005F0177 /* Assets.xcassets */; };
@@ -104,6 +105,8 @@
 		46683A3D2782B4680066BDC9 /* CollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell1.swift; sourceTree = "<group>"; };
 		46683A3F2782B4780066BDC9 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
 		46683A412782DFC30066BDC9 /* CollectionViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell3.swift; sourceTree = "<group>"; };
+		46683A432783042C0066BDC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46683A45278306620066BDC9 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		466C708A2743939200054E16 /* stepsToUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsToUploadViewController.swift; sourceTree = "<group>"; };
 		466C708C274397BC00054E16 /* connectWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectWalletViewController.swift; sourceTree = "<group>"; };
 		466C708E2743997300054E16 /* scanQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scanQrViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +158,6 @@
 		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F1F5D392731393C005F0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F1F5D3B2731393C005F0177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F1F5D3E2731393C005F0177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F1F5D412731393C005F0177 /* nft.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nft.xcdatamodel; sourceTree = "<group>"; };
 		4F1F5D432731393D005F0177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,9 +238,9 @@
 		4698AB2B273A85B700E177F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46683A45278306620066BDC9 /* cards.json */,
 				4F1F5D3D2731393C005F0177 /* Main.storyboard */,
 				4671BA2427437D2000604D1D /* uploadItemViewController.swift */,
-				4F1F5D3B2731393C005F0177 /* ViewController.swift */,
 				4671BA272743896800604D1D /* addItemViewController.swift */,
 				4671BA2927438EAB00604D1D /* previewUploadedItemViewController.swift */,
 				466C708A2743939200054E16 /* stepsToUploadViewController.swift */,
@@ -264,6 +266,7 @@
 				46683A3D2782B4680066BDC9 /* CollectionViewCell1.swift */,
 				46683A3F2782B4780066BDC9 /* CollectionViewCell2.swift */,
 				46683A412782DFC30066BDC9 /* CollectionViewCell3.swift */,
+				46683A432783042C0066BDC9 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				4F1F5D472731393D005F0177 /* LaunchScreen.storyboard in Resources */,
 				4F1F5D442731393D005F0177 /* Assets.xcassets in Resources */,
 				4F1F5D3F2731393C005F0177 /* Main.storyboard in Resources */,
+				46683A46278306620066BDC9 /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +623,6 @@
 				466C70B22743C64200054E16 /* Assets.swift in Sources */,
 				466C709C2743A72100054E16 /* noResultsViewController.swift in Sources */,
 				466C70BC2743CC6F00054E16 /* LikeBrain.swift in Sources */,
-				4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */,
 				46683A422782DFC30066BDC9 /* CollectionViewCell3.swift in Sources */,
 				4681EBA5277E914D00BFBCA2 /* Reset.swift in Sources */,
 				466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */,
@@ -638,6 +641,7 @@
 				466C709A2743A4D700054E16 /* searchViewController.swift in Sources */,
 				466C70B62743C92A00054E16 /* AccountBrain.swift in Sources */,
 				466C70A42743BC0300054E16 /* Payment.swift in Sources */,
+				46683A442783042C0066BDC9 /* ViewController.swift in Sources */,
 				466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */,
 				466C70AA2743BF0400054E16 /* Likes.swift in Sources */,
 				46297662275442AF00535877 /* SignInViewController.swift in Sources */,
