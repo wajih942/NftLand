@@ -12,6 +12,9 @@
 		4615CECC277756D50024ACA6 /* MarketSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615CECB277756D50024ACA6 /* MarketSaleViewController.swift */; };
 		461AF54B275B3498006D4563 /* Networking .swift in Sources */ = {isa = PBXBuildFile; fileRef = 461AF54A275B3498006D4563 /* Networking .swift */; };
 		46297662275442AF00535877 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46297661275442AF00535877 /* SignInViewController.swift */; };
+		46683A3E2782B4680066BDC9 /* CollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A3D2782B4680066BDC9 /* CollectionViewCell1.swift */; };
+		46683A402782B4780066BDC9 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A3F2782B4780066BDC9 /* CollectionViewCell2.swift */; };
+		46683A422782DFC30066BDC9 /* CollectionViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46683A412782DFC30066BDC9 /* CollectionViewCell3.swift */; };
 		466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708A2743939200054E16 /* stepsToUploadViewController.swift */; };
 		466C708D274397BC00054E16 /* connectWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708C274397BC00054E16 /* connectWalletViewController.swift */; };
 		466C708F2743997300054E16 /* scanQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C708E2743997300054E16 /* scanQrViewController.swift */; };
@@ -98,6 +101,9 @@
 		4615CECB277756D50024ACA6 /* MarketSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSaleViewController.swift; sourceTree = "<group>"; };
 		461AF54A275B3498006D4563 /* Networking .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking .swift"; sourceTree = "<group>"; };
 		46297661275442AF00535877 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		46683A3D2782B4680066BDC9 /* CollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell1.swift; sourceTree = "<group>"; };
+		46683A3F2782B4780066BDC9 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
+		46683A412782DFC30066BDC9 /* CollectionViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell3.swift; sourceTree = "<group>"; };
 		466C708A2743939200054E16 /* stepsToUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepsToUploadViewController.swift; sourceTree = "<group>"; };
 		466C708C274397BC00054E16 /* connectWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectWalletViewController.swift; sourceTree = "<group>"; };
 		466C708E2743997300054E16 /* scanQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scanQrViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +261,9 @@
 				466F2F89277FCD5F0093A317 /* detailsViewController.swift */,
 				466F2F8B278043D40093A317 /* BuynftViewController.swift */,
 				466F2F8D27804B760093A317 /* waitingForHashViewController.swift */,
+				46683A3D2782B4680066BDC9 /* CollectionViewCell1.swift */,
+				46683A3F2782B4780066BDC9 /* CollectionViewCell2.swift */,
+				46683A412782DFC30066BDC9 /* CollectionViewCell3.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,12 +613,14 @@
 				46DC966B274B14BD00ECB59C /* SignUpViewController.swift in Sources */,
 				4671BA2A27438EAB00604D1D /* previewUploadedItemViewController.swift in Sources */,
 				466C709127439B0500054E16 /* termsViewController.swift in Sources */,
+				46683A3E2782B4680066BDC9 /* CollectionViewCell1.swift in Sources */,
 				4671BA282743896800604D1D /* addItemViewController.swift in Sources */,
 				466C70AE2743C07000054E16 /* Orders.swift in Sources */,
 				466C70B22743C64200054E16 /* Assets.swift in Sources */,
 				466C709C2743A72100054E16 /* noResultsViewController.swift in Sources */,
 				466C70BC2743CC6F00054E16 /* LikeBrain.swift in Sources */,
 				4F1F5D3C2731393C005F0177 /* ViewController.swift in Sources */,
+				46683A422782DFC30066BDC9 /* CollectionViewCell3.swift in Sources */,
 				4681EBA5277E914D00BFBCA2 /* Reset.swift in Sources */,
 				466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */,
 				46932A54277B4C5E00E19ED1 /* Balance.swift in Sources */,
@@ -633,6 +644,7 @@
 				46072995274C8F89001C1BC3 /* EditProfileViewController.swift in Sources */,
 				466C70A02743B3BF00054E16 /* Customer.swift in Sources */,
 				46932A50277ACFE100E19ED1 /* MintResponse.swift in Sources */,
+				46683A402782B4780066BDC9 /* CollectionViewCell2.swift in Sources */,
 				466C70B42743C87E00054E16 /* CustomerBrain.swift in Sources */,
 				466C70C02743CD6E00054E16 /* OrdersBrain.swift in Sources */,
 				466C708F2743997300054E16 /* scanQrViewController.swift in Sources */,

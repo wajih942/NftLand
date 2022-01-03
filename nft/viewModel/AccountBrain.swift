@@ -848,5 +848,38 @@ struct AccountBrain {
     
     }
     }
+    
+    
+    static func editinputValidation(account:UserInfo,self:UIViewController,image: UIImage?) -> Bool {
+        var message = ""
+        //let SalePrice = (item.instantSalePrice as NSString).floatValue
+        //let auctionPrice = (item.auctionEntrancePrice as NSString).floatValue
+        //let date = Date()
+        
+
+        
+
+        
+        //print(date)
+        if account.name!.count > 2 && account.bio!.count > 16   && isValidUrl(url: account.url!) && AccountBrain.ifImageExit(image: image) {
+            return true
+        }
+        if account.name!.count <= 2 {
+            message = message + "DisplayName should contain at least 3 caractere"
+        }
+        if account.bio!.count <= 16 {
+            message = message + " Bio should contain at least 5 words"
+        }
+        if !AccountBrain.ifImageExit(image: image) {
+            message = message + " You can not Edit unless you upload an image"
+        }
+    
+        let alert = UIAlertController(title: "Please chech your information", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok" , style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert,animated: true)
+        
+        return false
+    }
 
 }

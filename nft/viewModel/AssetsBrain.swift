@@ -261,6 +261,121 @@ struct AssetsBrain {
     ///
     ///
     //private var dataTask: URLSessionDataTask?
+    static func getOnSaleData(address:String,url:String,completion: @escaping (Result<[Meta], Error>) -> Void) {
+        
+        guard let url = URL(string: url) else { return  }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+       request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
+        //if we want to use a post we should put the request in the body of the request
+       let body:[String:Any] = [
+        
+        "address":address,
+            
+           
+                    ]
+  do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+        } catch let error {
+            print("an error happen while parssing the body into json ",error)
+        }
+        
+        let task =  URLSession.shared.dataTask(with: request) {(data,response,error)  in
+            
+            if let error = error {
+                print("an error happen",error)
+                return
+            }
+            if let data = data
+            {
+                do {
+                    // Parse the data
+                    let decoder = JSONDecoder()
+                    if AssetsBrain.parseJSON3(res: data) != nil {
+                        let jsonData = AssetsBrain.parseJSON3(res: data)!
+                        
+                        // Back to the main thread
+                        DispatchQueue.main.async {
+                            completion(.success(jsonData))
+                        }
+                    }
+                    
+                } catch let error {
+                    completion(.failure(error))
+                }
+                
+            }
+    
+    
+        }
+        task.resume()
+    }
+        
+    /*
+    static func getonsaleItem(address:String,url:String)->[Meta]  {
+        
+            var items = [Meta]()
+            var marketsaleResponse = MarketSaleResponse(err: "", txHash: "")
+            guard let url = URL(string: url) else { return items }
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+           request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
+            //if we want to use a post we should put the request in the body of the request
+           let body:[String:Any] = [
+            
+            "address":address,
+                
+               
+                        ]
+      do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            } catch let error {
+                print("an error happen while parssing the body into json ",error)
+            }
+            let semaphore = DispatchSemaphore(value: 0)
+            let task =  URLSession.shared.dataTask(with: request) {(data,response,error)  in
+                
+                if let error = error {
+                    print("an error happen",error)
+                    return
+                }
+                if let data = data
+                {
+                    
+                    items = AssetsBrain.parseJSON3(res: data)!
+                    
+                    
+                }/*{
+                    do {
+                        if let json = try? JSONSerialization.jsonObject(with: data, options: []){
+                            
+                            print(json)
+                        }
+                    } catch let error  {
+                        print("we couldn t parse data into json ",error)
+                    }
+                }*/semaphore.signal()
+            }
+            task.resume()
+            semaphore.wait()
+        return items
+        
+    }
+    */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     static func getitemData(completion: @escaping (Result<[Meta], Error>) -> Void) {
         var dataTask: URLSessionDataTask?
         let itemsURL = "http://localhost:3001/allitems"

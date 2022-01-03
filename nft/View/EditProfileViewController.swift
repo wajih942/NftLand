@@ -16,8 +16,10 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
     var coverImage = UIImage(named: "")
     //iboutlets
     
+    @IBOutlet weak var profileimageshape: UIImageView!
     
-  
+    @IBOutlet weak var updateShape: UIButton!
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var DisplayNameTextField: UITextField!
     @IBOutlet weak var CustomUrlSessionTextField: UITextField!
@@ -62,9 +64,14 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
         edit.bio = BioTextView.text!
         
         if info3.CustomerId! == "" {
-            AccountBrain.updateprofile(account: edit,coverImage: coverImage!, profileImage: profileImage.image!, id: edit._id!)
-        }else{
+            if AccountBrain.editinputValidation(account: edit, self: self, image: profileImage.image) {
+                AccountBrain.updateprofile(account: edit,coverImage: coverImage!, profileImage: profileImage.image!, id: edit._id!)
+            }
             
+        }else{
+            if AccountBrain.editinputValidation(account: edit, self: self, image: profileImage.image!) {
+                AccountBrain.updateprofile(account: edit,coverImage: coverImage!, profileImage: profileImage.image!, id: info3.CustomerId!)
+            }
             AccountBrain.updateprofile(account: edit,coverImage: coverImage!, profileImage: profileImage.image!, id: info3.CustomerId!)
         }
         
@@ -105,7 +112,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
             
         }
     }
-    //functions
+ /*   //functions
     func performRequest(account : Account,token : String , id : String) {
         guard let url = URL(string: "http://localhost:3001/customers/\(id)") else { return }
         var request = URLRequest(url: url)
@@ -143,7 +150,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
         }.resume()
     
     }
-    
+    */
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
@@ -159,11 +166,13 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
         super.viewDidLoad()
         DisplayNameTextField.delegate = self
         CustomUrlSessionTextField.delegate = self
-        PortfolioTextField.delegate = self
+        //PortfolioTextField.delegate = self
         
         BioTextView.delegate = self
         print(edit)
         print(info3)
+        profileImage.layer.cornerRadius = 37
+        updateShape.layer.cornerRadius = 17
         // Do any additional setup after loading the view.
     }
     

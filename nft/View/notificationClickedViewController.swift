@@ -59,6 +59,8 @@ class notificationClickedViewController: UIViewController {
     
     
     @IBAction func Disconnect(_ sender: Any) {
+        var userinfo = ["","","","","","","","",""]
+        defaults.set(userinfo,forKey: "user")
         performSegue(withIdentifier: "deconnectSegue1", sender: self)
     }
     
@@ -95,6 +97,7 @@ class notificationClickedViewController: UIViewController {
         }
         if let user =  defaults.array(forKey: "user") as? [String]{
             userNameLabel.text = user[1]
+            print(user)
         }
        
 

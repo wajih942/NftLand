@@ -9,11 +9,16 @@ import UIKit
 import SideMenu
 class visitProfileViewController: UIViewController,UIImagePickerControllerDelegate & UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     
+    @IBOutlet weak var FavoritesCollection: UICollectionView!
     
+    @IBOutlet weak var onsalecollection: UICollectionView!
     
+
+    @IBOutlet weak var purshasedcollection: UICollectionView!
     //struct
     var fav = [Meta]()
-    
+    var purshased = [Meta]()
+    var onSale = [Meta]()
     var profile =  UserInfo(_id : "",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
     var info2 = CustomerLogin(CustomerId: "", token: "")
     var profileImage = UIImage(named: "")
@@ -55,8 +60,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     }
     @IBAction func notificationButton(_ sender: Any) {
         
-        var userinfo = [profile._id!,profile.name!,profile.wallet_address!,profile.bio!,profile.url!,profile.profile_picture!,profile.couverture_picture!,profile.email!,""]
-        defaults.set(userinfo,forKey: "user")
+        
         performSegue(withIdentifier: "profileToNotifSegue", sender: self)
     }
    
@@ -74,6 +78,8 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     
     @IBAction func burgerButton(_ sender: Any) {
         performSegue(withIdentifier: "profileToFunctionalitiesSegue", sender: self)
+        var userinfo = [profile._id!,profile.name!,profile.wallet_address!,profile.bio!,profile.url!,profile.profile_picture!,profile.couverture_picture!,profile.email!,""]
+        defaults.set(userinfo,forKey: "user")
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
@@ -137,11 +143,19 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     }
     //functions
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return fav.count
+            
+            if collectionView == FavoritesCollection {
+                return fav.count
+            }
+            if collectionView == purshasedcollection {
+                return purshased.count
+            }
+            return onSale.count
         }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
+        if collectionView == FavoritesCollection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fcell", for: indexPath as IndexPath)
             let contentView = cell.contentView
                     
@@ -166,16 +180,122 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             //imageView.image = UIImage(named: "")
                     
                     return cell
+        }
+        
+        
+        if collectionView == purshasedcollection {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcell", for: indexPath as IndexPath)
+            let contentView = cell.contentView
+                    
+            let label = contentView.viewWithTag(2) as! UILabel
+            let imageView = contentView.viewWithTag(1) as! UIImageView
+                    
+        label.text = fav[indexPath.row].name!
+        if  URL(string: fav[indexPath.row].image!) != nil {
+            let url2 = URL(string:fav[indexPath.row].image!)!
+            let dataTask2 = URLSession.shared.dataTask(with: url2) { (data, _, _) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        // Create Image and Update Image View
+                        imageView.image = UIImage(data: data)!
+                        
+                    }
+                }
+                
+            }
+            dataTask2.resume()
+        }
+            //imageView.image = UIImage(named: "")
+                    
+                    return cell
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onsalecell", for: indexPath as IndexPath)
+        let contentView = cell.contentView
+                
+        let label = contentView.viewWithTag(2) as! UILabel
+        let imageView = contentView.viewWithTag(1) as! UIImageView
+                
+    label.text = onSale[indexPath.row].name!
+    if  URL(string: onSale[indexPath.row].image!) != nil {
+        let url2 = URL(string:onSale[indexPath.row].image!)!
+        let dataTask2 = URLSession.shared.dataTask(with: url2) { (data, _, _) in
+            if let data = data {
+                DispatchQueue.main.async {
+                    // Create Image and Update Image View
+                    imageView.image = UIImage(data: data)!
+                    
+                }
+            }
+            
+        }
+        dataTask2.resume()
+    }
+        //imageView.image = UIImage(named: "")
+                
+                return cell
+            
 
         }
 
    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+   /* func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
             AssetsBrain.deleteItem(index: indexPath.row, fav: fav)
             fav.remove(at: indexPath.row)
             collectionView.reloadData()
-               }
+               }*/
+    func fetchitemsData(completion: @escaping () -> ()) {
+            
+            // weak self - prevent retain cycles
+        if let info =  defaults.array(forKey: "info") as? [String]{
+                         print(info[0])
+            AssetsBrain.getOnSaleData(address: info[0], url: "http://localhost:3001/onsaleperartist") { [weak self] (result) in
+                
+                switch result {
+                case .success(let listOf):
+                   self?.onSale = listOf
+                    completion()
+                case .failure(let error):
+                    // Something is wrong with the JSON file or the model
+                    print("Error processing json data: \(error)")
+                }
+            }
+            }
+            
+        }
+    
+    
+    func fetchitemsData2(completion: @escaping () -> ()) {
+            
+            // weak self - prevent retain cycles
+        if let info =  defaults.array(forKey: "info") as? [String]{
+                         print(info[0])
+            AssetsBrain.getOnSaleData(address: info[0], url: "http://localhost:3001/purshased") { [weak self] (result) in
+                
+                switch result {
+                case .success(let listOf):
+                   self?.purshased = listOf
+                    completion()
+                case .failure(let error):
+                    // Something is wrong with the JSON file or the model
+                    print("Error processing json data: \(error)")
+                }
+            }
+            }
+            
+        }
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(info2.token!)
@@ -220,7 +340,12 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         }
         
         
-            
+        fetchitemsData {
+            self.onsalecollection.reloadData()
+        }
+        fetchitemsData2 {
+            self.purshasedcollection.reloadData()
+        }
         
         
 
@@ -231,7 +356,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         smallImage.layer.cornerRadius = 20
         smallImage.image = profileImage
         
-
+        
         
         // Do any additional setup after loading the view.
         
@@ -252,3 +377,4 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     */
 
 }
+

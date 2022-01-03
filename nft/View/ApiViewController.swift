@@ -12,9 +12,9 @@ import FacebookLogin
 import AuthenticationServices
 class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentationContextProviding,ASAuthorizationControllerDelegate{
     //vars
+    let defaults = UserDefaults.standard
     
-    
-    
+    var profile = UserInfo(_id: "", name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
     
     
     //ibactions
@@ -108,15 +108,30 @@ class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentatio
     
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "signintoprofileSegue" {
+            let destination = segue.destination as! visitProfileViewController
+            if let user =  defaults.array(forKey: "user") as? [String]{
+                profile = UserInfo(_id: user[0], name: user[1], wallet_address: user[2], bio: user[3], url: user[4], profile_picture: user[5], couverture_picture: user[6], email: user[7], password: user[8])
+                print(profile)
+                print(user)
+            }
+            destination.profile = profile
+    }
     
-    
-    
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        if let user =  defaults.array(forKey: "user") as? [String]{
+            if user[0] != "" {
+                performSegue(withIdentifier: "signintoprofileSegue", sender: self)
+            }
+                       
+                    }
 
+        
      /* if let token = AccessToken.current ,!token.isExpired{
             let token = token.tokenString
             let request = FacebookCore.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
