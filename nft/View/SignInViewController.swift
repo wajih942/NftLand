@@ -45,7 +45,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func LoginButton(_ sender: Any) {
      
-          /*  info = AccountBrain.postRequest(email: emailTextField.text!, password: passwordTextField.text!)
+           info = AccountBrain.postRequest(email: emailTextField.text!, password: passwordTextField.text!)
         if info.token == nil{
             let alert = UIAlertController(title: "Login failed", message: "Please try again ", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok" , style: .cancel, handler: nil)
@@ -58,8 +58,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             performSegue(withIdentifier: "SignInToProfileSegue", sender: self)
         }
         
-        */
-        performSegue(withIdentifier: "SignInToProfileSegue", sender: self)
+       
+        
         }
     //functions
     override func viewWillDisappear(_ animated: Bool) {

@@ -19,7 +19,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     var profileImage = UIImage(named: "")
     private var  sideMenu : UISideMenuNavigationController?
     //iboutlet
-    
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var onsaleShape: UIButton!
     
@@ -55,6 +55,8 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     }
     @IBAction func notificationButton(_ sender: Any) {
         performSegue(withIdentifier: "profileToNotifSegue", sender: self)
+        var userinfo = [profile._id!,profile.name!,profile.wallet_address!,profile.bio!,profile.url!,profile.profile_picture!,profile.couverture_picture!,profile.email!,""]
+        defaults.set(userinfo,forKey: "user")
     }
    
     
@@ -124,9 +126,13 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             destination.info3 = info2
             destination.edit = profile
            /*AccountBrain.copyAccount(account1: destination.edit , account2: profile)*/
-            
-            
-        }
+            }
+        if segue.identifier == "profileToFunctionalitiesSegue" {
+            let destination = segue.destination as! notificationClickedViewController
+            destination.userinfo1 = [profile._id!,profile.name!,profile.wallet_address!,profile.bio!,profile.url!,profile.profile_picture!,profile.couverture_picture!,profile.email!,""]
+           
+            }
+        
     }
     //functions
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

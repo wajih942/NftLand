@@ -3463,7 +3463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfP-Ff-qtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13160.869565217392" y="-23.4375"/>
+            <point key="canvasLocation" x="11084" y="-1102"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="NbU-Ec-q3m">
@@ -5160,7 +5160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJp-E9-A4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8221.7391304347839" y="-1149.1071428571429"/>
+            <point key="canvasLocation" x="9471" y="-842"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="9q4-5B-p5V">
@@ -7296,9 +7296,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Phw-8P-CIF"/>
-        <segue reference="VDf-Lf-GxS"/>
+        <segue reference="4U1-Fc-Yy0"/>
         <segue reference="e46-Wr-Mx6"/>
-        <segue reference="tPc-6Q-LKZ"/>
+        <segue reference="miz-yu-yLw"/>
         <segue reference="gTW-1N-nID"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
