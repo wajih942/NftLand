@@ -20,7 +20,7 @@ PODS:
     - FBSDKLoginKit/Login (= 5.15.1)
   - FBSDKLoginKit/Login (5.15.1):
     - FBSDKCoreKit (~> 5.0)
-  - GoogleSignIn (6.0.2):
+  - GoogleSignIn (6.1.0):
     - AppAuth (~> 1.4)
     - GTMAppAuth (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -28,12 +28,14 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
+  - lottie-ios (3.2.3)
   - SideMenu (5.0.1)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - GoogleSignIn
+  - lottie-ios
   - SideMenu
 
 SPEC REPOS:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - lottie-ios
     - SideMenu
 
 SPEC CHECKSUMS:
@@ -54,11 +57,12 @@ SPEC CHECKSUMS:
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
-  GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
+  GoogleSignIn: c90b5bec45e780f54c6a8e1e3c182a86e3dda69d
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
 
-PODFILE CHECKSUM: cf0925ae3f104f96e39ee24df47ee4d45097aacc
+PODFILE CHECKSUM: 0386be3a9217a6b4b89164498a560f463cc8975d
 
 COCOAPODS: 1.11.2

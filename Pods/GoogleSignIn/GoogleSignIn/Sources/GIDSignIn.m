@@ -116,10 +116,13 @@ static const NSTimeInterval kFetcherMaxRetryInterval = 15.0;
 // The delay before the new sign-in flow can be presented after the existing one is cancelled.
 static const NSTimeInterval kPresentationDelayAfterCancel = 1.0;
 
-// Extra parameters for the token exchange endpoint.
+// Parameters for the auth and token exchange endpoints.
 static NSString *const kAudienceParameter = @"audience";
 // See b/11669751 .
 static NSString *const kOpenIDRealmParameter = @"openid.realm";
+static NSString *const kIncludeGrantedScopesParameter = @"include_granted_scopes";
+static NSString *const kLoginHintParameter = @"login_hint";
+static NSString *const kHostedDomainParameter = @"hd";
 
 // Minimum time to expiration for a restored access token.
 static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
@@ -209,6 +212,7 @@ static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
       [GIDSignInInternalOptions defaultOptionsWithConfiguration:configuration
                                        presentingViewController:presentingViewController
                                                       loginHint:hint
+                                                   addScopesFlow:NO
                                                        callback:callback];
   [self signInWithOptions:options];
 }
@@ -248,6 +252,7 @@ static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
       [GIDSignInInternalOptions defaultOptionsWithConfiguration:configuration
                                        presentingViewController:presentingViewController
                                                       loginHint:self.currentUser.profile.email
+                                                   addScopesFlow:YES
                                                        callback:callback];
 
   NSSet<NSString *> *requestedScopes = [NSSet setWithArray:scopes];
@@ -430,21 +435,29 @@ static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
   NSURL *redirectURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@:%@",
                                              [schemes clientIdentifierScheme],
                                              kBrowserCallbackPath]];
-  NSString *emmSupport = [[self class] isOperatingSystemAtLeast9] ? kEMMVersion : nil;
+  NSString *emmSupport;
+#if TARGET_OS_MACCATALYST
+  emmSupport = nil;
+#else
+  emmSupport = [[self class] isOperatingSystemAtLeast9] ? kEMMVersion : nil;
+#endif
+
   NSMutableDictionary<NSString *, NSString *> *additionalParameters = [@{} mutableCopy];
+  additionalParameters[kIncludeGrantedScopesParameter] = @"true";
   if (options.configuration.serverClientID) {
     additionalParameters[kAudienceParameter] = options.configuration.serverClientID;
   }
   if (options.loginHint) {
-    additionalParameters[@"login_hint"] = options.loginHint;
+    additionalParameters[kLoginHintParameter] = options.loginHint;
   }
   if (options.configuration.hostedDomain) {
-    additionalParameters[@"hd"] = options.configuration.hostedDomain;
+    additionalParameters[kHostedDomainParameter] = options.configuration.hostedDomain;
   }
   [additionalParameters addEntriesFromDictionary:
       [GIDAuthentication parametersWithParameters:options.extraParams
                                        emmSupport:emmSupport
                            isPasscodeInfoRequired:NO]];
+
   OIDAuthorizationRequest *request =
       [[OIDAuthorizationRequest alloc] initWithConfiguration:_appAuthConfiguration
                                                     clientId:options.configuration.clientID
@@ -625,9 +638,15 @@ static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
                                                  code:kGIDSignInErrorCodeKeychain];
         return;
       }
-      GIDGoogleUser *user = [[GIDGoogleUser alloc] initWithAuthState:authState
-                                                         profileData:handlerAuthFlow.profileData];
-      [self setCurrentUserWithKVO:user];
+
+      if (self->_currentOptions.addScopesFlow) {
+        [self->_currentUser updateAuthState:authState
+                                profileData:handlerAuthFlow.profileData];
+      } else {
+        GIDGoogleUser *user = [[GIDGoogleUser alloc] initWithAuthState:authState
+                                                           profileData:handlerAuthFlow.profileData];
+        [self setCurrentUserWithKVO:user];
+      }
     }
   }];
 }
@@ -643,12 +662,12 @@ static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
       return;
     }
     OIDIDToken *idToken =
-        [[OIDIDToken alloc] initWithIDTokenString:authState.lastTokenResponse.idToken];
+        [[OIDIDToken alloc] initWithIDTokenString: authState.lastTokenResponse.idToken];
     // If the profile data are present in the ID token, use them.
     if (idToken) {
       handlerAuthFlow.profileData = [self profileDataWithIDToken:idToken];
     }
-    
+
     // If we can't retrieve profile data from the ID token, make a userInfo request to fetch them.
     if (!handlerAuthFlow.profileData) {
       [handlerAuthFlow wait];
@@ -830,11 +849,11 @@ static const NSTimeInterval kMinimumRestoredAccessTokenTimeToExpire = 600.0;
 - (GIDProfileData *)profileDataWithIDToken:(OIDIDToken *)idToken {
   if (!idToken ||
       !idToken.claims[kBasicProfilePictureKey] ||
-      !idToken.claims[kBasicProfileNameKey] || 
+      !idToken.claims[kBasicProfileNameKey] ||
       !idToken.claims[kBasicProfileGivenNameKey] ||
       !idToken.claims[kBasicProfileFamilyNameKey]) {
     return nil;
-  } 
+  }
 
   return [[GIDProfileData alloc]
       initWithEmail:idToken.claims[kBasicProfileEmailKey]

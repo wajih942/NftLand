@@ -22,5 +22,6 @@ target 'nft' do
   pod 'FacebookCore'
  pod 'FacebookLogin'
 pod 'SideMenu'
+pod 'lottie-ios'
 
 end
