@@ -45,6 +45,7 @@
 		466C70C02743CD6E00054E16 /* OrdersBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70BF2743CD6E00054E16 /* OrdersBrain.swift */; };
 		466C70C22743CE3000054E16 /* BidsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70C12743CE3000054E16 /* BidsBrain.swift */; };
 		466C70C42743CE9900054E16 /* AssetsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C70C32743CE9900054E16 /* AssetsBrain.swift */; };
+		466C71522783F2340054ACDB /* ApiLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C71512783F2340054ACDB /* ApiLogin.swift */; };
 		466F2F8A277FCD5F0093A317 /* detailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F2F89277FCD5F0093A317 /* detailsViewController.swift */; };
 		466F2F8C278043D40093A317 /* BuynftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F2F8B278043D40093A317 /* BuynftViewController.swift */; };
 		466F2F8E27804B760093A317 /* waitingForHashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F2F8D27804B760093A317 /* waitingForHashViewController.swift */; };
@@ -135,6 +136,7 @@
 		466C70BF2743CD6E00054E16 /* OrdersBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersBrain.swift; sourceTree = "<group>"; };
 		466C70C12743CE3000054E16 /* BidsBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsBrain.swift; sourceTree = "<group>"; };
 		466C70C32743CE9900054E16 /* AssetsBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsBrain.swift; sourceTree = "<group>"; };
+		466C71512783F2340054ACDB /* ApiLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogin.swift; sourceTree = "<group>"; };
 		466F2F89277FCD5F0093A317 /* detailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsViewController.swift; sourceTree = "<group>"; };
 		466F2F8B278043D40093A317 /* BuynftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuynftViewController.swift; sourceTree = "<group>"; };
 		466F2F8D27804B760093A317 /* waitingForHashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waitingForHashViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				4681EBA2277E85B800BFBCA2 /* UserInfo.swift */,
 				4681EBA4277E914D00BFBCA2 /* Reset.swift */,
 				4681EBA6277E9C2600BFBCA2 /* NewPasswordRes.swift */,
+				466C71512783F2340054ACDB /* ApiLogin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				46683A442783042C0066BDC9 /* ViewController.swift in Sources */,
 				466C708B2743939200054E16 /* stepsToUploadViewController.swift in Sources */,
 				466C70AA2743BF0400054E16 /* Likes.swift in Sources */,
+				466C71522783F2340054ACDB /* ApiLogin.swift in Sources */,
 				46297662275442AF00535877 /* SignInViewController.swift in Sources */,
 				46072995274C8F89001C1BC3 /* EditProfileViewController.swift in Sources */,
 				466C70A02743B3BF00054E16 /* Customer.swift in Sources */,

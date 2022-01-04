@@ -25,6 +25,16 @@ class notificationClickedViewController: UIViewController {
     @IBOutlet weak var walletAddressButton: UILabel!
     
     
+    @IBAction func darkthem(_ sender: UISwitch) {
+        let appDelegate = UIApplication.shared.windows.first
+        if sender.isOn {
+            appDelegate?.overrideUserInterfaceStyle = .dark
+            return
+        }
+        appDelegate?.overrideUserInterfaceStyle = .light
+        return
+    }
+    
     
     //ibactions
     @IBAction func searchButton(_ sender: Any) {
@@ -60,7 +70,9 @@ class notificationClickedViewController: UIViewController {
     
     @IBAction func Disconnect(_ sender: Any) {
         var userinfo = ["","","","","","","","",""]
+        var info = ["",""]
         defaults.set(userinfo,forKey: "user")
+        defaults.set(info,forKey: "info")
         performSegue(withIdentifier: "deconnectSegue1", sender: self)
     }
     
@@ -85,14 +97,16 @@ class notificationClickedViewController: UIViewController {
         
         
         if let info =  defaults.array(forKey: "info") as? [String]{
-            
-            walletAddressButton.text = info[0]
-            walletStateLabel.text = "wallet connected"
-            DispatchQueue.main.async {
-                // Create Image and Update Image View
-                self.balanceLabel.text = AccountBrain.getBalance(address: info[0]).balance! + " ETH"
-                
+            if info[0] != "" {
+                walletAddressButton.text = info[0]
+                walletStateLabel.text = "wallet connected"
+                DispatchQueue.main.async {
+                    // Create Image and Update Image View
+                    self.balanceLabel.text = AccountBrain.getBalance(address: info[0]).balance! + " ETH"
+                    
+                }
             }
+           
             
         }
         if let user =  defaults.array(forKey: "user") as? [String]{

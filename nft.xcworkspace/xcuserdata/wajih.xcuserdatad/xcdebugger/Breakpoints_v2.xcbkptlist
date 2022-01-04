@@ -14,9 +14,9 @@
             filePath = "nft/View/visitProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "followButton(_:)"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "editCoverButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -188,6 +188,54 @@
                   startingLineNumber = "15"
                   endingLineNumber = "15"
                   offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02735463-35A6-4CA8-8A59-6D76A1E957B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nft/View/detailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "detailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "02735463-35A6-4CA8-8A59-6D76A1E957B4 - 1d0a78b763a62e50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.detailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; nft.detailsViewController"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/detailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "02735463-35A6-4CA8-8A59-6D76A1E957B4 - c8eed396915783c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nft.detailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;nft.detailsViewController&gt;"
+                  moduleName = "nft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajih/Documents/GitHub/ios-app/nft/View/detailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "600">
                </Location>
             </Locations>
          </BreakpointContent>

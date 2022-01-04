@@ -23,7 +23,10 @@ class stepsToUploadViewController: UIViewController {
     
     @IBOutlet weak var txhashInfoLabel: UILabel!
     
+    
     @IBOutlet weak var ipfsUrlLabel: UILabel!
+    
+    
     
     @IBOutlet weak var txHashLabel: UILabel!
     

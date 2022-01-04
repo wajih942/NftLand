@@ -848,7 +848,19 @@ struct AccountBrain {
     
     }
     }
+    static func parseJSON5(res2:Data) ->ApiLogin?  {
+        let decoder = JSONDecoder()
+        do{
+            let decodedData = try decoder.decode(ApiLogin.self,from: res2)
+            return decodedData
+        }catch{
+            print(error)
+            return nil
+            
     
+    }
+    }
+
     
     static func editinputValidation(account:UserInfo,self:UIViewController,image: UIImage?) -> Bool {
         var message = ""

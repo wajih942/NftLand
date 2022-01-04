@@ -45,11 +45,18 @@ class MarketSaleViewController: UIViewController {
             print(response)
 
         }
-        performSegue(withIdentifier: "marketsaleToActivitySegue", sender: self)
+        performSegue(withIdentifier: "MarketSaletowaitsegue", sender: self)
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MarketSaletowaitsegue" {
+            let destination = segue.destination as! waitingForHashViewController
+            
+            destination.response = response
+            
+        }
+    }
     
     
     

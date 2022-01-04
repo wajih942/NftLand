@@ -35,9 +35,20 @@ class detailsViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    
+    let defaults = UserDefaults.standard
     @IBAction func buyButton(_ sender: Any) {
-        performSegue(withIdentifier: "detailstobuynftSegue", sender: self)
+        
+        if let info1 =  defaults.array(forKey: "info") as? [String]{
+            if info1[0] == info.seller!  {
+                AssetsBrain.prompt(title: "warning", text: "this is your item", self: self)
+            }else{
+                performSegue(withIdentifier: "detailstobuynftSegue", sender: self)
+            }
+            
+                       
+        }
+
+        
     }
     
     

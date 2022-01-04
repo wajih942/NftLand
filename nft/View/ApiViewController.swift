@@ -182,10 +182,16 @@ class ApiViewController: UIViewController  ,ASAuthorizationControllerPresentatio
     func getFBUserData(){
         if let token = AccessToken.current ,!token.isExpired{
             let token = token.tokenString
-            let request = FacebookCore.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+            let request = FacebookCore.GraphRequest(graphPath: "me", parameters: ["fields":"email,name,picture"], tokenString: token, version: nil, httpMethod: .get)
             
           request.start(completionHandler: {
-                connection,result,error  in print("\(result)")
+                connection,result,error -> Void in
+              print(result)
+                  
+             
+              
+            
+              
             })
       }
     }

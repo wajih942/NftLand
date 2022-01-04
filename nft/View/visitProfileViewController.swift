@@ -12,7 +12,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     @IBOutlet weak var FavoritesCollection: UICollectionView!
     
     @IBOutlet weak var onsalecollection: UICollectionView!
-    
+    let defaults = UserDefaults.standard
 
     @IBOutlet weak var purshasedcollection: UICollectionView!
     //struct
@@ -24,7 +24,8 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
     var profileImage = UIImage(named: "")
     private var  sideMenu : UISideMenuNavigationController?
     //iboutlet
-    let defaults = UserDefaults.standard
+ 
+   
     
     @IBOutlet weak var onsaleShape: UIButton!
     
@@ -150,9 +151,12 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             if collectionView == purshasedcollection {
                 return purshased.count
             }
-            return onSale.count
+            if collectionView == onsalecollection {
+                return onSale.count
+            }
+            return 0
         }
-    
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
         if collectionView == FavoritesCollection {
@@ -190,9 +194,9 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             let label = contentView.viewWithTag(2) as! UILabel
             let imageView = contentView.viewWithTag(1) as! UIImageView
                     
-        label.text = fav[indexPath.row].name!
-        if  URL(string: fav[indexPath.row].image!) != nil {
-            let url2 = URL(string:fav[indexPath.row].image!)!
+        label.text = purshased[indexPath.row].name!
+        if  URL(string: purshased[indexPath.row].image!) != nil {
+            let url2 = URL(string:purshased[indexPath.row].image!)!
             let dataTask2 = URLSession.shared.dataTask(with: url2) { (data, _, _) in
                 if let data = data {
                     DispatchQueue.main.async {
@@ -238,12 +242,12 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         }
 
    
-   /* func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
             AssetsBrain.deleteItem(index: indexPath.row, fav: fav)
             fav.remove(at: indexPath.row)
-            collectionView.reloadData()
-               }*/
+        FavoritesCollection.reloadData()
+               }
     func fetchitemsData(completion: @escaping () -> ()) {
             
             // weak self - prevent retain cycles
@@ -254,6 +258,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
                 switch result {
                 case .success(let listOf):
                    self?.onSale = listOf
+                    print(listOf)
                     completion()
                 case .failure(let error):
                     // Something is wrong with the JSON file or the model
@@ -300,7 +305,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         super.viewDidLoad()
         print(info2.token!)
         LabelName.text = profile.name!
-        AddressLabel.text = profile.wallet_address!
+        //AddressLabel.text = profile.wallet_address!
         BioLabel.text = profile.bio
         UrlLabel.text = profile.url!
         print(profile.couverture_picture!)
@@ -339,13 +344,17 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             dataTask2.resume()
         }
         
+        if let info =  defaults.array(forKey: "info") as? [String]{
+            if info[0] != "" {
+                fetchitemsData {
+                    self.onsalecollection.reloadData()
+                }
+                fetchitemsData2 {
+                    self.purshasedcollection.reloadData()
+                }
+                
+            }}
         
-        fetchitemsData {
-            self.onsalecollection.reloadData()
-        }
-        fetchitemsData2 {
-            self.purshasedcollection.reloadData()
-        }
         
         
 
@@ -356,7 +365,9 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
         smallImage.layer.cornerRadius = 20
         smallImage.image = profileImage
         
-        
+        if let user =  defaults.array(forKey: "user") as? [String]{
+            AddressLabel.text = user[0]
+                   }
         
         // Do any additional setup after loading the view.
         

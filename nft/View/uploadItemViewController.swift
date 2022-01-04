@@ -6,11 +6,13 @@
 //
 
 import UIKit
-
+import Lottie
 class uploadItemViewController: UIViewController {
 
     
     //var
+    let animationView = AnimationView()
+
     let defaults = UserDefaults.standard
     var item4 = Item(itemName: "", description: "", details:  [""], instantSalePrice: "", auctionEntrancePrice: "", instantSale: false, auctionSale: false, time: "")
     var itemImage4 = UIImage(named: "")
@@ -20,7 +22,15 @@ class uploadItemViewController: UIViewController {
     
     @IBOutlet weak var confirmShape: UIButton!
     
-    
+    func setupAnimation()  {
+            animationView.animation = Animation.named("cards")
+            animationView.frame = view.bounds
+            animationView.backgroundColor = .white
+            animationView.contentMode = .scaleAspectFit
+            animationView.loopMode = .loop
+            animationView.play()
+            view.addSubview(animationView)
+        }
     
     
     
@@ -38,8 +48,9 @@ class uploadItemViewController: UIViewController {
         if let info =  defaults.array(forKey: "info") as? [String]{
             print(info[0])
             print(info[1])
-            
+            setupAnimation()
            response = AssetsBrain.uploadImage(item: item4, paramName: "image", fileName: "image", image: itemImage4!,address: info[0],privateKey: info[1],gasLimit: gaslimitprice.text!,gasPrice: gaspricetext.text!)
+            
         }
         
         print(response.txHash)

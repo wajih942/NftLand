@@ -537,8 +537,10 @@ struct AssetsBrain {
                 }
                 if let data = data
                 {
+                    if AssetsBrain.parseJSON1(res: data) != nil  {
+                        marketsaleResponse = AssetsBrain.parseJSON1(res: data)!
+                    }
                     
-                    marketsaleResponse = AssetsBrain.parseJSON1(res: data)!
                     
                     
                 }/*{

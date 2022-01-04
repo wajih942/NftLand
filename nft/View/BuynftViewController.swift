@@ -31,11 +31,12 @@ class BuynftViewController: UIViewController {
     
     
     @IBAction func confirmButton(_ sender: Any) {
-        performSegue(withIdentifier: "buyToWaitSegue", sender: self)
+        
         if let info2 =  defaults.array(forKey: "info") as? [String]{
             print(info2[0])
             print(info2[1])
-            /*response = AssetsBrain.buyNft(token: info.tokenId!, price: info.price!, address: info2[0], privateKey: info2[1], gasLimit: gaslimittextfield.text!, gasPrice: gaspricetextfield.text!)*/
+            response = AssetsBrain.buyNft(token: info.tokenId!, price: info.price!, address: info2[0], privateKey: info2[1], gasLimit: gaslimittextfield.text!, gasPrice: gaspricetextfield.text!)
+            performSegue(withIdentifier: "buyToWaitSegue", sender: self)
         }
         print(info)
 
@@ -50,6 +51,17 @@ class BuynftViewController: UIViewController {
     
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            if segue.identifier == "buyToWaitSegue" {
+                let destination = segue.destination as! waitingForHashViewController
+                destination.response = response
+                
+                
+            }
+            
+        }
     
     
     override func viewDidLoad() {
