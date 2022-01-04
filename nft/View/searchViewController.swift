@@ -106,7 +106,7 @@ class searchViewController: UIViewController,UITableViewDataSource,UITableViewDe
             if segue.identifier == "searchtoDetailsSegue" {
                 let indexPath = sender as! IndexPath
                 let destination = segue.destination as! detailsViewController
-                destination.info = data[indexPath.row]
+                destination.info = filtredData[indexPath.row]
                 
             }
             
