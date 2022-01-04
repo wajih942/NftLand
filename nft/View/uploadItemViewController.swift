@@ -48,7 +48,7 @@ class uploadItemViewController: UIViewController {
         if let info =  defaults.array(forKey: "info") as? [String]{
             print(info[0])
             print(info[1])
-            setupAnimation()
+           
            response = AssetsBrain.uploadImage(item: item4, paramName: "image", fileName: "image", image: itemImage4!,address: info[0],privateKey: info[1],gasLimit: gaslimitprice.text!,gasPrice: gaspricetext.text!)
             
         }
