@@ -728,7 +728,7 @@ struct AccountBrain {
         let name = account.name!
         let walletaddress = "Please connect your wallet"
         let customurl = account.url!
-        let bio = account.bio
+        let bio = account.bio!
         let email = account.email!
         let password = account.password!
         

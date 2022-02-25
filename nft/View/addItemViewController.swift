@@ -109,7 +109,7 @@ class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     }
     
     @IBAction func CreateItemButton(_ sender: Any) {
-        item = Item(itemName: itemNameText.text!, description: descriptionText.text!, details: [sizetext.text!,propritietext.text!], instantSalePrice: instantsalePrice.text!, auctionEntrancePrice: auctionPricetext.text!, instantSale: instantsaleswitch.isOn, auctionSale:auctionswitch.isOn,time: setTime.text!)
+        item = Item(itemName: itemNameText.text!, description: descriptionText.text!, details: [sizetext.text!,propritietext.text!], instantSalePrice: instantsalePrice.text!, auctionEntrancePrice: "", instantSale: true, auctionSale:false,time: "")
         if AssetsBrain.inputValidation(item: item,image: itemImage.image,self: self) {
             performSegue(withIdentifier: "createToPreview", sender: self)
         }
@@ -180,26 +180,7 @@ class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
         
         return true
     }
-    //functions
-    func createDatePicker()  {
-        //toolbar
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        //barButton
-        let donebtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(datePickerValueChanged))
-        toolBar.setItems([donebtn], animated: true)
-        //style
-        datePicker.frame.size = CGSize(width: 0, height: 250)
-        //assign toolbar
-        setTime.inputAccessoryView = toolBar
-        
-        //assign date picker to the text field
-        setTime.inputView = datePicker
-        
-        //date picker mode
-        datePicker.datePickerMode = .dateAndTime
-    }
+    
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
@@ -214,29 +195,18 @@ class addItemViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     override func viewDidLoad() {
         super.viewDidLoad()
         createshape.layer.cornerRadius = 20
-        instantsaleswitch.isOn = false
-        auctionswitch.isOn = false
+        
         
         itemNameText.delegate = self
         descriptionText.delegate = self
         sizetext.delegate = self
         propritietext.delegate = self
         instantsalePrice.delegate = self
-        auctionPricetext.delegate = self
-        setTime.delegate = self
-        createDatePicker()
+        
       
         
         // Do any additional setup after loading the view.
     }
-    @objc func datePickerValueChanged(){
-        // formater
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy HH:mm"
-        
-        setTime.text = formatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-        
-    }
+    
 
 }

@@ -81,8 +81,7 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
         DisplayNameTextField.text = ""
         CustomUrlSessionTextField.text = ""
         BioTextView.text = ""
-        PortfolioTextField.text = ""
-        PasswordTextField.text = ""
+       
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         DisplayNameTextField.endEditing(true)

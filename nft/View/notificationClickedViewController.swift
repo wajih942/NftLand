@@ -73,7 +73,7 @@ class notificationClickedViewController: UIViewController {
         var info = ["",""]
         defaults.set(userinfo,forKey: "user")
         defaults.set(info,forKey: "info")
-        performSegue(withIdentifier: "deconnectSegue1", sender: self)
+        performSegue(withIdentifier: "deconexionsegue", sender: self)
     }
     
     
