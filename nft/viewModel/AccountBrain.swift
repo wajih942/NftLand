@@ -9,7 +9,7 @@ import Foundation
 struct AccountBrain {
     static func getBalance(address:String) -> Balance {
         var balance = Balance(balance: "")
-        guard let url = URL(string: "http://localhost:3001/balance") else { return balance }
+        guard let url = URL(string: "https://nftback.herokuapp.com/balance") else { return balance }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
        request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -75,7 +75,7 @@ struct AccountBrain {
     }
     
     static  func postInfo(account : Account) {
-        guard let url = URL(string: "http://localhost:3001/customers") else { return }
+        guard let url = URL(string: "https://nftback.herokuapp.com/customers") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
        request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -192,7 +192,7 @@ struct AccountBrain {
         
     }
     static func uploadWithImage(account: UserInfo, image: UIImage,image2:UIImage){
-        let url = URL(string: "http://localhost:3001/customers")
+        let url = URL(string: "https://nftback.herokuapp.com/customers")
         
         
         let walletAddressBody = "wallet_address"
@@ -297,7 +297,7 @@ struct AccountBrain {
         var info = CustomerLogin(CustomerId: "", token: "")
         
         
-        guard let url = URL(string: "http://localhost:3001/customers/login") else { return info}
+        guard let url = URL(string: "https://nftback.herokuapp.com/customers/login") else { return info}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
        request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -414,7 +414,7 @@ struct AccountBrain {
         var token = Reset(Token: "")
         
         
-        guard let url = URL(string: "http://localhost:3001/customers/recover") else { return token}
+        guard let url = URL(string: "https://nftback.herokuapp.com/customers/recover") else { return token}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
        request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -485,7 +485,7 @@ struct AccountBrain {
         var res = NewPasswordResponse(response: "")
         
         
-        guard let url = URL(string: "http://localhost:3001/customers/reset/\(id)") else { return res}
+        guard let url = URL(string: "https://nftback.herokuapp.com/customers/reset/\(id)") else { return res}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
        request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -542,7 +542,7 @@ struct AccountBrain {
     }
     
     static func uploadCoverImage(coverImage: UIImage,profileImage:UIImage,id:String){
-        let url = URL(string: "http://localhost:3001/customers/\(id)")
+        let url = URL(string: "https://nftback.herokuapp.com/customers/\(id)")
         
         
        
@@ -613,7 +613,7 @@ struct AccountBrain {
     
     
     static func updateprofile(account: UserInfo, coverImage: UIImage,profileImage:UIImage,id:String){
-        let url = URL(string: "http://localhost:3001/customers/\(id)")
+        let url = URL(string: "https://nftback.herokuapp.com/customers/\(id)")
         
         
         
@@ -712,7 +712,7 @@ struct AccountBrain {
     
     
     static func postprofile(account: UserInfo, coverImage: UIImage,profileImage:UIImage) ->UserInfo{
-        let url = URL(string: "http://localhost:3001/customers")
+        let url = URL(string: "https://nftback.herokuapp.com/customers")
         var res = UserInfo(_id :"",name: "", wallet_address: "", bio: "", url: "", profile_picture: "", couverture_picture: "", email: "", password: "")
         
         let walletAddressBody = "wallet_address"

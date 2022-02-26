@@ -253,7 +253,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             // weak self - prevent retain cycles
         if let info =  defaults.array(forKey: "info") as? [String]{
                          print(info[0])
-            AssetsBrain.getOnSaleData(address: info[0], url: "http://localhost:3001/onsaleperartist") { [weak self] (result) in
+            AssetsBrain.getOnSaleData(address: info[0], url: "https://nftback.herokuapp.com/onsaleperartist") { [weak self] (result) in
                 
                 switch result {
                 case .success(let listOf):
@@ -275,7 +275,7 @@ class visitProfileViewController: UIViewController,UIImagePickerControllerDelega
             // weak self - prevent retain cycles
         if let info =  defaults.array(forKey: "info") as? [String]{
                          print(info[0])
-            AssetsBrain.getOnSaleData(address: info[0], url: "http://localhost:3001/purshased") { [weak self] (result) in
+            AssetsBrain.getOnSaleData(address: info[0], url: "https://nftback.herokuapp.com/purshased") { [weak self] (result) in
                 
                 switch result {
                 case .success(let listOf):

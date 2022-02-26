@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4F1F5D332731393C005F0177"
-               BuildableName = "nft.app"
-               BlueprintName = "nft"
+               BuildableName = "NFT.app"
+               BlueprintName = "NFTLand"
                ReferencedContainer = "container:nft.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F1F5D332731393C005F0177"
-            BuildableName = "nft.app"
-            BlueprintName = "nft"
+            BuildableName = "NFT.app"
+            BlueprintName = "NFTLand"
             ReferencedContainer = "container:nft.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F1F5D332731393C005F0177"
-            BuildableName = "nft.app"
-            BlueprintName = "nft"
+            BuildableName = "NFT.app"
+            BlueprintName = "NFTLand"
             ReferencedContainer = "container:nft.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

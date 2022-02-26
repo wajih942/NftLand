@@ -87,7 +87,7 @@ struct AssetsBrain {
     
     
     static func uploadImage(item: Item,paramName: String, fileName: String, image: UIImage,address :String,privateKey:String,gasLimit:String,gasPrice:String) -> MintResponse{
-        let url = URL(string: "http://localhost:3001/upload")
+        let url = URL(string: "https://nftback.herokuapp.com/upload")
         
         var res = MintResponse(err: "", txHash: "", result: "")
         let nameBody = "name"
@@ -195,7 +195,7 @@ struct AssetsBrain {
     static func createMarketSale(txhash:String,price:String,address:String,privateKey:String,gasLimit:String,gasPrice:String)->MarketSaleResponse  {
         
             var marketsaleResponse = MarketSaleResponse(err: "", txHash: "")
-            guard let url = URL(string: "http://localhost:3001/marketsale") else { return marketsaleResponse }
+            guard let url = URL(string: "https://nftback.herokuapp.com/marketsale") else { return marketsaleResponse }
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
            request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json
@@ -378,7 +378,7 @@ struct AssetsBrain {
     
     static func getitemData(completion: @escaping (Result<[Meta], Error>) -> Void) {
         var dataTask: URLSessionDataTask?
-        let itemsURL = "http://localhost:3001/allitems"
+        let itemsURL = "https://nftback.herokuapp.com/allitems"
         
         guard let url = URL(string: itemsURL) else {return}
         
@@ -426,7 +426,7 @@ struct AssetsBrain {
     ////////////////////////////////////////////////////////////
     static func getAllItems() ->[Meta]{
         var items = [Meta]()
-        guard let url = URL(string: "http://localhost:3001/allitems") else { return items }
+        guard let url = URL(string: "https://nftback.herokuapp.com/allitems") else { return items }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "content-type")
@@ -508,7 +508,7 @@ struct AssetsBrain {
     static func buyNft(token:String,price:String,address:String,privateKey:String,gasLimit:String,gasPrice:String)->MarketSaleResponse  {
         
             var marketsaleResponse = MarketSaleResponse(err: "", txHash: "")
-            guard let url = URL(string: "http://localhost:3001/buynft") else { return marketsaleResponse }
+            guard let url = URL(string: "https://nftback.herokuapp.com/buynft") else { return marketsaleResponse }
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
            request.setValue("application/json", forHTTPHeaderField: "content-type")//applicationjson indicates that we want to get back results in json

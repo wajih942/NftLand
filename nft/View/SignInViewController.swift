@@ -54,7 +54,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
             
             
         }else{
-              userInfo = AccountBrain.getInfo(url: "http://localhost:3001/customers", id: info.CustomerId!, token: info.token!)
+              userInfo = AccountBrain.getInfo(url: "https://nftback.herokuapp.com/customers", id: info.CustomerId!, token: info.token!)
             performSegue(withIdentifier: "SignInToProfileSegue", sender: self)
         }
         

@@ -13,7 +13,7 @@
         <!--Add Item View Controller-->
         <scene sceneID="wFf-60-wNq">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yOU-nn-m6s" customClass="addItemViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yOU-nn-m6s" customClass="addItemViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="key-kn-uda">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,7 +298,7 @@
         <!--Preview Uploaded Item View Controller-->
         <scene sceneID="jek-Og-NBr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="AWk-1T-aK1" customClass="previewUploadedItemViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="AWk-1T-aK1" customClass="previewUploadedItemViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qaZ-fo-yuG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,7 +499,7 @@
         <!--Steps To Upload View Controller-->
         <scene sceneID="4Ta-jy-95g">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="3jU-We-yeu" customClass="stepsToUploadViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3jU-We-yeu" customClass="stepsToUploadViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KR0-vh-btX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -752,7 +752,7 @@
         <!--Connect Wallet View Controller-->
         <scene sceneID="YhH-wc-HpC">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DFf-rP-wcL" customClass="connectWalletViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DFf-rP-wcL" customClass="connectWalletViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afb-mk-8OZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -919,7 +919,7 @@
         <!--Scan Qr View Controller-->
         <scene sceneID="tLT-7E-jVf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="G92-Xc-lAa" customClass="scanQrViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="G92-Xc-lAa" customClass="scanQrViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YS4-yS-hIT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1068,7 +1068,7 @@
         <!--Terms View Controller-->
         <scene sceneID="i1G-KA-Vxt">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Qor-lG-UC7" customClass="termsViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qor-lG-UC7" customClass="termsViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gIZ-KG-QUM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1253,7 +1253,7 @@
         <!--Visit Profile View Controller-->
         <scene sceneID="rTi-80-kbO">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="doZ-bs-fAa" customClass="visitProfileViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="doZ-bs-fAa" customClass="visitProfileViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUF-68-DBj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1379,7 +1379,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onsalecell" id="ODL-CD-vEX" customClass="CollectionViewCell1" customModule="nft" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onsalecell" id="ODL-CD-vEX" customClass="CollectionViewCell1" customModule="NFTLand" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="-2.5" width="239" height="272"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OqO-yV-Iwv">
@@ -1421,7 +1421,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fcell" id="qJA-H8-iCY" customClass="CollectionViewCell2" customModule="nft" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fcell" id="qJA-H8-iCY" customClass="CollectionViewCell2" customModule="NFTLand" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="5" width="245" height="306"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MNE-VZ-jqJ">
@@ -1463,7 +1463,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pcell" id="0bA-Ew-y9A" customClass="CollectionViewCell3" customModule="nft" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pcell" id="0bA-Ew-y9A" customClass="CollectionViewCell3" customModule="NFTLand" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="12.5" width="219" height="237"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r5M-gx-dVH">
@@ -1602,7 +1602,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="NbU-Ec-q3m">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="E0k-qD-eYE" customClass="EditProfileViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="E0k-qD-eYE" customClass="EditProfileViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2BX-jd-bSa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1860,7 +1860,7 @@
         <!--Search View Controller-->
         <scene sceneID="opb-qM-r60">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="3KE-OV-rPM" customClass="searchViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3KE-OV-rPM" customClass="searchViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQn-aN-IaU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2020,7 +2020,7 @@
         <!--Notification Clicked View Controller-->
         <scene sceneID="j11-2g-PSy">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="8e4-dh-ekB" customClass="notificationClickedViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="8e4-dh-ekB" customClass="notificationClickedViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p1I-1b-l1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2279,7 +2279,7 @@
         <!--View Controller-->
         <scene sceneID="7o6-fE-kme">
             <objects>
-                <viewController id="FpL-kn-uup" customClass="ViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FpL-kn-uup" customClass="ViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DKd-lH-0SI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2306,13 +2306,13 @@
         <!--Sign Up View Controller-->
         <scene sceneID="9q4-5B-p5V">
             <objects>
-                <viewController id="ct5-JN-7Dx" customClass="SignUpViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ct5-JN-7Dx" customClass="SignUpViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fsc-7A-OnM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-pj-0ju">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I7Z-11-TwG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1580"/>
@@ -2572,7 +2572,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="OTq-cV-cVw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="8yE-rZ-vVT" customClass="SignInViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8yE-rZ-vVT" customClass="SignInViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ndV-3y-USv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2713,12 +2713,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTn-xk-Mea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11861.25" y="-460"/>
+            <point key="canvasLocation" x="10677" y="-80"/>
         </scene>
         <!--NFT Land-->
         <scene sceneID="eQV-yI-Nzr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="xlv-nh-2wI" customClass="ApiViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="xlv-nh-2wI" customClass="ApiViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jjC-A4-H6T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2807,10 +2807,6 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="symbol 2" translatesAutoresizingMaskIntoConstraints="NO" id="mKQ-Ca-tQb">
-                                        <rect key="frame" x="1" y="-78" width="128" height="101"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KqX-yt-XuH" firstAttribute="trailing" secondItem="3FO-A6-fTD" secondAttribute="trailing" id="NFr-L4-1jU"/>
@@ -2868,7 +2864,7 @@
         <!--Upload Item View Controller-->
         <scene sceneID="oVC-Gd-NUV">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="J6r-yn-TqY" customClass="uploadItemViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="J6r-yn-TqY" customClass="uploadItemViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cjC-3l-Xrb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3065,7 +3061,7 @@
         <!--Market Sale View Controller-->
         <scene sceneID="8Cv-r0-Up6">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Xtd-nU-Zvi" customClass="MarketSaleViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Xtd-nU-Zvi" customClass="MarketSaleViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ag0-px-iaS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3267,13 +3263,13 @@
         <!--Details View Controller-->
         <scene sceneID="V06-Ti-oCB">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="co5-tW-ObH" customClass="detailsViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="co5-tW-ObH" customClass="detailsViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q1r-Fo-fei">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXD-TR-waj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-CQ-XkP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="894"/>
@@ -3443,7 +3439,7 @@
         <!--Reset View Controller-->
         <scene sceneID="Pm3-5x-HbF">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yWd-qQ-AW8" customClass="ResetViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yWd-qQ-AW8" customClass="ResetViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fUx-68-W6g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3557,7 +3553,7 @@
         <!--New Password View Controller-->
         <scene sceneID="Y8I-b6-tU0">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="fjM-ic-b4F" customClass="NewPasswordViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fjM-ic-b4F" customClass="NewPasswordViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gbt-XU-ZJW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3673,7 +3669,7 @@
         <!--Buynft View Controller-->
         <scene sceneID="60q-bu-GNm">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="HrB-zH-MsG" customClass="BuynftViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="HrB-zH-MsG" customClass="BuynftViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1s-u7-213">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3866,7 +3862,7 @@
         <!--Waiting For Hash View Controller-->
         <scene sceneID="Cza-bc-n6P">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Qh5-hH-GQE" customClass="waitingForHashViewController" customModule="nft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qh5-hH-GQE" customClass="waitingForHashViewController" customModule="NFTLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lqE-j2-SvP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3997,12 +3993,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mc7-HY-gO9"/>
         <segue reference="cVw-HT-bxX"/>
-        <segue reference="Ycj-uc-EI1"/>
-        <segue reference="Phw-8P-CIF"/>
-        <segue reference="RhZ-wb-R1W"/>
-        <segue reference="miz-yu-yLw"/>
+        <segue reference="QS3-mW-Io3"/>
+        <segue reference="sOy-eF-HCH"/>
+        <segue reference="4U1-Fc-Yy0"/>
+        <segue reference="iVb-Pw-Bjf"/>
         <segue reference="gTW-1N-nID"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4025,7 +4020,6 @@
         <image name="reset" width="20" height="20"/>
         <image name="reset-1" width="24" height="24"/>
         <image name="search" width="20" height="20"/>
-        <image name="symbol 2" width="149" height="96"/>
         <image name="vector (Stroke)" width="24" height="16"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

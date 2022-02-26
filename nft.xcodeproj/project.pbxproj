@@ -157,7 +157,7 @@
 		46DC966A274B14BD00ECB59C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		46F1CFF0275F32FB001D552E /* nft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nft.entitlements; sourceTree = "<group>"; };
 		46F1CFF1275F32FB001D552E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		4F1F5D342731393C005F0177 /* nft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1F5D342731393C005F0177 /* NFTLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFTLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F5D372731393C005F0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F1F5D392731393C005F0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4F1F5D3E2731393C005F0177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -313,7 +313,7 @@
 		4F1F5D352731393C005F0177 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F1F5D342731393C005F0177 /* nft.app */,
+				4F1F5D342731393C005F0177 /* NFTLand.app */,
 				4F1F5D4D2731393D005F0177 /* nftTests.xctest */,
 				4F1F5D572731393D005F0177 /* nftUITests.xctest */,
 			);
@@ -368,9 +368,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F1F5D332731393C005F0177 /* nft */ = {
+		4F1F5D332731393C005F0177 /* NFTLand */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F1F5D612731393D005F0177 /* Build configuration list for PBXNativeTarget "nft" */;
+			buildConfigurationList = 4F1F5D612731393D005F0177 /* Build configuration list for PBXNativeTarget "NFTLand" */;
 			buildPhases = (
 				55FBA679BACB560EEC014D95 /* [CP] Check Pods Manifest.lock */,
 				4F1F5D302731393C005F0177 /* Sources */,
@@ -382,9 +382,9 @@
 			);
 			dependencies = (
 			);
-			name = nft;
+			name = NFTLand;
 			productName = nft;
-			productReference = 4F1F5D342731393C005F0177 /* nft.app */;
+			productReference = 4F1F5D342731393C005F0177 /* NFTLand.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4F1F5D4C2731393D005F0177 /* nftTests */ = {
@@ -462,7 +462,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F1F5D332731393C005F0177 /* nft */,
+				4F1F5D332731393C005F0177 /* NFTLand */,
 				4F1F5D4C2731393D005F0177 /* nftTests */,
 				4F1F5D562731393D005F0177 /* nftUITests */,
 			);
@@ -688,12 +688,12 @@
 /* Begin PBXTargetDependency section */
 		4F1F5D4F2731393D005F0177 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F1F5D332731393C005F0177 /* nft */;
+			target = 4F1F5D332731393C005F0177 /* NFTLand */;
 			targetProxy = 4F1F5D4E2731393D005F0177 /* PBXContainerItemProxy */;
 		};
 		4F1F5D592731393D005F0177 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F1F5D332731393C005F0177 /* nft */;
+			target = 4F1F5D332731393C005F0177 /* NFTLand */;
 			targetProxy = 4F1F5D582731393D005F0177 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -847,7 +847,7 @@
 				CODE_SIGN_ENTITLEMENTS = nft/nft.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KDV3CN6XTH;
+				DEVELOPMENT_TEAM = G96V29LG5G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FBAEMKit/XCFrameworks\"/**",
@@ -858,6 +858,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = nft/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow NFTLand to access your camera to scan Qr code ";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow NFTLand to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -868,7 +870,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "---.nft";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nft.wajih123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -885,7 +887,7 @@
 				CODE_SIGN_ENTITLEMENTS = nft/nft.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KDV3CN6XTH;
+				DEVELOPMENT_TEAM = G96V29LG5G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FBAEMKit/XCFrameworks\"/**",
@@ -896,6 +898,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = nft/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow NFTLand to access your camera to scan Qr code ";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow NFTLand to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -906,7 +910,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "---.nft";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nft.wajih123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1022,7 +1026,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F1F5D612731393D005F0177 /* Build configuration list for PBXNativeTarget "nft" */ = {
+		4F1F5D612731393D005F0177 /* Build configuration list for PBXNativeTarget "NFTLand" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F1F5D622731393D005F0177 /* Debug */,

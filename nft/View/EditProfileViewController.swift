@@ -103,10 +103,10 @@ class EditProfileViewController: UIViewController,UITextFieldDelegate,UITextView
         if segue.identifier == "EditToProfileSegue" {
             let destination = segue.destination as! visitProfileViewController
             if info3.CustomerId! == "" {
-                destination.profile = AccountBrain.getInfo(url: "http://localhost:3001/customers", id: edit._id!, token: edit._id!)
+                destination.profile = AccountBrain.getInfo(url: "https://nftback.herokuapp.com/customers", id: edit._id!, token: edit._id!)
             }else{
                 
-                destination.profile = AccountBrain.getInfo(url: "http://localhost:3001/customers", id: info3.CustomerId!, token: info3.token!)
+                destination.profile = AccountBrain.getInfo(url: "https://nftback.herokuapp.com/customers", id: info3.CustomerId!, token: info3.token!)
             }
             
         }
